@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import BookingModal from './BookingModal'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isBookingOpen, setIsBookingOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,25 +48,56 @@ const Navbar = () => {
 
         </div>
         <div className="v-line" />
-        <button className="navbar-book-btn">BOOK YOUR STAY</button>
+        <button className="navbar-book-btn" onClick={() => setIsBookingOpen(true)}>BOOK YOUR STAY</button>
       </div>
 
       <div className={`mobile-nav-overlay ${isMenuOpen ? 'active' : ''}`}>
-        <button 
-          className="close-menu-btn" 
-          onClick={() => setIsMenuOpen(false)}
-          aria-label="Close menu"
-        >
-          &times;
-        </button>
-        <div className="mobile-links">
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT</Link>
-          <a href="#rooms" onClick={() => setIsMenuOpen(false)}>ROOMS</a>
-          <a href="#facilities" onClick={() => setIsMenuOpen(false)}>FACILITIES</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
+        <div className="menu-left-pane">
+          <button 
+            className="close-menu-btn" 
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            &times;&nbsp;&nbsp;
+          </button>
+          <div className="mobile-links">
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
+            <a href="#rooms" onClick={() => setIsMenuOpen(false)}>ROOMS</a>
+            <a href="#booking" onClick={() => setIsMenuOpen(false)}>BOOKING</a>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>PAGES</Link>
+            <a href="#blog" onClick={() => setIsMenuOpen(false)}>BLOG</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
+          </div>
+        </div>
+
+        <div className="menu-right-pane">
+          <div className="menu-contact-info">
+            <div className="brand-box menu-brand">
+              <h2 className="brand-name" style={{color: '#ffffffff'}}>MERJIN'S PARAISO</h2>
+              <span className="brand-sub" style={{color: '#dcc191ff'}}>LUXURY HOTEL</span>
+            </div>
+            
+            <h3 className="menu-subtitle" style={{color: '#ffffffff'}}>Hotel & Spa Merjin's<br/>Paraiso</h3>
+            
+            <div className="menu-info-block">
+              <h4 style={{color: '#ffffffff'}}>Location</h4>
+              <p style={{color: '#ffffffff'}}>PO Box 16122 Collins Street West<br/>Victoria 8007 Australia</p>
+            </div>
+            
+            <div className="menu-info-block">
+              <h4 style={{color: '#ffffffff'}}>Phone Support</h4>
+              <p style={{color: '#ffffffff'}}>+ 01 345 647 745<br/>info@merjinsparaiso.com</p>
+            </div>
+            
+            <div className="menu-info-block">
+              <h4 style={{color: '#ffffffff'}}>Connect With Us</h4>
+              <p style={{color: '#ffffffff'}}>+ 01 345 647 745</p>
+            </div>
+          </div>
         </div>
       </div>
+      
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </nav>
   )
 }

@@ -2,9 +2,13 @@
 
 :root {
   --primary: #072b2b;
+  --primary-dark: #041919;
   --accent: #c9a56a;
+  --accent-light: #fde8cc;
+  --accent-dark: #a6844b;
   --text: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.7);
+  --ivory: #fdfaf5;
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Outfit', sans-serif;
 }
@@ -33,32 +37,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
 button {
   font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--primary);
+  background: var(--primary-dark);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b89459;
+  background: var(--accent-light);
 }
