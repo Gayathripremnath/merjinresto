@@ -143,7 +143,7 @@ const Home = () => {
       </section>
 
       {/* Facilities Section */}
-      <section className="facilities-section">
+      {/* <section className="facilities-section">
         <div className="container">
           <div className="facilities-header animate-on-scroll fade-up">
             <span className="section-tag">OUR SERVICES</span>
@@ -200,7 +200,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Events Section */}
       <section className="events-split-section">
