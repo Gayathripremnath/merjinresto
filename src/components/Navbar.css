@@ -1,0 +1,237 @@
+.site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 110px;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.site-navbar.scrolled {
+  background: rgba(7, 43, 43, 0.43);
+  height: 75px;
+  backdrop-filter: blur(20px);
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-section.left {
+  flex: 3;
+  padding-left: 40px;
+}
+
+.nav-section.center {
+  flex: 4;
+  justify-content: center;
+}
+
+.nav-section.right {
+  flex: 3;
+  justify-content: flex-end;
+}
+
+/* Sub-items and separators */
+.v-line {
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 30px;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-lines {
+  width: 20px;
+  height: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-lines span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+}
+
+.menu-text {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.phone-icon {
+  font-size: 14px;
+}
+
+.contact-link a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+/* Brand */
+.brand-box {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.brand-sub {
+  font-size: 9px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Right Section */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar-book-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  height: 100%;
+  padding: 0 40px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar-book-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile Menu Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #072b2b;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 2000;
+}
+
+.mobile-nav-overlay.active {
+  transform: translateX(0);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color 0.3s ease;
+}
+
+.close-menu-btn:hover {
+  color: #c9a56a;
+}
+
+.mobile-links a {
+  font-size: 32px;
+  font-family: var(--font-serif);
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mobile-links a:hover {
+  color: #fde8cc;
+}
+
+@media (max-width: 1100px) {
+
+  .v-line,
+  .contact-link {
+    display: none;
+  }
+
+  .nav-section.left {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-navbar {
+    height: 70px;
+  }
+
+  .navbar-book-btn {
+    display: none;
+  }
+
+  .lang-switcher {
+    padding-right: 20px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
