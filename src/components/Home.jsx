@@ -39,21 +39,67 @@ const Home = () => {
        
       </section>
 
-      {/* About Section */}
-      <section className="about-section">
+      {/* Editorial About Section */}
+      <section className="about-editorial-section">
         <div className="container">
-          <div className="about-grid">
-            <div className="about-text">
-              <span className="section-tag animate-on-scroll fade-up">OUR STORY</span>
-              <h2 className="section-title animate-on-scroll fade-up delay-100">The Art of Luxury <br />Living Since 1954</h2>
-              <p className="animate-on-scroll fade-up delay-200">Experience the ultimate in hospitality at Merjin's Paraiso, where breathtaking views meet modern elegance. Our resort offers a unique blend of heritage and contemporary comfort, designed for the most discerning travelers.</p>
-              <button className="outline-btn animate-on-scroll fade-up delay-300">READ MORE</button>
-            </div>
-            <div className="about-image animate-on-scroll fade-left delay-200">
-              <div className="img-wrapper">
+          <div className="editorial-grid">
+            <div className="editorial-images">
+              <div className="img-main animate-on-scroll fade-right">
                 <img src={spaImg} alt="Luxury Spa" />
-                <div className="img-overlay" />
               </div>
+              <div className="img-sub animate-on-scroll fade-up delay-200">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&auto=format&fit=crop&q=80" alt="Resort details" />
+              </div>
+            </div>
+            
+            <div className="editorial-text animate-on-scroll fade-left delay-100">
+              <div className="watermark">1954</div>
+              <span className="section-tag">OUR STORY</span>
+              <h2 className="section-title">The Art of Luxury <br />Living Since 1954</h2>
+              <p>Experience the ultimate in hospitality at Merjin's Paraiso, where breathtaking views meet modern elegance. Our resort offers a unique blend of heritage and contemporary comfort, designed for the most discerning travelers.</p>
+              
+              <div className="editorial-stats">
+                <div className="stat-item">
+                  <span className="stat-num">5.0</span>
+                  <span className="stat-label">Star Rating</span>
+                </div>
+                <div className="v-divider"></div>
+                <div className="stat-item">
+                  <span className="stat-num">120+</span>
+                  <span className="stat-label">Luxury Rooms</span>
+                </div>
+              </div>
+              
+              <button className="editorial-btn"><span>READ MORE</span> <span className="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="experience-section">
+        <div className="container">
+          <div className="experience-header animate-on-scroll fade-up">
+            <span className="section-tag">DISCOVER</span>
+            <h2 className="section-title">Enjoy a Luxury Experience</h2>
+            <p className="experience-subtitle">Step into a realm of unmatched elegance where every detail surrounds you in comfort and sophistication.</p>
+          </div>
+          
+          <div className="experience-grid">
+            <div className="experience-card animate-on-scroll fade-up delay-100">
+              <span className="exp-number">01</span>
+              <h3>Wellness & Spa</h3>
+              <p>Rejuvenate your body and mind with our holistic treatments and thermal signature baths.</p>
+            </div>
+            <div className="experience-card animate-on-scroll fade-up delay-200">
+              <span className="exp-number">02</span>
+              <h3>Fine Dining</h3>
+              <p>Savor exquisite cuisine crafted by world-renowned chefs in our ambient signature restaurants.</p>
+            </div>
+            <div className="experience-card animate-on-scroll fade-up delay-300">
+              <span className="exp-number">03</span>
+              <h3>Bespoke Services</h3>
+              <p>Experience personalized VIP butler service and meticulously curated local excursions.</p>
             </div>
           </div>
         </div>

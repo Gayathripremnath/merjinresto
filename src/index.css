@@ -15,6 +15,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--primary);
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--primary);
