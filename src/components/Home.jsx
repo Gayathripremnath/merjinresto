@@ -153,64 +153,49 @@ const Home = () => {
           <div className="facilities-grid">
             <div className="facility-item animate-on-scroll fade-up delay-100">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M12 20h.01M8.502 16.502a5.002 5.002 0 0 1 6.996 0M5.002 13.002a10.003 10.003 0 0 1 13.996 0M1.502 9.502a15.005 15.005 0 0 1 20.996 0" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>WIFI & INTERNET</h3>
+              <h3>Wifi & Internet</h3>
               <p>High-speed connectivity throughout the resort.</p>
             </div>
 
             <div className="facility-item animate-on-scroll fade-up delay-200">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M14 8h-4l-6 6v4h16v-4l-6-6Z" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M7 18v2M17 18v2M2 14h20M7 8V6a2 2 0 1 1 4 0v2M13 8V6a2 2 0 1 1 4 0v2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7h2m14 0c0 1.1-.9 2-2 2s-2-.9-2-2m-8 0c0 1.1-.9 2-2 2s-2-.9-2-2" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>AIRPORT TRANSFER</h3>
+              <h3>Airport Transfer</h3>
               <p>Luxury shuttle service to and from the terminal.</p>
             </div>
 
             <div className="facility-item animate-on-scroll fade-up delay-300">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <rect x="2" y="3" width="20" height="15" rx="2"/><path d="M12 18v3M8 21h8" strokeLinecap="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 21v-4M7 21h10" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>SMART TV</h3>
+              <h3>Smart TV</h3>
               <p>4K entertainment systems in every suite.</p>
             </div>
 
             <div className="facility-item animate-on-scroll fade-up delay-100">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M3 11h18M3 15h18M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7M12 19v2M7 19v2M17 19v2" strokeLinecap="round"/>
-                  <path d="M9 7l3-4 3 4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v4M10 2v4M14 2v4" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>BREAKFAST IN BED</h3>
+              <h3>Breakfast in Bed</h3>
               <p>Gourmet morning meals delivered to your door.</p>
             </div>
 
             <div className="facility-item animate-on-scroll fade-up delay-200">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H20.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23Z" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="m12 10 5 12H7l5-12Z" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM12 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM12 10V7M12 5V2M15.5 10l2-2.5M18.5 6.5l2-2.5M8.5 10l-2-2.5M5.5 6.5l-2-2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>LAUNDRY SERVICES</h3>
+              <h3>Laundry Services</h3>
               <p>Professional cleaning and pressing on demand.</p>
             </div>
 
             <div className="facility-item animate-on-scroll fade-up delay-300">
               <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M12 3v18M12 3l4 4M12 3l-4 4M12 21l4-4M12 21l-4-4M3 12h18M3 12l4 4M3 12l4-4M21 12l-4 4M21 12l-4-4" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </div>
-              <h3>HOUSEKEEPER SERVICES</h3>
+              <h3>Housekeeper Services</h3>
               <p>Daily turndown and impeccable room care.</p>
             </div>
           </div>
