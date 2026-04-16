@@ -85,3 +85,59 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-light);
 }
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .container {
+    padding: 80px 30px;
+  }
+
+  .hero-section {
+    height: 75vh;
+  }
+
+  .events-split-section {
+    height: auto;
+  }
+
+  .room-img { height: 360px; }
+
+  .experience-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .facilities-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 18px; }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+
+  .container { padding: 60px 18px; }
+
+  .hero-section { height: 60vh; }
+  .main-title { font-size: clamp(28px, 10vw, 72px); }
+
+  .editorial-grid, .rooms-grid, .experience-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .facilities-grid { grid-template-columns: 1fr; gap: 18px; }
+  .facility-item { padding: 12px 8px; }
+
+  .room-img { height: 260px; }
+  .cta-footer { padding: 80px 16px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+
+  .container { padding: 40px 12px; }
+  .hero-section { height: 55vh; }
+  .sub-tag { margin-bottom: 12px; }
+  .main-title { font-size: clamp(20px, 12vw, 48px); }
+
+  .outline-btn, .primary-btn, .event-btn { padding: 10px 14px; }
+
+  .facility-icon { width: 44px; height: 44px; }
+  .facility-item h3 { font-size: 12px; }
+  .facility-item p { font-size: 13px; max-width: 100%; }
+}
