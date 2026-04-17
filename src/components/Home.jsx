@@ -78,35 +78,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="experience-section">
-        <div className="container">
-          <div className="experience-header animate-on-scroll fade-up">
-            <span className="section-tag">DISCOVER</span>
-            <h2 className="section-title">Enjoy a Luxury Experience</h2>
-            <p className="experience-subtitle">Step into a realm of unmatched elegance where every detail surrounds you in comfort and sophistication.</p>
-          </div>
-
-          <div className="experience-grid">
-            <div className="experience-card animate-on-scroll fade-up delay-100">
-              <span className="exp-number">01</span>
-              <h3>Wellness & Spa</h3>
-              <p>Rejuvenate your body and mind with our holistic treatments and thermal signature baths.</p>
-            </div>
-            <div className="experience-card animate-on-scroll fade-up delay-200">
-              <span className="exp-number">02</span>
-              <h3>Fine Dining</h3>
-              <p>Savor exquisite cuisine crafted by world-renowned chefs in our ambient signature restaurants.</p>
-            </div>
-            <div className="experience-card animate-on-scroll fade-up delay-300">
-              <span className="exp-number">03</span>
-              <h3>Bespoke Services</h3>
-              <p>Experience personalized VIP butler service and meticulously curated local excursions.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Rooms Section */}
       <section className="rooms-section">
         <div className="container">
@@ -139,6 +110,57 @@ const Home = () => {
                 <p>Modern design with floor-to-ceiling panoramic windows.</p>
                 <div className="room-price">From $320 / night</div>
               </div>
+            </div>
+            
+            <div className="room-card animate-on-scroll fade-up delay-300">
+              <div className="room-img">
+                <img src={roomImg} alt="Junior Suite" />
+              </div>
+              <div className="room-info">
+                <h3>Junior Mountain Suite</h3>
+                <p>Cozy suite with panoramic views and king-size bed.</p>
+                <div className="room-price">From $380 / night</div>
+              </div>
+            </div>
+
+            <div className="room-card animate-on-scroll fade-up delay-400">
+              <div className="room-img">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60" alt="Family Suite" />
+              </div>
+              <div className="room-info">
+                <h3>Family Suite</h3>
+                <p>Generous space with two bedrooms and family amenities.</p>
+                <div className="room-price">From $520 / night</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="experience-section">
+        <div className="container">
+          <div className="experience-header animate-on-scroll fade-up">
+            <span className="section-tag">DISCOVER</span>
+            <h2 className="section-title">Enjoy a Luxury Experience</h2>
+            <p className="experience-subtitle">Step into a realm of unmatched elegance where every detail surrounds you in comfort and sophistication.</p>
+          </div>
+
+          <div className="experience-grid">
+            <div className="experience-card animate-on-scroll fade-up delay-100">
+              <span className="exp-number">01</span>
+              <h3>Wellness & Spa</h3>
+              <p>Rejuvenate your body and mind with our holistic treatments and thermal signature baths.</p>
+            </div>
+            <div className="experience-card animate-on-scroll fade-up delay-200">
+              <span className="exp-number">02</span>
+              <h3>Fine Dining</h3>
+              <p>Savor exquisite cuisine crafted by world-renowned chefs in our ambient signature restaurants.</p>
+            </div>
+            <div className="experience-card animate-on-scroll fade-up delay-300">
+              <span className="exp-number">03</span>
+              <h3>Bespoke Services</h3>
+              <p>Experience personalized VIP butler service and meticulously curated local excursions.</p>
             </div>
           </div>
         </div>
