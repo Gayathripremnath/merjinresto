@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import roomImg from '../assets/room.png'
 import spaImg from '../assets/spa.png'
+import BookingModal from './BookingModal'
 
 const Home = () => {
+  const [isBookingOpen, setIsBookingOpen] = useState(false)
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -250,9 +252,10 @@ const Home = () => {
       <section className="cta-footer">
         <div className="container">
           <h2 className="animate-on-scroll zoom-in">Ready for an UNFORGETTABLE Stay?</h2>
-          <button className="primary-btn animate-on-scroll fade-up delay-200">BOOK NOW</button>
+          <button className="primary-btn animate-on-scroll fade-up delay-200" onClick={() => setIsBookingOpen(true)}>BOOK NOW</button>
         </div>
       </section>
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   )
 }
