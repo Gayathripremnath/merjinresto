@@ -352,3 +352,12 @@
     font-size: 32px;
   }
 }
+
+/* Further reduce BOOK YOUR STAY sizing on narrow phones */
+@media (max-width: 480px) {
+  .navbar-book-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+    letter-spacing: 1px;
+  }
+}
