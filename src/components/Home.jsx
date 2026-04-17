@@ -148,16 +148,25 @@ const Home = () => {
 
           <div className="experience-grid">
             <div className="experience-card animate-on-scroll fade-up delay-100">
+              <div className="card-img">
+                <img src={spaImg} alt="Wellness & Spa" />
+              </div>
               <span className="exp-number">01</span>
               <h3>Wellness & Spa</h3>
               <p>Rejuvenate your body and mind with our holistic treatments and thermal signature baths.</p>
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-200">
+              <div className="card-img">
+                <img src={roomImg} alt="Fine Dining" />
+              </div>
               <span className="exp-number">02</span>
               <h3>Fine Dining</h3>
               <p>Savor exquisite cuisine crafted by world-renowned chefs in our ambient signature restaurants.</p>
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
+              <div className="card-img">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1000&auto=format&fit=crop&q=80" alt="Bespoke Services" />
+              </div>
               <span className="exp-number">03</span>
               <h3>Bespoke Services</h3>
               <p>Experience personalized VIP butler service and meticulously curated local excursions.</p>
