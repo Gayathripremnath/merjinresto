@@ -192,3 +192,51 @@ a {
   .facility-item h3 { font-size: 11px; }
   .facility-item p { font-size: 12px; line-height: 1.4; }
 }
+
+/* Phone-specific overflow fixes (only media queries) */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Ensure pseudo-background doesn't cause horizontal scroll */
+  body::after {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Constrain wide elements to viewport */
+  .container,
+  .hero-section,
+  .room-img,
+  img,
+  .experience-grid,
+  .rooms-grid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Desktop-specific overflow fixes (only media queries) */
+@media (min-width: 1025px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Prevent any 100vw-based backgrounds from causing a horizontal scrollbar */
+  body::after {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Center container and avoid full-viewport width for content that can overflow */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
