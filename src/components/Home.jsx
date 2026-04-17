@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+﻿import React, { useEffect, useState } from 'react'
 import './Home.css'
 import roomImg from '../assets/room.png'
 import spaImg from '../assets/spa.png'
@@ -137,6 +137,68 @@ const Home = () => {
         </div>
       </section>
 
+            {/* Amenities Strip Section */}
+      <section className="amenities-strip-section">
+        <div className="amenities-strip-container">
+
+          <div className="amenity-item animate-on-scroll fade-up delay-100">
+            <div className="amenity-icon-wrap">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+                <path d="M14 46h36" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M18 46V34a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v12" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M26 32v-6a6 6 0 0 1 12 0v6" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M22 38h20" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M22 42h20" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="32" cy="20" r="4" stroke="#c9a56a" strokeWidth="2"/>
+              </svg>
+            </div>
+            <div className="amenity-info">
+              <h3>Room Cleaning</h3>
+              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
+            </div>
+          </div>
+
+          <div className="amenity-divider"></div>
+
+          <div className="amenity-item animate-on-scroll fade-up delay-200">
+            <div className="amenity-icon-wrap">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+                <path d="M10 26a31 31 0 0 1 44 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M17 33a21 21 0 0 1 30 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M24 40a11 11 0 0 1 16 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="32" cy="48" r="3" fill="#c9a56a"/>
+                <path d="M32 14v4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M22 17l2 3" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M42 17l-2 3" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <div className="amenity-info">
+              <h3>Room Wifi</h3>
+              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
+            </div>
+          </div>
+
+          <div className="amenity-divider"></div>
+
+          <div className="amenity-item animate-on-scroll fade-up delay-300">
+            <div className="amenity-icon-wrap">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+                <path d="M8 38h4l4-12h32l4 12h4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 38v8a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2h32v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-8" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="20" cy="46" r="3" stroke="#c9a56a" strokeWidth="2"/>
+                <circle cx="44" cy="46" r="3" stroke="#c9a56a" strokeWidth="2"/>
+                <path d="M32 14l-6 8h4v8h4v-8h4l-6-8z" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <div className="amenity-info">
+              <h3>Pickup &amp; Drop</h3>
+              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section className="experience-section">
         <div className="container">
@@ -174,66 +236,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Facilities Section */}
-      {/* <section className="facilities-section">
-        <div className="container">
-          <div className="facilities-header animate-on-scroll fade-up">
-            <span className="section-tag">OUR SERVICES</span>
-            <h2 className="section-title">Hotel Facilities</h2>
-          </div>
-
-          <div className="facilities-grid">
-            <div className="facility-item animate-on-scroll fade-up delay-100">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Wifi & Internet</h3>
-              <p>High-speed connectivity throughout the resort.</p>
-            </div>
-
-            <div className="facility-item animate-on-scroll fade-up delay-200">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7h2m14 0c0 1.1-.9 2-2 2s-2-.9-2-2m-8 0c0 1.1-.9 2-2 2s-2-.9-2-2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Airport Transfer</h3>
-              <p>Luxury shuttle service to and from the terminal.</p>
-            </div>
-
-            <div className="facility-item animate-on-scroll fade-up delay-300">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 21v-4M7 21h10" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Smart TV</h3>
-              <p>4K entertainment systems in every suite.</p>
-            </div>
-
-            <div className="facility-item animate-on-scroll fade-up delay-100">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v4M10 2v4M14 2v4" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Breakfast in Bed</h3>
-              <p>Gourmet morning meals delivered to your door.</p>
-            </div>
-
-            <div className="facility-item animate-on-scroll fade-up delay-200">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM12 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM12 10V7M12 5V2M15.5 10l2-2.5M18.5 6.5l2-2.5M8.5 10l-2-2.5M5.5 6.5l-2-2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Laundry Services</h3>
-              <p>Professional cleaning and pressing on demand.</p>
-            </div>
-
-            <div className="facility-item animate-on-scroll fade-up delay-300">
-              <div className="facility-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </div>
-              <h3>Housekeeper Services</h3>
-              <p>Daily turndown and impeccable room care.</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Events Section */}
       <section className="events-split-section">

@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -30,7 +31,7 @@ html {
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   background-color: var(--primary);
   color: var(--text);
   overflow-x: hidden;
