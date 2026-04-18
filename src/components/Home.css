@@ -98,13 +98,15 @@
 
 .main-title {
   font-family: var(--font-serif);
-  font-size: 110px;
-  font-weight: 500 !important;
-  line-height: 0.95;
-  letter-spacing: .04em;
-  line-height: 1.2;
+  font-size: clamp(56px, 12vw, 130px);
+  font-weight: 400;
+  line-height:1.2;
+  letter-spacing: -0.04em;
   font-style: italic;
+  min-height: 200px; /* Prevent layout shift */
 }
+
+
 
 /* Booking Bar */
 .booking-container {
@@ -1061,6 +1063,7 @@
 
   .main-title {
     font-size: clamp(36px, 12vw, 48px);
+    min-height: 120px; /* Reduced min-height for mobile */
   }
 
   .editorial-images {

@@ -10,6 +10,18 @@ import BookingModal from './BookingModal'
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [typedTitle, setTypedTitle] = useState("")
+  const fullTitle = "Experience Unparalleled Comfort"
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setTypedTitle(fullTitle.slice(0, index + 1));
+      index++;
+      if (index >= fullTitle.length) clearInterval(intervalId);
+    }, 100);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const slides = [bg1, bg2, bg3];
 
@@ -57,7 +69,18 @@ const Home = () => {
         <div className="overlay" />
         <div className="hero-content">
           <span className="sub-tag animate-on-scroll fade-up">STAY WITH US FEEL LIKE HOME</span>
-          <h1 className="main-title animate-on-scroll fade-up delay-100">Experience  <br /> Unparalleled Comfort</h1>
+          <h1 className="main-title">
+            {typedTitle.split(" ").map((word, i) => (
+              <React.Fragment key={i}>
+                {word === "Unparalleled" || word === "Comfort" ? (
+                  <span className="gold-text">{word} </span>
+                ) : (
+                  word + " "
+                )}
+                {i === 0 && <br />}
+              </React.Fragment>
+            ))}
+          </h1>
         </div>
       </section>
 
