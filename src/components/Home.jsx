@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+﻿import React, { useEffect, useState } from 'react'
 import './Home.css'
 import roomImg from '../assets/room.png'
 import spaImg from '../assets/spa.png'
@@ -90,18 +90,18 @@ const Home = () => {
           <div className="editorial-grid">
             <div className="editorial-images">
               <div className="img-main animate-on-scroll fade-right">
-                <img src={spaImg} alt="Luxury Spa" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/87/a1/6c/forest-canopy.jpg?w=1200&h=-1&s=1" alt="Forest Luxury Hotel" />
               </div>
               <div className="img-sub animate-on-scroll fade-up delay-200">
-                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&auto=format&fit=crop&q=80" alt="Resort details" />
+                <img src="https://plus.unsplash.com/premium_photo-1685133855266-57a70d527acd?w=800&auto=format&fit=crop&q=80" alt="Resort in Nature" />
               </div>
             </div>
 
             <div className="editorial-text animate-on-scroll fade-left delay-100">
               <div className="watermark">1954</div>
               <span className="section-tag">OUR STORY</span>
-              <h2 className="section-title">The Art of Luxury <br />Living Since 1954</h2>
-              <p>Experience the ultimate in hospitality at Merjin's Paraiso, where breathtaking views meet modern elegance. Our resort offers a unique blend of heritage and contemporary comfort, designed for the most discerning travelers.</p>
+              <h2 className="section-title">Nestled in the Heart of the Ancient Forest</h2>
+              <p className="editorial-text">Found in 1954, Merjin's Paraiso was built with a vision to harmonize luxury living with the raw beauty of the wilderness. Surrounded by centuries-old pines and whispering winds, our resort offers an unmatched sanctuary for those seeking to reconnect with nature without compromising on elegance.</p>
 
               <div className="editorial-stats">
                 <div className="stat-item">
@@ -146,7 +146,7 @@ const Home = () => {
 
             <div className="room-card animate-on-scroll scale-fade-up delay-200">
               <div className="room-img">
-                <img src="https://images.unsplash.com/photo-1652400094008-37eaddd622ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Deluxe Room" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/61/f9/68/room.jpg?w=2000&h=-1&s=1" alt="Deluxe Room" />
               </div>
               <div className="room-info">
                 <h3>Panoramic Deluxe Room</h3>
@@ -157,11 +157,11 @@ const Home = () => {
 
             <div className="room-card animate-on-scroll scale-fade-up delay-300">
               <div className="room-img">
-                <img src={roomImg} alt="Junior Suite" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/87/a1/6c/forest-canopy.jpg?w=1200&h=-1&s=1" alt="Forest Canopy Suite" />
               </div>
               <div className="room-info">
-                <h3>Junior Mountain Suite</h3>
-                <p>Cozy suite with panoramic views and king-size bed.</p>
+                <h3>Forest Canopy Suite</h3>
+                <p>Stay amidst the treetops in our glass-walled suite, offering unobstructed views of the whispering pine canopy.</p>
                 {/* <div className="room-price">From $380 / night</div> */}
               </div>
             </div>
@@ -263,7 +263,7 @@ const Home = () => {
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-200">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEZpbmUlMjBEaW5pbmd8ZW58MHx8MHx8fDA%3D"alt="Fine Dining" />
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/28/73/f0/forest-canopy.jpg?w=1400&h=-1&s=1"alt="Fine Dining" />
               </div>
               <span className="exp-number">02</span>
               <h3>Fine Dining</h3>
@@ -271,11 +271,11 @@ const Home = () => {
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1000&auto=format&fit=crop&q=80" alt="Exclusive Excursions" />
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1000" alt="Exclusive Forest Excursions" />
               </div>
               <span className="exp-number">03</span>
               <h3>Exclusive Excursions</h3>
-              <p>Discover the hidden gems of the coast with our private yacht charters and curated local journeys.</p>
+              <p>Explore the secrets of the deep woodland with our private wildlife safaris and curated sunlit meadow picnics.</p>
             </div>
           </div>
         </div>
