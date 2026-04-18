@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import roomImg from '../assets/room.png'
 import spaImg from '../assets/spa.png'
@@ -9,7 +9,7 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    "https://images.unsplash.com/photo-1683636800840-7fb89100c34f?auto=format&fit=crop&q=80&w=2560",
+    "https://images.unsplash.com/photo-1699168937003-3fe540bd38ef?auto=format&fit=crop&q=80&w=2560",
     "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8fDA%3D",
     "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2560"
   ];
