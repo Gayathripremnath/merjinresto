@@ -321,6 +321,7 @@
     font-size: 10px; /* Reduced from 12px */
     border-left: none;
     background: rgba(255, 255, 255, 0.03);
+    margin-right: 15px; /* Added small space to the right */
   }
 
   .lang-switcher {
@@ -359,6 +360,7 @@
     font-size: 9px;
     padding: 4px 6px;
     letter-spacing: 0.5px;
+    margin-right: 10px; /* Small space for narrow phones */
   }
 
   .brand-name {
