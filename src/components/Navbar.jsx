@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="v-line" />
         <div className="contact-link">
           <span className="phone-icon">📞</span>
-          <a href="tel:+41965677854">+91 90007-00004</a>
+          <a href="tel:+41965677854">+91 90000-00004</a>
         </div>
       </div>
 

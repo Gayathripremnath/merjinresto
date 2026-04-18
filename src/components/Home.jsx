@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 import roomImg from '../assets/room.png'
 import spaImg from '../assets/spa.png'
+import bg1 from '../assets/bg1.jpg'
+import bg2 from '../assets/bg2.jpg'
+import bg3 from '../assets/bg3.jpg'
 import BookingModal from './BookingModal'
 
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = [
-    "https://images.unsplash.com/photo-1699168937003-3fe540bd38ef?auto=format&fit=crop&q=80&w=2560",
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2560"
-  ];
+  const slides = [bg1, bg2, bg3];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -226,14 +225,14 @@ const Home = () => {
         <div className="container">
           <div className="experience-header animate-on-scroll fade-up">
             <span className="section-tag">DISCOVER</span>
-            <h2 className="section-title">Enjoy a Luxury Experience</h2>
-            <p className="experience-subtitle">Step into a realm of unmatched elegance where every detail surrounds you in comfort and sophistication.</p>
+            <h2 className="section-title">Curated Moments of Perfection</h2>
+            <p className="experience-subtitle">Elevate your stay with a collection of experiences designed to inspire, relax, and create lasting memories.</p>
           </div>
 
           <div className="experience-grid">
             <div className="experience-card animate-on-scroll fade-up delay-100">
               <div className="card-img">
-                <img src={spaImg} alt="Wellness & Spa" />
+                <img src="https://images.unsplash.com/photo-1617995815236-7f06f6e53180?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2VsbG5lcyUyMGFuZCUyMHNwYXxlbnwwfHwwfHx8MA%3D%3D" alt="Wellness & Spa" />
               </div>
               <span className="exp-number">01</span>
               <h3>Wellness & Spa</h3>
@@ -241,7 +240,7 @@ const Home = () => {
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-200">
               <div className="card-img">
-                <img src={roomImg} alt="Fine Dining" />
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEZpbmUlMjBEaW5pbmd8ZW58MHx8MHx8fDA%3D"alt="Fine Dining" />
               </div>
               <span className="exp-number">02</span>
               <h3>Fine Dining</h3>
@@ -249,11 +248,11 @@ const Home = () => {
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1000&auto=format&fit=crop&q=80" alt="Bespoke Services" />
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1000&auto=format&fit=crop&q=80" alt="Exclusive Excursions" />
               </div>
               <span className="exp-number">03</span>
-              <h3>Bespoke Services</h3>
-              <p>Experience personalized VIP butler service and meticulously curated local excursions.</p>
+              <h3>Exclusive Excursions</h3>
+              <p>Discover the hidden gems of the coast with our private yacht charters and curated local journeys.</p>
             </div>
           </div>
         </div>
