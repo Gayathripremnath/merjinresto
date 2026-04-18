@@ -5,11 +5,13 @@ import Home from './components/Home'
 import About from './components/About'
 import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
+import ScrollProgress from './components/ScrollProgress'
 
 function App() {
   return (
     <BrowserRouter>
       <CustomCursor />
+      <ScrollProgress />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

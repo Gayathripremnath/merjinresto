@@ -318,7 +318,7 @@
     align-items: center;
     height: auto;
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 10px; /* Reduced from 12px */
     border-left: none;
     background: rgba(255, 255, 255, 0.03);
   }
@@ -328,8 +328,8 @@
   }
 
   .brand-name {
-    font-size: 16px;
-    letter-spacing: 3px;
+    font-size: 14px; /* Reduced from 16px */
+    letter-spacing: 2px; /* Smoothed out */
   }
 
   .mobile-nav-overlay {
@@ -356,8 +356,13 @@
 /* Further reduce BOOK YOUR STAY sizing on narrow phones */
 @media (max-width: 480px) {
   .navbar-book-btn {
-    font-size: 10px;
-    padding: 4px 8px;
+    font-size: 9px;
+    padding: 4px 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-name {
+    font-size: 11px;
     letter-spacing: 1px;
   }
 }

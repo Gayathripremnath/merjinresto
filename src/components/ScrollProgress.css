@@ -1,0 +1,70 @@
+.scroll-progress-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-progress-container.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.progress-circle-bg {
+    fill: rgba(7, 43, 43, 0.8);
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 2;
+}
+
+.progress-circle-bar {
+    fill: none;
+    stroke: #c9a56a; /* Luxury Gold */
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.arrow-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: #c9a56a;
+    transition: transform 0.3s ease;
+}
+
+.scroll-progress-container:hover .arrow-icon {
+    transform: translateY(-4px);
+}
+
+.scroll-progress-container:hover .progress-circle-bar {
+    stroke-width: 3;
+}
+
+@media (max-width: 768px) {
+    .scroll-progress-container {
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .progress-circle {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="v-line" />
         <div className="contact-link">
           <span className="phone-icon">📞</span>
-          <a href="tel:+41965677854">+91 96567-7854</a>
+          <a href="tel:+41965677854">+91 90007-00004</a>
         </div>
       </div>
 
@@ -44,10 +44,6 @@ const Navbar = () => {
       </div>
 
       <div className="nav-section right">
-        <div className="lang-switcher">
-
-        </div>
-        <div className="v-line" />
         <button className="navbar-book-btn" onClick={() => setIsBookingOpen(true)}>BOOK YOUR STAY</button>
       </div>
 
