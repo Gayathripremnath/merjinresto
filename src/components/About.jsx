@@ -12,7 +12,7 @@ const About= () => {
       
       {/* SECTION 1: HERO BANNER */}
       <section 
-        className="hero-section" 
+        className="hero-section-about" 
         style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${HERO_BG})` }}
       >
         <div className="hero-content">

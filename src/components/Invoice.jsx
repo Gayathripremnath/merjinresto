@@ -49,7 +49,7 @@ const Invoice = ({ details, onBack }) => {
           {/* Header Segment */}
           <div className="invoice-card-header">
             <div className="brand-side">
-              <h1 className="brand-logo-text">TRIPMOUNT</h1>
+              <h1 className="brand-logo-text">Merjin's</h1>
               <p className="brand-sub">Premium Cabins Resort</p>
             </div>
             <div className="meta-side">
