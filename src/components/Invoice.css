@@ -1,5 +1,14 @@
 /* Invoice.css – Minimalist invoice card styling */
 
+:root {
+  --primary-dark: #072b2b;
+  --accent: #02080c;
+  --accent-light: #0f92de;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Page container centers the card */
 .invoice-page {
   display: flex;
   justify-content: center;
@@ -9,14 +18,18 @@
   padding: 20px;
 }
 
+/* Card styling with glassmorphism */
 .invoice-card {
-  background: #fff;
-  color: #072b2b;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--primary-dark);
   max-width: 500px;
   width: 100%;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  font-family: var(--font-sans);
 }
 
 .invoice-title {
@@ -30,7 +43,7 @@
 .room-info {
   font-size: 15px;
   margin-bottom: 15px;
-  color: #333;
+  line-height: 1.4;
 }
 
 .invoice-list {
@@ -38,7 +51,6 @@
   padding: 0;
   margin: 0 0 20px;
   font-size: 14px;
-  color: #555;
 }
 
 .invoice-list li {
@@ -46,7 +58,7 @@
 }
 
 .price-summary {
-  background: #f9f9f9;
+  background: rgba(0,0,0,0.03);
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -68,25 +80,22 @@
   padding-top: 8px;
 }
 
-.confirm-btn,
-.print-btn,
-.download-btn {
+button {
   width: 100%;
   background: var(--accent);
   color: var(--primary-dark);
   border: none;
-  padding: 14px;
+  padding: 12px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 12px;
+  transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
-.print-btn,
-.download-btn {
-  background: var(--accent-light);
+button:hover {
+  background: white;
 }
 
 @media print {
