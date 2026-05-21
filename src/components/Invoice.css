@@ -1,105 +1,89 @@
-/* Invoice.css – Minimalist invoice card styling */
+/* Invoice.css - Extends Booking styles for invoice page */
+@import "./Booking.css";
 
-:root {
-  --primary-dark: #072b2b;
-  --accent: #02080c;
-  --accent-light: #0f92de;
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-}
-
-/* Page container centers the card */
+/* Invoice specific layout */
 .invoice-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #f5f5f5;
-  padding: 20px;
+  /* reuse booking-page styles */
 }
 
-/* Card styling with glassmorphism */
-.invoice-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: var(--primary-dark);
-  max-width: 500px;
-  width: 100%;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  font-family: var(--font-sans);
-}
-
-.invoice-title {
+.room-summary {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: clamp(28px, 3vw, 36px);
   margin-bottom: 15px;
-  text-align: center;
-  color: var(--primary-dark);
-}
-
-.room-info {
-  font-size: 15px;
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.invoice-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-  font-size: 14px;
-}
-
-.invoice-list li {
-  margin-bottom: 6px;
+  color: #072b2b;
 }
 
 .price-summary {
-  background: rgba(0,0,0,0.03);
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.price-item {
+  margin-top: 30px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 20px;
   display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  margin-bottom: 6px;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.price-item,
 .price-total {
   display: flex;
   justify-content: space-between;
-  font-weight: 600;
-  font-size: 16px;
-  border-top: 1px solid #ddd;
-  padding-top: 8px;
+  font-size: 1.1rem;
 }
 
-button {
-  width: 100%;
-  background: var(--accent);
-  color: var(--primary-dark);
-  border: none;
-  padding: 12px;
-  font-size: 15px;
+.price-total {
   font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1.3rem;
+  border-top: 2px solid var(--accent);
+  padding-top: 10px;
   margin-top: 10px;
 }
 
-button:hover {
-  background: white;
+.confirm-btn,
+.print-btn,
+.download-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
+.confirm-btn {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+.print-btn {
+  background: var(--primary);
+  color: #fff;
+  margin-left: 10px;
+}
+
+.download-btn {
+  background: var(--primary-dark);
+  color: #fff;
+  margin-left: 10px;
+}
+
+.confirm-btn:hover,
+.print-btn:hover,
+.download-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Print media: hide interactive buttons */
 @media print {
-  body * { visibility: hidden; }
-  .invoice-card, .invoice-card * { visibility: visible; }
-  .invoice-card { position: absolute; left: 0; top: 0; width: 100%; }
+  .confirm-btn,
+  .print-btn,
+  .download-btn {
+    display: none !important;
+  }
+  .hero-overlay {
+    display: none;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+  }
 }
