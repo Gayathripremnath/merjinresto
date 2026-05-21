@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* Global Reset context within component */
+.about-container {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   SECTION 1: HERO BANNER
+   ========================================== */
+.hero-section {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.crumb-home {
+  opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.crumb-home:hover {
+  opacity: 1;
+}
+
+.crumb-separator {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.crumb-current {
+  opacity: 1;
+}
+
+
+/* ==========================================
+   SECTION 2: CONTENT GRID
+   ========================================== */
+.content-section {
+  padding: 80px 4%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Left Column Styling */
+.sub-title {
+  color: #8c9284;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #1a242f;
+  line-height: 1.25;
+  margin: 0 0 25px 0;
+  font-weight: 400;
+}
+
+.description {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+/* Features Row Structural Layout */
+.features-container {
+  display: flex;
+  gap: 30px;
+  align-items: fill;
+}
+
+.feature-image-wrapper {
+  flex: 1;
+}
+
+.feature-side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.feature-items {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-icon {
+  margin-bottom: 12px;
+}
+
+.feature-item h3 {
+  font-size: 1.15rem;
+  color: #1a242f;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.feature-item p {
+  color: #777777;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Right Column Showcase Styling */
+.right-column {
+  width: 100%;
+  height: 100%;
+}
+
+.main-showcase-img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .main-showcase-img {
+    height: 500px;
+  }
+  
+  .description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: 45vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-section {
+    padding: 50px 20px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+  }
+
+  .main-showcase-img {
+    height: 400px;
+  }
+}
+/* ==========================================
+   SECTION 3: AMENITIES & SERVICES
+   ========================================== */
+.services-section {
+  padding: 60px 4% 100px 4%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Flex header splitting title and description */
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.services-title-area {
+  flex: 1.2;
+}
+
+.services-title-area .main-title {
+  margin-bottom: 0; /* Tighten bottom spacing */
+}
+
+.services-desc-area {
+  flex: 1;
+}
+
+.services-description {
+  color: #777777;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-bottom: 5px; /* Aligns visually with the bottom of header text */
+}
+
+/* 4-Column Card Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Tall, Elegant Aspect Ratio Cards */
+.service-card {
+  position: relative;
+  height: 520px; /* Replicates the tall vertical frame */
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Subtle zoom effect on hover */
+.service-card:hover .card-img {
+  transform: scale(1.06);
+}
+
+/* Dark Gradient Overlay to make the white text readable */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 35px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card-overlay h3 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.card-overlay p {
+  color: #e0e0e0;
+  font-size: 0.88rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES FOR SERVICES
+   ========================================== */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for tablets */
+    gap: 20px;
+  }
+  
+  .service-card {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .services-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Full width cards on mobile */
+  }
+
+  .service-card {
+    height: 400px;
+  }
+}
+/* ==========================================
+   SECTION 4: NEAREST PLACES
+   ========================================== */
+.places-section {
+  padding: 60px 4% 100px 4%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Centered title configuration */
+.places-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.places-header .sub-title {
+  margin-bottom: 12px;
+}
+
+.places-header .main-title {
+  font-size: 3.2rem; /* Slightly larger heading for the destinations section */
+  margin: 0;
+}
+
+/* Places Grid (4 Equal Columns) */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Squarish/Slightly Portrait aspect ratio box for destinations */
+.place-card {
+  position: relative;
+  height: 440px; /* Perfect square-ish portrait form */
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.place-card .place-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Smooth zoom on hover */
+.place-card:hover .place-img {
+  transform: scale(1.05);
+}
+
+/* Balanced linear dark overlay for absolute card text readability */
+.place-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 13, 22, 0.95) 0%, rgba(4, 13, 22, 0.3) 35%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 35px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.place-overlay h3 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.3px;
+}
+
+.place-overlay p {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES FOR NEAREST PLACES
+   ========================================== */
+@media (max-width: 1100px) {
+  .places-grid {
+    grid-template-columns: repeat(2, 1fr); /* Fits nicely as 2x2 on medium devices */
+    gap: 20px;
+  }
+  
+  .place-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .places-header .main-title {
+    font-size: 2.4rem;
+  }
+  
+  .places-grid {
+    grid-template-columns: 1fr; /* Stacked layout on compact mobile screens */
+  }
+
+  .place-card {
+    height: 360px;
+  }
+}
