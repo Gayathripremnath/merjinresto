@@ -187,6 +187,21 @@ const About= () => {
     </div>
   </div>
 </section>  
+{/* PLACE THIS DIRECTLY UNDER THE NEAREST PLACES </section> */}
+
+{/* SECTION 5: BOOK NOW CTA */}
+<section 
+  className="cta-section" 
+  style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${HERO_BG})` }}
+>
+  <div className="cta-content">
+    <span className="cta-sub-title">BOOK NOW!</span>
+    <h2 className="cta-main-title">Welcome To TripMount<br />Book Your Stay Today.</h2>
+    <button className="cta-btn" onClick={() => window.location.href = '#booking'}>
+      BOOK YOUR COTTAGE
+    </button>
+  </div>
+</section>
 
     </div>
   );

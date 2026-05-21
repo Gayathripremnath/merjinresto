@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <div className="footer-column brand-col animate-on-scroll fade-up">
+        <div className="footer-column ">
           <Link to="/" className="brand-box" style={{ textDecoration: 'none' }}>
             <h1 className="brand-name">MERJIN'S PARAISO</h1>
             <span className="brand-sub">LUXURY HOTEL</span>
@@ -16,7 +16,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="footer-column links-col animate-on-scroll fade-up delay-100">
+        <div className="footer-column ">
           <h3>Quick Links</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -27,7 +27,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-column contact-col animate-on-scroll fade-up delay-200">
+        <div className="footer-column ">
           <h3>Contact Us</h3>
           <ul>
             <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH</li>
@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-column social-col animate-on-scroll fade-up delay-300">
+        <div className="footer-column ">
           <h3>Follow Us</h3>
           <div className="social-links">
             <a href="#" aria-label="Instagram" title="Instagram">
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
       
-      <div className="footer-bottom animate-on-scroll fade-up delay-100">
+      <div className="footer-bottom ">
         <p>&copy; {new Date().getFullYear()} Genova Technologies. All Rights Reserved.</p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
