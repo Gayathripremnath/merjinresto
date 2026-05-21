@@ -1,11 +1,11 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
-import roomImg from '../assets/room.png'
-import spaImg from '../assets/spa.png'
 import bg1 from '../assets/bg1.jpg'
 import bg2 from '../assets/bg2.jpg'
 import bg3 from '../assets/bg3.jpg'
 import BookingModal from './BookingModal'
+
+const slides = [bg1, bg2, bg3];
 
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -23,7 +23,6 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const slides = [bg1, bg2, bg3];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {

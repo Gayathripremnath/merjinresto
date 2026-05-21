@@ -26,7 +26,9 @@
     if (target) {
       e.preventDefault();
       scrollToHash(hash);
-      try { history.pushState(null, '', hash); } catch (err) {}
+      try { history.pushState(null, '', hash); } catch {
+        // ignore history state error
+      }
     }
   });
 

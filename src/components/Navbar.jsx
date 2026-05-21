@@ -44,6 +44,9 @@ const Navbar = () => {
       </div>
 
       <div className="nav-section right">
+        <div className="lang-switcher" style={{ marginRight: '20px', fontSize: '11px', letterSpacing: '2px' }}>
+          <span>EN</span> <span style={{ fontSize: '9px', opacity: 0.7 }}>▼</span>
+        </div>
         <button className="navbar-book-btn" onClick={() => setIsBookingOpen(true)}>BOOK YOUR STAY</button>
       </div>
 
@@ -58,11 +61,11 @@ const Navbar = () => {
           </button>
           <div className="mobile-links">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
-            <a href="#rooms" onClick={() => setIsMenuOpen(false)}>ROOMS</a>
-            <a href="#booking" onClick={() => setIsMenuOpen(false)}>BOOKING</a>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>PAGES</Link>
-            <a href="#blog" onClick={() => setIsMenuOpen(false)}>BLOG</a>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
+            <Link to="/rooms" onClick={() => setIsMenuOpen(false)}>ROOMS</Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT US</Link>
+            <Link to="/pages" onClick={() => setIsMenuOpen(false)}>PAGES</Link>
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>BLOG</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
           </div>
         </div>
 

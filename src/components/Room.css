@@ -1,0 +1,706 @@
+/* Room.css - Rooms and Suites Style Sheet */
+
+.rooms-page {
+  background-color: var(--primary);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Animations Definitions */
+@keyframes slideUpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animations Base classes */
+.animate-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.animate-on-scroll.fade-up {
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.fade-right {
+  transform: translateX(-40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.fade-left {
+  transform: translateX(40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.scale-fade-up {
+  transform: translateY(30px) scale(0.96);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+.delay-100 { transition-delay: 100ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+
+/* Rooms Hero Section */
+.rooms-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 750px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 25, 25, 0.4) 0%,
+    rgba(4, 25, 25, 0.6) 60%,
+    rgba(7, 43, 43, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.rooms-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin-top: -60px; /* offset for navbar height */
+}
+
+.rooms-hero .hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.rooms-hero .hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 2vw, 19px);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 620px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+
+/* Floating Search Widget */
+.floating-widget-wrapper {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  z-index: 10;
+}
+
+.search-capsule {
+  display: flex;
+  align-items: center;
+  background: rgba(4, 25, 25, 0.45);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 10px 10px 10px 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  width: 100%;
+  animation: slideUpBounce 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.capsule-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 15px;
+  user-select: none;
+}
+
+.capsule-item:hover {
+  opacity: 0.9;
+}
+
+.capsule-item .label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.capsule-item .value-display {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.capsule-item .arrow-icon {
+  font-size: 9px;
+  opacity: 0.6;
+  transition: transform 0.3s ease;
+}
+
+.capsule-item:hover .arrow-icon {
+  transform: translateY(2px);
+}
+
+.capsule-divider {
+  width: 1px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+/* Action Button */
+.go-btn {
+  background: #fdfaf5;
+  color: var(--primary-dark);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.go-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.go-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.go-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(201, 165, 106, 0.4);
+  background: #ffffff;
+}
+
+/* Dropdowns positioning & styles */
+.dropdown-overlay {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  min-width: 250px;
+  background: rgba(5, 26, 26, 0.98);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(201, 165, 106, 0.25);
+  border-radius: 12px;
+  padding: 10px 0;
+  z-index: 100;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  list-style: none;
+  margin: 0;
+  animation: dropdownFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* List Dropdown */
+.list-dropdown li {
+  padding: 12px 20px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.25s ease;
+}
+
+.list-dropdown li:hover {
+  background: rgba(201, 165, 106, 0.15);
+  color: var(--accent-light);
+  padding-left: 25px;
+}
+
+.list-dropdown li.active {
+  background: rgba(201, 165, 106, 0.2);
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+/* Date Picker Dropdown */
+.date-picker-dropdown {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 280px;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.date-input-group label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.date-input-group input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.date-input-group input:focus {
+  border-color: var(--accent);
+}
+
+/* Catalog Section V2 - Editorial White/Ivory Background styling */
+.catalog-section-v2 {
+  background-color: #ffffff;
+  color: #072b2b;
+  padding: 120px 0;
+  width: 100%;
+}
+
+.catalog-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.catalog-card-v2 {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+/* Image Wrapper with Inset Thin Border */
+.card-image-wrap-v2 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Elegant portrait aspect ratio matching screenshot */
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-wrap-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+/* Offset Inset thin white line overlay */
+.inset-border-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+/* Book Now Button overlay on room cards */
+.card-image-wrap-v2 {
+  position: relative; /* ensure positioning context */
+}
+
+.book-now-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  padding: 10px 20px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.card-image-wrap-v2:hover .book-now-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Hover effects */
+.catalog-card-v2:hover .card-image-wrap-v2 img {
+  transform: scale(1.05);
+}
+
+.catalog-card-v2:hover .inset-border-overlay {
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Price Badge on Top Left inside the border */
+.price-badge-v2 {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 3;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 6px 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Card body layout */
+.card-body-v2 {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Room Title Gilda Display */
+.room-title-v2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 36px);
+  color: #072b2b;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+/* Specs inline section */
+.room-specs-v2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.spec-item-v2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(7, 43, 43, 0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.spec-item-v2 svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.65;
+  color: #072b2b;
+}
+
+/* Room Description paragraph */
+.room-desc-v2 {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(7, 43, 43, 0.85);
+  margin-bottom: 0;
+  max-width: 95%;
+}
+
+/* Hotel Services Section V3 - Dark Teal Background */
+.services-section-v3 {
+  background-color: var(--primary-dark);
+  padding: 120px 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px; /* added space before next section */
+}
+
+.services-header-v3 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-grid-v3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px; /* smaller gap than original 40px */
+}
+
+.service-card-v3 {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 50px 35px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card-v3:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(201, 165, 106, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon-wrap-v3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(201, 165, 106, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+}
+
+.service-card-v3:hover .service-icon-wrap-v3 {
+  background: var(--accent);
+  color: var(--primary-dark);
+  box-shadow: 0 0 20px rgba(201, 165, 106, 0.4);
+}
+
+.service-icon-wrap-v3 svg {
+  width: 32px;
+  height: 32px;
+}
+
+.service-card-v3 h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.service-card-v3 p {
+  font-family: var(--font-sans);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Signature Luxuries Section */
+.luxuries-section {
+  background: #051d1d;
+  padding: 120px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.luxuries-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.luxuries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.luxury-item {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 50px 40px;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.luxury-item:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(201, 165, 106, 0.2);
+  transform: translateY(-6px);
+}
+
+.luxury-icon {
+  font-size: 36px;
+  margin-bottom: 25px;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.luxury-item h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.luxury-item p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .catalog-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .services-grid-v3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .luxuries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search-capsule {
+    border-radius: 24px;
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+  }
+  
+  .capsule-divider {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+  }
+  
+  .capsule-item {
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .go-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .dropdown-overlay {
+    top: auto;
+    bottom: calc(100% + 15px);
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-hero {
+    min-height: 600px;
+  }
+  
+  .catalog-grid-v2 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .services-grid-v3 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .luxuries-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
