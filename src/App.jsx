@@ -5,6 +5,7 @@ import CustomCursor from './components/CustomCursor';
 import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 import { Suspense, lazy } from 'react';
+import ContactUs from './components/Contactus';
 
 // Lazy‑load page components for code‑splitting
 const Home = lazy(() => import('./components/Home'));
@@ -13,7 +14,7 @@ const About = lazy(() => import('./components/About'));
 const Booking = lazy(() => import('./components/Booking'));
 const Invoice = lazy(() => import('./components/Invoice'));
 const Gallery = lazy(() => import('./components/Gallery'));
-const ContactUs = lazy(() => import('./components/ContactUs'));
+const Contact = lazy(() => import('./components/Contactus'));
 
 function App() {
   return (
