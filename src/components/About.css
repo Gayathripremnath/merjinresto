@@ -538,7 +538,7 @@
   .cta-section {
     height: 45vh;
     min-height: 350px;
-    background-attachment: scroll; /* Disables parallax layer on mobile web browsers for smoother rendering */
+    background-attachment: scroll; 
   }
 
   .cta-main-title {
