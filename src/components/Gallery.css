@@ -163,7 +163,7 @@
   opacity: 1;
 }
 
-/* Responsive adjustment frame breaks */
+
 @media (max-width: 500px) {
   .gallery-masonry-grid {
     grid-template-columns: 1fr;
