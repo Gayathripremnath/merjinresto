@@ -5,7 +5,6 @@ import CustomCursor from './components/CustomCursor';
 import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 import { Suspense, lazy } from 'react';
-import ContactUs from './components/Contactus';
 
 // Lazy‑load page components for code‑splitting
 const Home = lazy(() => import('./components/Home'));
