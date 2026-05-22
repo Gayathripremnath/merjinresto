@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Room.css'
 import roomHeroImg from '../assets/room_hero.png'
@@ -7,35 +7,13 @@ import BookingModal from './BookingModal'
 const Rooms = () => {
   const navigate = useNavigate()
   const [isBookingOpen, setIsBookingOpen] = useState(false)
-  const [showDatePicker, setShowDatePicker] = useState(false)
-  const [showRoomDropdown, setShowRoomDropdown] = useState(false)
-  const [showGuestDropdown, setShowGuestDropdown] = useState(false)
 
-  // Booking states
-  const [dates, setDates] = useState({ checkIn: '', checkOut: '' })
-  const [selectedRoom, setSelectedRoom] = useState('Luxury Suite')
-  const [guests, setGuests] = useState('2 Guests')
 
-  const datePickerRef = useRef(null)
-  const roomDropdownRef = useRef(null)
-  const guestDropdownRef = useRef(null)
 
-  // Close dropdowns on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (datePickerRef.current && !datePickerRef.current.contains(event.target)) {
-        setShowDatePicker(false)
-      }
-      if (roomDropdownRef.current && !roomDropdownRef.current.contains(event.target)) {
-        setShowRoomDropdown(false)
-      }
-      if (guestDropdownRef.current && !guestDropdownRef.current.contains(event.target)) {
-        setShowGuestDropdown(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+
+
+
+
 
   // Scroll animations observer
   useEffect(() => {
@@ -229,10 +207,6 @@ const Rooms = () => {
     }
   ]
 
-  const handleGo = () => {
-    setIsBookingOpen(true)
-  }
-
   return (
     <div className="rooms-page">
       {/* Immersive Hero Section */}
@@ -260,7 +234,7 @@ const Rooms = () => {
               >
                 {/* Image Container with Custom Inset Border, Price Badge, and Book Now Button */}
                 <div className="card-image-wrap-v2" onClick={() => {
-                  setSelectedRoom(room.name);
+            
                   setIsBookingOpen(true);
                 }}>
                   <img src={room.image} alt={room.name} />
