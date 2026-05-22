@@ -10,7 +10,7 @@ const Gallery = ({ onBackToBooking }) => {
     { id: 3, category: 'amenities', title: 'Infinity Pool Facing the Valleys', img: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80' },
     { id: 4, category: 'rooms', title: 'A-Frame Glass Cabin Night View', img: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80' },
     { id: 5, category: 'views', title: 'Pine Forest Trekking Trail', img: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80' },
-    { id: 6, category: 'amenities', title: 'Outdoor Campfire & Grill Zone', img: 'https://images.unsplash.com/photo-1526495124232-a02e18494d1a?auto=format&fit=crop&w=800&q=80' },
+    { id: 6, category: 'amenities', title: 'Outdoor Campfire & Grill Zone', img: 'https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzb3J0fGVufDB8fDB8fHww' },
   ];
 
   const filteredItems = activeFilter === 'all' 
