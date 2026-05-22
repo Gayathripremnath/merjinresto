@@ -13,7 +13,7 @@ const About = lazy(() => import('./components/About'));
 const Booking = lazy(() => import('./components/Booking'));
 const Invoice = lazy(() => import('./components/Invoice'));
 const Gallery = lazy(() => import('./components/Gallery'));
-const ContactUs = lazy(() => import('./components/ContactUs.jsx'));
+const ContactUs = lazy(() => import('./components/ContactUs'));
 function App() {
   return (
     <BrowserRouter>
