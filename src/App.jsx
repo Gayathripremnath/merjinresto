@@ -6,7 +6,6 @@ import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 import { Suspense, lazy } from 'react';
 
-// Lazy‑load page components for code‑splitting
 const Home = lazy(() => import('./components/Home'));
 const Rooms = lazy(() => import('./components/Rooms'));
 const About = lazy(() => import('./components/About'));
