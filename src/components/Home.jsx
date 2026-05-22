@@ -99,7 +99,7 @@ const Home = () => {
             <div className="editorial-text animate-on-scroll fade-left delay-100">
               <div className="watermark">1954</div>
               <span className="section-tag">OUR STORY</span>
-              <h2 className="section-title">Nestled in the Heart of the Ancient Forest</h2>
+              <h2 className="section-title1">Nestled in the Heart of the Ancient Forest</h2>
               <p className="editorial-text">Found in 1954, Merjin's Paraiso was built with a vision to harmonize luxury living with the raw beauty of the wilderness. Surrounded by centuries-old pines and whispering winds, our resort offers an unmatched sanctuary for those seeking to reconnect with nature without compromising on elegance.</p>
 
               <div className="editorial-stats">
@@ -126,7 +126,7 @@ const Home = () => {
           <div className="rooms-header animate-on-scroll fade-up">
             <div>
               <span className="section-tag">ACCOMMODATION</span>
-              <h2 className="section-title">Rooms & Suites</h2>
+              <h2 className="section-title1">Rooms & Suites</h2>
             </div>
             <button className="outline-btn">VIEW ALL</button>
           </div>
@@ -247,7 +247,7 @@ const Home = () => {
         <div className="container">
           <div className="experience-header animate-on-scroll fade-up">
             <span className="section-tag">DISCOVER</span>
-            <h2 className="section-title">Curated Moments of Perfection</h2>
+            <h2 className="section-title1">Curated Moments of Perfection</h2>
             <p className="experience-subtitle">Elevate your stay with a collection of experiences designed to inspire, relax, and create lasting memories.</p>
           </div>
 
@@ -301,7 +301,7 @@ const Home = () => {
         <div className="container">
           <div className="testimonials-header animate-on-scroll fade-up">
             <span className="section-tag">GUEST EXPERIENCES</span>
-            <h2 className="section-title">What Our Guests Say</h2>
+            <h2 className="section-title1">What Our Guests Say</h2>
           </div>
 
           <div className="testimonials-grid">

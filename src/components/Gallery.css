@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.gallery-global-wrapper {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.gallery-hero-banner {
+  background: linear-gradient(rgba(18, 30, 18, 0.65), rgba(18, 30, 18, 0.85)), 
+              url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  padding: 120px 20px 80px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.gallery-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-sub-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #a3b899;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.gallery-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.btn-gallery-nav-back {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-gallery-nav-back:hover {
+  background-color: #ffffff;
+  color: #121e12;
+  border-color: #ffffff;
+}
+
+/* Filter Section */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.gallery-filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: #ffffff;
+  border: 1px solid #e2e5e6;
+  padding: 10px 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #555555;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: #4b6043; /* Forest Accent */
+  color: #ffffff;
+  border-color: #4b6043;
+}
+
+/* Gallery Grid System */
+.gallery-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f0f2f3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 70%; /* Aspect Ratio Control */
+  overflow: hidden;
+}
+
+.gallery-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover Reveals Styling Frame */
+.gallery-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(18, 30, 18, 0.9) 10%, rgba(18, 30, 18, 0.2) 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-card-category {
+  color: #a3b899;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.gallery-card-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Interactive States trigger framework */
+.gallery-card:hover .gallery-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-card-overlay {
+  opacity: 1;
+}
+
+/* Responsive adjustment frame breaks */
+@media (max-width: 500px) {
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-main-title {
+    font-size: 2.2rem;
+  }
+}

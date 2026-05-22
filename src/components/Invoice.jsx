@@ -5,6 +5,9 @@ const Invoice = ({ details, onBack }) => {
   const {
     invoiceNo,
     date,
+    guestName,    // Destructured guest values
+    guestEmail,   // Destructured guest values
+    guestPhone,   // Destructured guest values
     dates,
     nights,
     rooms,
@@ -63,12 +66,21 @@ const Invoice = ({ details, onBack }) => {
 
           {/* Info Breakdown Segment */}
           <div className="invoice-details-grid">
+            {/* NEW GUEST PROFILE SECTION */}
+            <div className="details-block guest-info-block">
+              <h3>Guest Information</h3>
+              <p><strong>Name:</strong> {guestName || 'N/A'}</p>
+              <p><strong>Email:</strong> {guestEmail || 'N/A'}</p>
+              <p><strong>Phone:</strong> {guestPhone || 'N/A'}</p>
+            </div>
+
             <div className="details-block">
               <h3>Reservation Details</h3>
               <p><strong>Stay Timeline:</strong> {dates}</p>
               <p><strong>Duration:</strong> {nights} Nights</p>
               <p><strong>Total Inventory:</strong> {rooms} Room(s)</p>
             </div>
+            
             <div className="details-block">
               <h3>Occupancy</h3>
               <p><strong>Adults Count:</strong> {adults} Guest(s)</p>

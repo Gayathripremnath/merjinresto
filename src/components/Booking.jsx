@@ -3,9 +3,14 @@ import './Booking.css';
 import InvoicePage from './Invoice';
 
 const Booking = () => {
-  // 1. Navigation & Invoice Toggle States (Fixed the missing references)
+  // 1. Navigation & Invoice Toggle States
   const [isBooked, setIsBooked] = useState(false);
   const [bookingDetails, setBookingDetails] = useState(null);
+
+  // Guest Contact Information States
+  const [guestName, setGuestName] = useState('');
+  const [guestEmail, setGuestEmail] = useState('');
+  const [guestPhone, setGuestPhone] = useState('');
 
   // 2. Form Inputs State
   const [checkInDate, setCheckInDate] = useState('');
@@ -55,11 +60,15 @@ const Booking = () => {
     const individualAdultFee = extraServices.adultFee ? (20 * adults * nightsCount) : 0;
     const grandTotal = roomTotal + serviceFee + individualAdultFee;
     
+    // Completely updated details object containing the guest credentials
     const details = {
-      invoiceNo: `TM-${Math.floor(100000 + Math.random() * 900000)}`,
+      invoiceNo: `MP-${Math.floor(100000 + Math.random() * 900000)}`,
       date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-      dates: stayDatesString, // Now updates dynamically!
-      nights: nightsCount,   // Now updates dynamically!
+      guestName: guestName,
+      guestEmail: guestEmail,
+      guestPhone: guestPhone,
+      dates: stayDatesString,
+      nights: nightsCount,
       rooms: rooms,
       adults: adults,
       children: parseInt(childrenCount) || 0,
@@ -87,8 +96,7 @@ const Booking = () => {
       <section className="booking-hero-banner">
         <div className="hero-overlay-content">
           <span className="hero-sub-tag">BOOK NOW!</span>
-          <h1 className="hero-main-title">Welcome To Merjin's<br />Book Your Stay Today.</h1>
-          <button className="hero-cta-btn">BOOK NOW</button>
+          <h1 className="hero-main-title">Welcome To Merjin's</h1>
         </div>
       </section>
 
@@ -125,7 +133,6 @@ const Booking = () => {
             <div className="accommodation-description">
               <p>Sit arcu odio aenean vitae eu egestas. Gravida commodo non sem diam faucibus justo dolor. Consectetur nunc scelerisque ut enim tristique sed. At leo urna eu quam cursus dolor. In bibendum sit scelerisque mattis cum.</p>
               <p>Adipiscing et vel tempor elementum dignissim urna. Eu sem sed enim habitant libero ultricies sagittis. Malesuada viverra netus diam vehicula nulla. Neque mattis lacus sed tristique. Luctus ipsum lobortis sed odio ut ultricies adipiscing nisi nulla. Turpis aliquam feugiat tortor rutrum diam molestie vel pharetra.</p>
-              <p>Fames massa tortor sit nisl sit. Duis nulla tempus quisque et diam condimentum nisl. Rhoncus quisque elementum nulla lorem at turpis vitae quisque. Vulputate duis vel et odio hendrerit magna. Nec lacus dui egestas sit. Vulputate tincidunt viverra viverra etiam porta facilisis. Diam dui euismod eget donec. Pharetra leo sed felis urna. At a viverra urna elementum tristique ac integer pretium. Vel tincidunt sed mi nulla lectus sagittis.</p>
             </div>
 
             <hr className="divider" />
@@ -162,13 +169,53 @@ const Booking = () => {
             </section>
           </main>
 
-        {/* RIGHT COLUMN: BOOKING SIDEBAR CARD */}
+   {/* RIGHT COLUMN: BOOKING SIDEBAR CARD */}
 <aside className="booking-sidebar">
   <div className="booking-widget-card">
     <h2>Book Your Room</h2>
     
     <form className="booking-form" onSubmit={handleFormSubmit}>
       
+      {/* GUEST CONTACT INFORMATION FIELDS */}
+      <div className="form-group contact-field">
+        <label className="input-label">Full Name</label>
+        <div className="input-wrapper">
+          <input 
+            type="text" 
+            placeholder="Enter your full name"
+            value={guestName} 
+            onChange={(e) => setGuestName(e.target.value)} 
+            required 
+          />
+        </div>
+      </div>
+
+      <div className="form-group contact-field">
+        <label className="input-label">Email Address</label>
+        <div className="input-wrapper">
+          <input 
+            type="email" 
+            placeholder="name@example.com"
+            value={guestEmail} 
+            onChange={(e) => setGuestEmail(e.target.value)} 
+            required 
+          />
+        </div>
+      </div>
+
+      <div className="form-group contact-field">
+        <label className="input-label">Phone Number</label>
+        <div className="input-wrapper">
+          <input 
+            type="tel" 
+            placeholder="Enter phone number"
+            value={guestPhone} 
+            onChange={(e) => setGuestPhone(e.target.value)} 
+            required 
+          />
+        </div>
+      </div>
+
       {/* TWO SEPARATE BOXES FOR CHECK-IN AND CHECK-OUT */}
       <div className="date-picker-row">
         <div className="form-group date-box">

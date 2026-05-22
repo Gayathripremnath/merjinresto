@@ -197,7 +197,7 @@ const About= () => {
   <div className="cta-content">
     <span className="cta-sub-title">BOOK NOW!</span>
     <h2 className="cta-main-title">Welcome To TripMount<br />Book Your Stay Today.</h2>
-    <button className="cta-btn" onClick={() => window.location.href = '#booking'}>
+    <button className="cta-btn" onClick={() => window.location.href = '/booking'}>
       BOOK YOUR COTTAGE
     </button>
   </div>
