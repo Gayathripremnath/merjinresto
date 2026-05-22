@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import the navigation hook
 import './ContactUs.css';
 
-const ContactUs = () => {
-  const navigate = useNavigate(); // Initialize navigation instance
+const ContactUs = ({ onBackToBooking }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,8 +36,7 @@ const ContactUs = () => {
         <div className="contact-hero-content">
           <span className="contact-sub-tag">GET IN TOUCH</span>
           <h1 className="contact-main-title">Connect With Us</h1>
-          {/* Changed onClick to explicitly point back to your /booking route */}
-          <button className="btn-contact-nav-back" onClick={() => navigate('/booking')}>
+          <button className="btn-contact-nav-back" onClick={onBackToBooking}>
             &larr; Back To Booking
           </button>
         </div>
@@ -118,7 +115,7 @@ const ContactUs = () => {
                 <div className="contact-form-group">
                   <label className="contact-input-label">Email Address</label>
                   <input 
-                    type="type" /* Note: Changed from 'email' based on your uploaded snippet, though type="email" is standard */
+                    type="email" 
                     name="email" 
                     placeholder="name@example.com" 
                     value={formData.email} 
