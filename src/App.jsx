@@ -13,7 +13,8 @@ const About = lazy(() => import('./components/About'));
 const Booking = lazy(() => import('./components/Booking'));
 const Invoice = lazy(() => import('./components/Invoice'));
 const Gallery = lazy(() => import('./components/Gallery'));
-const ContactUs = lazy(() => import('./components/ContactUs'));
+// const ContactUs = lazy(() => import('./components/ContactUs'));
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,7 +29,7 @@ function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<ContactUs />} />
+          {/* <Route path="/contact" element={<ContactUs />} /> */}
         </Routes>
       </Suspense>
       <Footer />
