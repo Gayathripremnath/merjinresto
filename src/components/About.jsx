@@ -196,7 +196,7 @@ const About= () => {
 >
   <div className="cta-content">
     <span className="cta-sub-title">BOOK NOW!</span>
-    <h2 className="cta-main-title">Welcome To Merjin<br />Book Your Stay Today.</h2>
+    <h2 className="cta-main-title">Welcome To Merjin's Paraíso<br />Book Your Stay Today.</h2>
     <button className="cta-btn" onClick={() => window.location.href = '/booking'}>
       BOOK YOUR COTTAGE
     </button>
