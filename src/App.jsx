@@ -10,7 +10,7 @@ import ScrollProgress from './components/ScrollProgress';
 import Booking from './components/Booking';
 import Invoice from './components/Invoice';
 import Gallery from './components/Gallery';
-import ContactUs from './components/ContactUs';
+import ContactUs from './components/Contactus';
 
 function App() {
   return (
