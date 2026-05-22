@@ -34,7 +34,7 @@ const About= () => {
             <span className="sub-title">ABOUT US</span>
             <h2 className="main-title">Enjoy Your Luxury<br />Experience</h2>
             <p className="description">
-              Experience the charm of Vagamon at TripMount, where stunning A-frame cabins and 
+              Experience the charm of Vagamon at Merjin's Paraíso, where stunning A-frame cabins and 
               breathtaking views of the hills and valleys await you. Immerse yourself in nature and luxury, all 
               just steps away from Vagamon town.
             </p>
@@ -93,7 +93,7 @@ const About= () => {
     <div className="services-desc-area">
       <p className="services-description">
         Relax and unwind with our exceptional amenities, including a serene infinity pool, 
-        nature trails, and personalized service to ensure your stay at TripMount is 
+        nature trails, and personalized service to ensure your stay at Merjin's Paraíso is 
         unforgettable.
       </p>
     </div>
@@ -196,7 +196,7 @@ const About= () => {
 >
   <div className="cta-content">
     <span className="cta-sub-title">BOOK NOW!</span>
-    <h2 className="cta-main-title">Welcome To TripMount<br />Book Your Stay Today.</h2>
+    <h2 className="cta-main-title">Welcome To Merjin<br />Book Your Stay Today.</h2>
     <button className="cta-btn" onClick={() => window.location.href = '/booking'}>
       BOOK YOUR COTTAGE
     </button>
