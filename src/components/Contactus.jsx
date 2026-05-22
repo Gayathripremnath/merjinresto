@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ContactUs.css';
+import './Contact.css';
 
 const ContactUs = ({ onBackToBooking }) => {
   const [formData, setFormData] = useState({
