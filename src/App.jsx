@@ -1,32 +1,36 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Rooms from './components/Rooms';
-import About from './components/About';
-import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import ScrollProgress from './components/ScrollProgress';
-import Booking from './components/Booking';
-import Invoice from './components/Invoice';
-import Gallery from './components/Gallery';
-import ContactUs from './components/Contactus';
+import Footer from './components/Footer';
+import { Suspense, lazy } from 'react';
 
+// Lazy‑load page components for code‑splitting
+const Home = lazy(() => import('./components/Home'));
+const Rooms = lazy(() => import('./components/Rooms'));
+const About = lazy(() => import('./components/About'));
+const Booking = lazy(() => import('./components/Booking'));
+const Invoice = lazy(() => import('./components/Invoice'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const ContactUs = lazy(() => import('./components/Contactus.jsx'));
 function App() {
   return (
     <BrowserRouter>
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/rooms" element={<Rooms />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/invoice" element={<Invoice />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<ContactUs />} />
-      </Routes>
+      <Suspense fallback={<div className="loading">Loading…</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/invoice" element={<Invoice />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </BrowserRouter>
   );
