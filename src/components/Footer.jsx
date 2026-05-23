@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="footer-column ">
           <h3>Contact Us</h3>
           <ul>
-            <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH</li>
+            <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH,Vagamon</li>
             <li><span>📞</span> <a href="tel:+41965677854">+41-96567-7854</a></li>
             <li><span>✉️</span> <a href="mailto:info@merjinsparaiso.com">info@merjinsparaiso.com</a></li>
           </ul>
@@ -64,10 +64,6 @@ const Footer = () => {
       
       <div className="footer-bottom ">
         <p>&copy; {new Date().getFullYear()} Genova Technologies. All Rights Reserved.</p>
-        <div className="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
       </div>
     </footer>
   )

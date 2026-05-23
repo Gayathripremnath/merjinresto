@@ -44,9 +44,7 @@ const Navbar = () => {
       </div>
 
       <div className="nav-section right">
-        <div className="lang-switcher" style={{ marginRight: '20px', fontSize: '11px', letterSpacing: '2px' }}>
-          <span>EN</span> <span style={{ fontSize: '9px', opacity: 0.7 }}>▼</span>
-        </div>
+       
         <button className="navbar-book-btn" onClick={() => setIsBookingOpen(true)}>BOOK YOUR STAY</button>
       </div>
 
