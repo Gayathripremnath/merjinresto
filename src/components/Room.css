@@ -391,7 +391,7 @@
   position: relative; /* ensure positioning context */
 }
 
-.book-now-btn {
+.book-now-btn, .read-more-btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -410,7 +410,8 @@
   z-index: 5;
 }
 
-.card-image-wrap-v2:hover .book-now-btn {
+.card-image-wrap-v2:hover .book-now-btn,
+.card-image-wrap-v2:hover .read-more-btn {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.05);
 }

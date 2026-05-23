@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Room.css'
 import roomHeroImg from '../assets/room_hero.png'
-import BookingModal from './BookingModal'
 
 const Rooms = () => {
   const navigate = useNavigate()
-  const [isBookingOpen, setIsBookingOpen] = useState(false)
 
 
 
@@ -233,14 +231,13 @@ const Rooms = () => {
                 style={{ animationDelay: `${(idx % 3 + 1) * 150}ms` }}
               >
                 {/* Image Container with Custom Inset Border, Price Badge, and Book Now Button */}
-                <div className="card-image-wrap-v2" onClick={() => {
-            
-                  setIsBookingOpen(true);
-                }}>
+                <div className="card-image-wrap-v2">
                   <img src={room.image} alt={room.name} />
                   <div className="inset-border-overlay" />
-                                      <div className="price-badge-v2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rupee-icon" style={{ width: '1em', height: '1em', marginRight: '0.3rem' }}><path d="M12 1v22M5 7h12M5 12h9M5 17h6"/></svg>{room.price} / NIGHT</div>
-                  <button className="book-now-btn" onClick={() => { navigate('/booking', { state: { room } }); }}>Book Now</button>
+                                      <div className="price-badge-v2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rupee-icon" style={{ width: '1em', height: '1em', marginRight: '0.3rem' }}></svg>{room.price} / NIGHT</div>
+                  <button className="read-more-btn" onClick={() => {
+                    navigate('/roomdetails', { state: { room } });
+                  }}>Read More</button>
                 </div>
                 
                 {/* Text Body */}
@@ -312,8 +309,6 @@ const Rooms = () => {
       </section>
 
      
-      {/* Booking Modal Call */}
-      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   )
 }

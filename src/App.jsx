@@ -9,6 +9,7 @@ import { Suspense, lazy } from 'react';
 
 const Home = lazy(() => import('./components/Home'));
 const Rooms = lazy(() => import('./components/Rooms'));
+const RoomDetails = lazy(() => import('./components/RoomDetails'));
 const About = lazy(() => import('./components/About'));
 const Booking = lazy(() => import('./components/Booking'));
 const Invoice = lazy(() => import('./components/Invoice'));
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="/roomdetails" element={<RoomDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/invoice" element={<Invoice />} />
