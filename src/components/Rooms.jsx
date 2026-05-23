@@ -239,7 +239,7 @@ const Rooms = () => {
                 }}>
                   <img src={room.image} alt={room.name} />
                   <div className="inset-border-overlay" />
-                  <div className="price-badge-v2">{room.price} / NIGHT</div>
+                                      <div className="price-badge-v2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rupee-icon" style={{ width: '1em', height: '1em', marginRight: '0.3rem' }}><path d="M12 1v22M5 7h12M5 12h9M5 17h6"/></svg>{room.price} / NIGHT</div>
                   <button className="book-now-btn" onClick={() => { navigate('/booking', { state: { room } }); }}>Book Now</button>
                 </div>
                 
