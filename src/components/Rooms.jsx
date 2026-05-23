@@ -341,7 +341,7 @@ const Rooms = () => {
         <div className="container">
           <div className="services-header-v3 animate-on-scroll fade-up">
             <span className="section-tag">EXCLUSIVE BENEFITS</span>
-            <h2 className="section-title">Hotel Services & Amenities</h2>
+            <h2 className="section-title">Resort Services & Amenities</h2>
           </div>
 
           <div className="services-grid-v3">

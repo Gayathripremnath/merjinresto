@@ -27,7 +27,7 @@ const Navbar = () => {
             <span />
             <span />
           </div>
-          <span className="menu-text">MENU</span>
+          {/* <span className="menu-text">MENU</span> */}
         </button>
         <div className="v-line" />
         <div className="contact-link">
