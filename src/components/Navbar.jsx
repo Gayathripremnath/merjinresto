@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="nav-section center">
         <Link to="/" className="brand-box">
           <h1 className="brand-name">MERJIN'S PARAISO</h1>
-          <span className="brand-sub">LUXURY HOTEL</span>
+          <span className="brand-sub">LUXURY RESORT</span>
         </Link>
       </div>
 

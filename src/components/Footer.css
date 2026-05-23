@@ -33,6 +33,7 @@
 .footer-column ul li {
   margin-bottom: 15px;
   display: flex;
+  font-size: 14px;
   align-items: flex-start;
   gap: 12px;
 }
@@ -45,9 +46,9 @@
 
 .footer-column a, .footer-column p {
   color: rgba(255, 255, 255, 0.65);
-  font-family: "plus-jakarta-display", sans-serif;
+  font-family: "Outfit", sans-serif;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1.5px;
   line-height: 1.8;
   transition: color 0.3s ease;
@@ -55,12 +56,12 @@
 
 .brand-col .footer-desc {
   font-family: "plus-jakarta-display", sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   font-style: italic;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.9;
-  letter-spacing: 0;
-  margin-top: 30px;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 .footer-column a:hover {
