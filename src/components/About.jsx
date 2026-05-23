@@ -88,7 +88,7 @@ const About= () => {
   <div className="services-header">
     <div className="services-title-area">
       <span className="sub-title">LUXURY, COMFORT & TAILOR-MADE SERVICES</span>
-      <h2 className="main-title">Amenities & Services</h2>
+      <h2 className="main-title1">Amenities & Services</h2>
     </div>
     <div className="services-desc-area">
       <p className="services-description">
@@ -145,7 +145,7 @@ const About= () => {
   {/* Centered Header */}
   <div className="places-header">
     <span className="sub-title">EXPLORE VAGAMON</span>
-    <h2 className="main-title">Visit Nearest Places</h2>
+    <h2 className="main-title1">Visit Nearest Places</h2>
   </div>
 
   {/* Places Grid */}

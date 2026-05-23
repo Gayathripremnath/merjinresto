@@ -3,7 +3,7 @@
 /* Global Reset context within component */
 .about-container {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #333333;
+  color: #072b2b;
   background-color: #ffffff;
   overflow-x: hidden;
 }
@@ -96,6 +96,14 @@
   margin: 0 0 25px 0;
   font-weight: 400;
   min-height: 80px; 
+}
+.main-title1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #f5faff;
+  line-height: 1.25;
+  margin: 0 0 25px 0;
+  font-weight: 400;
 }
 
 .description {
@@ -217,25 +225,29 @@
    SECTION 3: AMENITIES & SERVICES
    ========================================== */
 .services-section {
+  background-color: #072b2b;
   padding: 60px 4% 100px 4%;
-  max-width: 1300px;
   margin: 0 auto;
 }
 
 /* Flex header splitting title and description */
 .services-header {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 50px;
-  gap: 40px;
+  margin-bottom: 20px;
+  /* gap: 40px; */
 }
 
 .services-title-area {
+  
   flex: 1.2;
 }
 
 .services-title-area .main-title {
+  
   margin-bottom: 0; /* Tighten bottom spacing */
 }
 
@@ -244,6 +256,7 @@
 }
 
 .services-description {
+  
   color: #777777;
   font-size: 0.95rem;
   line-height: 1.7;
@@ -253,6 +266,8 @@
 
 /* 4-Column Card Grid */
 .services-grid {
+   max-width: 1200px;
+  margin: 0 auto; 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
@@ -260,7 +275,9 @@
 
 /* Tall, Elegant Aspect Ratio Cards */
 .service-card {
+   max-width: 1200px;
   position: relative;
+  height: 520px; /* Replicates the tall vertical frame */
   height: 520px; /* Replicates the tall vertical frame */
   border-radius: 2px;
   overflow: hidden;
@@ -351,18 +368,20 @@
    SECTION 4: NEAREST PLACES
    ========================================== */
 .places-section {
+  background-color: #072b2b;
   padding: 60px 4% 100px 4%;
-  max-width: 1300px;
   margin: 0 auto;
 }
 
 /* Centered title configuration */
 .places-header {
+  
   text-align: center;
   margin-bottom: 50px;
 }
 
 .places-header .sub-title {
+  color: #f5faff;
   margin-bottom: 12px;
 }
 
@@ -373,6 +392,8 @@
 
 /* Places Grid (4 Equal Columns) */
 .places-grid {
+    max-width: 1200px;
+  Margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;

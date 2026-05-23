@@ -566,7 +566,7 @@
   font-family: var(--font-serif);
   font-size: 22px;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: var(--accent);
 }
 
 .service-card-v3 p {
