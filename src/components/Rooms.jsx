@@ -47,7 +47,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -58,7 +58,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -69,7 +69,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -80,7 +80,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -91,7 +91,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -102,7 +102,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -113,7 +113,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -124,7 +124,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     },
     {
@@ -135,7 +135,7 @@ const Rooms = () => {
       guests: '2 GUEST',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '$499',
+      price: '₹499',
       description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
     }
   ]
