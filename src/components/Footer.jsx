@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <div className="footer-column ">
+        <div className="footer-column brand-col ">
           <Link to="/" className="brand-box" style={{ textDecoration: 'none' }}>
             <h1 className="brand-name">MERJIN'S PARAISO</h1>
-            <span className="brand-sub">LUXURY HOTEL</span>
+            <span className="brand-sub">LUXURY RESORT</span>
           </Link>
           <p className="footer-desc">
             Experience the pinnacle of hospitality. Where breathtaking views, modern elegance, and uncompromised luxury meet to create your perfect escape.

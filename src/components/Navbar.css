@@ -256,14 +256,14 @@
   margin-bottom: 60px;
 }
 
-.menu-brand .brand-name {
+.menu-brand .brand {
   color: #111;
   margin-bottom: 5px;
   letter-spacing: 2px;
   font-family: var(--font-serif);
 }
 
-.menu-brand .brand-sub {
+.menu-brand .brand-subb {
   color: #333;
   letter-spacing: 3px;
   font-size: 11px;
@@ -328,7 +328,7 @@
     padding-right: 20px;
   }
 
-  .brand-name {
+  .brand {
     font-size: 14px; /* Reduced from 16px */
     letter-spacing: 2px; /* Smoothed out */
   }
@@ -363,7 +363,7 @@
     margin-right: 10px; /* Small space for narrow phones */
   }
 
-  .brand-name {
+  .brand {
     font-size: 11px;
     letter-spacing: 1px;
   }

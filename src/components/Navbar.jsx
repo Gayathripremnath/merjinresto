@@ -69,8 +69,8 @@ const Navbar = () => {
         <div className="menu-right-pane">
           <div className="menu-contact-info">
             <div className="brand-box menu-brand">
-              <h2 className="brand-name" style={{color: '#ffffffff'}}>MERJIN'S PARAISO</h2>
-              <span className="brand-sub" style={{color: '#dcc191ff'}}>LUXURY HOTEL</span>
+              <h2 className="brand" style={{color: '#ffffffff'}}>MERJIN'S PARAISO</h2>
+              <span className="brand-subb" style={{color: '#dcc191ff'}}>LUXURY RESORT</span>
             </div>
             
             <h3 className="menu-subtitle" style={{color: '#ffffffff'}}>Hotel & Spa Merjin's<br/>Paraiso</h3>
