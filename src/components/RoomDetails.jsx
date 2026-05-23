@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Room.css';
 import './RoomDetails.css';
@@ -7,6 +7,8 @@ const RoomDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { room } = location.state || {};
+
+  const [activeImage, setActiveImage] = useState(room?.image);
 
   if (!room) {
     navigate('/rooms');
@@ -17,12 +19,15 @@ const RoomDetails = () => {
     navigate('/booking', { state: { room } });
   };
 
+  const gallery = room.gallery || [room.image];
+
   return (
     <div className="room-details-page">
       <section className="rooms-hero" style={{ backgroundImage: `url(${room.image})` }}>
         <div className="hero-overlay" />
         <div className="hero-content">
-          <h1 className="hero-title animate-on-scroll fade-up">{room.name}</h1>
+          <p className="hero-subtitle" style={{ marginBottom: '10px', letterSpacing: '4px', fontSize: '14px', fontWeight: '600' }}>ROOM DETAILS</p>
+          <h1 className="hero-title">{room.name}</h1>
         </div>
       </section>
 
@@ -30,16 +35,24 @@ const RoomDetails = () => {
         <div className="container">
           <div className="rd-content-grid">
             <div className="rd-image-column">
-              <img src={room.image} alt={room.name} className="rd-main-image" />
+              <img src={activeImage || room.image} alt={room.name} className="rd-main-image" />
+              <div className="rd-thumbnail-gallery">
+                {gallery.map((img, index) => (
+                  <img 
+                    key={index} 
+                    src={img} 
+                    alt={`${room.name} view ${index + 1}`} 
+                    className={`rd-thumbnail ${(activeImage || room.image) === img ? 'active' : ''}`}
+                    onClick={() => setActiveImage(img)}
+                  />
+                ))}
+              </div>
             </div>
             
             <div className="rd-details-column">
               <h2 className="rd-title">{room.name}</h2>
               <div className="rd-price-wrap">
                 <span className="rd-price">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rupee-icon">
-                    <path d="M12 1v22M5 7h12M5 12h9M5 17h6" />
-                  </svg>
                   {room.price}
                 </span>
                 <span className="rd-per-night"> / NIGHT</span>
@@ -84,4 +97,3 @@ const RoomDetails = () => {
 };
 
 export default RoomDetails;
-

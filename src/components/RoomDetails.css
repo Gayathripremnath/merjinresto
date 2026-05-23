@@ -40,6 +40,46 @@
   transform: translateY(-5px);
 }
 
+/* Thumbnail Gallery */
+.rd-thumbnail-gallery {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding: 5px 0 10px 0;
+}
+
+.rd-thumbnail-gallery::-webkit-scrollbar {
+  height: 4px;
+}
+
+.rd-thumbnail-gallery::-webkit-scrollbar-thumb {
+  background-color: rgba(7, 43, 43, 0.2);
+  border-radius: 4px;
+}
+
+.rd-thumbnail {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+}
+
+.rd-thumbnail:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.rd-thumbnail.active {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
 /* Details Column */
 .rd-details-column {
   padding-top: 20px;
