@@ -31,7 +31,7 @@ const Footer = () => {
           <ul>
             <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH,Vagamon</li>
             <li><span>📞</span> <a href="tel:+91 8848808474">+91 8848808474</a></li>
-            <li><span>✉️</span> <a href="mailto:merjinsparaiso@gmail.com">merjinsparaiso@gmail.com</a></li>
+            <li><span>✉️</span> <a href="mailto:info@merjinsparaiso.com">info@merjinsparaiso.com</a></li>
           </ul>
         </div>
 
