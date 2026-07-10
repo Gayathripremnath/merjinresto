@@ -31,21 +31,34 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <ul>
             <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH,Vagamon</li>
-            <li><span>📞</span> <a href="tel:+41965677854">+41-96567-7854</a></li>
-            <li><span>✉️</span> <a href="mailto:info@merjinsparaiso.com">info@merjinsparaiso.com</a></li>
+            <li><span>📞</span> <a href="tel:+91 8848808474">+91 8848808474</a></li>
+            <li><span>✉️</span> <a href="mailto:merjinsparaiso@gmail.com">merjinsparaiso@gmail.com</a></li>
           </ul>
         </div>
 
         <div className="footer-column ">
           <h3>Follow Us</h3>
           <div className="social-links">
-            <a href="#" aria-label="Instagram" title="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-              </svg>
-            </a>
+           <a
+  href="https://www.instagram.com/merjinsparaiso/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  title="Instagram"
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+  </svg>
+</a>
 
             <a href="#" aria-label="Facebook" title="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

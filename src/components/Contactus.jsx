@@ -36,9 +36,9 @@ const ContactUs = ({ onBackToBooking }) => {
         <div className="contact-hero-content">
           <span className="contact-sub-tag">GET IN TOUCH</span>
           <h1 className="contact-main-title">Connect With Us</h1>
-          <button className="btn-contact-nav-back" onClick={onBackToBooking}>
-            &larr; Back To Booking
-          </button>
+          {/* <button className="btn-contact-nav-back" onClick={onBackToBooking} href="/home">
+            &larr; Back To Home
+          </button> */}
         </div>
       </section>
 
@@ -69,7 +69,13 @@ const ContactUs = ({ onBackToBooking }) => {
                 </div>
                 <div className="card-text-context">
                   <h4>Reservation Desk Line</h4>
-                  <p>+91 9845 123 456 <br /> <span className="text-muted-call">Available Mon-Sun, 8 AM - 10 PM IST</span></p>
+                  <p>
+  <a href="tel:+919845123456">+91 90000 00000</a>
+  <br />
+  <span className="text-muted-call">
+    Available Mon-Sun, 8 AM - 10 PM IST
+  </span>
+</p>
                 </div>
               </div>
 
@@ -78,9 +84,15 @@ const ContactUs = ({ onBackToBooking }) => {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div className="card-text-context">
-                  <h4>Electronic Mailbox</h4>
-                  <p>stay@uniquevagamon.com<br />concierge@uniquevagamon.com</p>
-                </div>
+  <h4>Electronic Mailbox</h4>
+  <p>
+    <a href="mailto:info@uniquevagamon.com">info@uniquevagamon.com</a>
+    <br />
+    <a href="mailto:concierge@uniquevagamon.com">
+      concierge@uniquevagamon.com
+    </a>
+  </p>
+</div>
               </div>
             </div>
           </div>

@@ -103,7 +103,7 @@ const About= () => {
   <div className="services-grid">
     {/* Card 1: Restaurant */}
     <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600" alt="Restaurant" className="card-img" />
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="card-img" />
       <div className="card-overlay">
         <h3>Restaurant</h3>
         <p>Delicious Cuisine</p>
@@ -112,7 +112,7 @@ const About= () => {
 
     {/* Card 2: Infinity Pool */}
     <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600" alt="Infinity Pool" className="card-img" />
+      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="card-img" />
       <div className="card-overlay">
         <h3>Infinity Pool</h3>
         <p>Breathtaking Valley Views</p>
@@ -121,7 +121,7 @@ const About= () => {
 
     {/* Card 3: Bonfire */}
     <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=600" alt="Bonfire" className="card-img" />
+      <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="card-img" />
       <div className="card-overlay">
         <h3>Bonfire</h3>
         <p>Cozy Evening Gatherings</p>
@@ -130,7 +130,7 @@ const About= () => {
 
     {/* Card 4: Barbeque */}
     <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600" alt="Barbeque" className="card-img" />
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="card-img" />
       <div className="card-overlay">
         <h3>Barbeque</h3>
         <p>Grilled Delights Outdoors</p>
@@ -152,7 +152,7 @@ const About= () => {
   <div className="places-grid">
     {/* Place 1: Adventure Park */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600" alt="Adventure Park" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80" alt="Adventure Park" className="place-img" />
       <div className="place-overlay">
         <h3>Adventure Park</h3>
         <p>10KM (28 Min)</p>
@@ -161,7 +161,7 @@ const About= () => {
 
     {/* Place 2: Paragliding */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=600" alt="Paragliding" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80" alt="Paragliding" className="place-img" />
       <div className="place-overlay">
         <h3>Paragliding</h3>
         <p>9.4 KM</p>
@@ -170,7 +170,7 @@ const About= () => {
 
     {/* Place 3: Meadows */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=600" alt="Meadows" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80" alt="Meadows" className="place-img" />
       <div className="place-overlay">
         <h3>Meadows</h3>
         <p>4 KM</p>
@@ -179,7 +179,7 @@ const About= () => {
 
     {/* Place 4: Boating */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=600" alt="Boating" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80" alt="Boating" className="place-img" />
       <div className="place-overlay">
         <h3>Boating</h3>
         <p>1.2 KM</p>

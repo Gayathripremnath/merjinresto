@@ -1,4 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import {
+  FaBed,
+  FaFire,
+  FaCar,
+  FaMugHot,
+  FaSwimmingPool,
+} from "react-icons/fa";
+
+import { GiMountains } from "react-icons/gi";
 import './Home.css'
 import bg1 from '../assets/bg1.jpg'
 import bg2 from '../assets/bg2.jpg'
@@ -181,66 +190,62 @@ const Home = () => {
 
       {/* Amenities Strip Section */}
       <section className="amenities-strip-section">
-        <div className="amenities-strip-container">
+  <div className="amenities-strip-container">
 
-          <div className="amenity-item animate-on-scroll fade-up delay-100">
-            <div className="amenity-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
-                <path d="M24 44s2-16 12-16 12 16 12 16" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <rect x="20" y="44" width="24" height="6" rx="2" stroke="#c9a56a" strokeWidth="2" />
-                <path d="M32 28V12a4 4 0 0 1 4-4h4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <path d="M42 16c2 0 4 2 4 4s-2 4-4 4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="28" cy="18" r="2" fill="#c9a56a" />
-                <circle cx="52" cy="12" r="1.5" fill="#c9a56a" />
-                <circle cx="56" cy="24" r="1" fill="#c9a56a" />
-              </svg>
-            </div>
-            <div className="amenity-info">
-              <h3>Room Cleaning</h3>
-              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
-            </div>
-          </div>
+    <div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <GiMountains className="amenity-icon" />
+  </div>
+  <h3>Scenic Views <br /> & Fresh Air</h3>
+</div>
 
-          <div className="amenity-divider"></div>
+<div className="amenity-divider"></div>
 
-          <div className="amenity-item animate-on-scroll fade-up delay-200">
-            <div className="amenity-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
-                <path d="M10 26a31 31 0 0 1 44 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <path d="M17 33a21 21 0 0 1 30 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <path d="M24 40a11 11 0 0 1 16 0" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="32" cy="48" r="3" fill="#c9a56a" />
-                <path d="M32 14v4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <path d="M22 17l2 3" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <path d="M42 17l-2 3" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </div>
-            <div className="amenity-info">
-              <h3>Room Wifi</h3>
-              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
-            </div>
-          </div>
+<div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <FaBed className="amenity-icon" />
+  </div>
+  <h3>Comfortable <br /> Rooms</h3>
+</div>
 
-          <div className="amenity-divider"></div>
+<div className="amenity-divider"></div>
 
-          <div className="amenity-item animate-on-scroll fade-up delay-300">
-            <div className="amenity-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
-                <path d="M8 38h4l4-12h32l4 12h4" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M8 38v8a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2h32v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-8" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="20" cy="46" r="3" stroke="#c9a56a" strokeWidth="2" />
-                <circle cx="44" cy="46" r="3" stroke="#c9a56a" strokeWidth="2" />
-                <path d="M32 14l-6 8h4v8h4v-8h4l-6-8z" stroke="#c9a56a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <div className="amenity-info">
-              <h3>Pickup &amp; Drop</h3>
-              <p>Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor</p>
-            </div>
-          </div>
+<div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <FaSwimmingPool className="amenity-icon" />
+  </div>
+  <h3>Swimming <br /> Pool</h3>
+</div>
 
-        </div>
-      </section>
+<div className="amenity-divider"></div>
+
+<div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <FaMugHot className="amenity-icon" />
+  </div>
+  <h3>Multi-Cuisine <br /> Dining</h3>
+</div>
+
+<div className="amenity-divider"></div>
+
+<div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <FaFire className="amenity-icon" />
+  </div>
+  <h3>Bonfire & <br /> Outdoor Seating</h3>
+</div>
+
+<div className="amenity-divider"></div>
+
+<div className="amenity-item">
+  <div className="amenity-icon-wrap">
+    <FaCar className="amenity-icon" />
+  </div>
+  <h3>Ample Parking <br /> Space</h3>
+</div>
+
+  </div>
+</section>
 
       {/* Experience Section */}
       <section className="experience-section">
