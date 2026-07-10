@@ -32,7 +32,7 @@ const About= () => {
           {/* Left Column: Text & Features */}
           <div className="left-column">
             <span className="sub-title">ABOUT US</span>
-            <h2 className="main-title">Enjoy Your Luxury<br />Experience</h2>
+            <h2 className="main-tit">Enjoy Your Luxury<br />Experience</h2>
             <div className="description-container">
               <p className="description" style={{marginBottom: "15px"}}>
                 Welcome to Merjin's Paraiso Resort, your peaceful retreat in the heart of the beautiful hills of Vagamon, Kerala. Surrounded by lush greenery, misty mountains, and refreshing fresh air, our resort is designed to offer the perfect escape from the busy pace of everyday life.

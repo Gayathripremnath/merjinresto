@@ -102,7 +102,7 @@
 
 .main-title {
   font-family: var(--font-serif);
-  font-size: clamp(56px, 12vw, 130px);
+  font-size: clamp(2px, 15vw, 130px) !important;
   font-weight: 400;
   line-height:1.2;
   letter-spacing: -0.04em;
@@ -1090,8 +1090,8 @@
   }
 
   .main-title {
-    font-size: clamp(36px, 12vw, 48px);
-    min-height: 120px; /* Reduced min-height for mobile */
+    font-size: clamp(48px, 15vw, 64px);
+    min-height: 150px; /* Adjusted min-height for mobile due to increased text size */
   }
 
   .editorial-images {
