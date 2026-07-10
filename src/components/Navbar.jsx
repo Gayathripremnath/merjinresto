@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import BookingModal from './BookingModal'
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,11 +38,21 @@ const Navbar = () => {
       </div>
 
       <div className="nav-section center">
-        <Link to="/" className="brand-box">
-          <h1 className="brand-name">MERJIN'S PARAISO</h1>
-          <span className="brand-sub">LUXURY RESORT</span>
-        </Link>
+  <Link to="/" className="brand-box">
+    <div className="brand-content">
+      <img
+        src={logo}
+        alt="Merjin's Paraiso Logo"
+        className="brand-logo"
+      />
+
+      <div className="brand-text">
+        <h1 className="brand-name">MERJIN'S PARAISO</h1>
+        <span className="brand-sub">LUXURY RESORT</span>
       </div>
+    </div>
+  </Link>
+</div>
 
       <div className="nav-section right">
        

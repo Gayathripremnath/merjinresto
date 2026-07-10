@@ -74,7 +74,9 @@
   margin-bottom: 25px;
   color: white;
 }
-
+.brand-box img{
+  height:80px;
+}
 .brand-col .brand-name {
   font-size: 20px;
   font-family: "plus-jakarta-display", sans-serif;

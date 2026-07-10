@@ -106,22 +106,14 @@ const Home = () => {
             </div>
 
             <div className="editorial-text animate-on-scroll fade-left delay-100">
-              <div className="watermark">1954</div>
-              <span className="section-tag">OUR STORY</span>
-              <h2 className="section-title1">Nestled in the Heart of the Ancient Forest</h2>
-              <p className="editorial-text">Found in 1954, Merjin's Paraiso was built with a vision to harmonize luxury living with the raw beauty of the wilderness. Surrounded by centuries-old pines and whispering winds, our resort offers an unmatched sanctuary for those seeking to reconnect with nature without compromising on elegance.</p>
+              <div className="watermark">ABOUT</div>
+              <span className="section-tag">About us</span>
+              <h2 className="section-title1">Luxury Living Amidst Nature's Beauty</h2>
+              <p className="editorial-text">Welcome to Merjin's Paraiso Resort, your peaceful retreat in the heart of the beautiful hills of Vagamon, Kerala. Surrounded by lush greenery, misty mountains, and refreshing fresh air, our resort is designed to offer the perfect escape from the busy pace of everyday life.
+Whether you're planning a romantic getaway, a family vacation, a group trip, or simply looking to relax in nature, Merjin's Paraiso Resort provides a comfortable and memorable stay. Our well-appointed rooms, warm hospitality, delicious cuisine, and scenic surroundings create an experience you'll cherish forever.
+</p>
 
-              <div className="editorial-stats">
-                <div className="stat-item">
-                  <span className="stat-num">5.0</span>
-                  <span className="stat-label">Star Rating</span>
-                </div>
-                <div className="v-divider"></div>
-                <div className="stat-item">
-                  <span className="stat-num">120+</span>
-                  <span className="stat-label">Luxury Rooms</span>
-                </div>
-              </div>
+            
 
               <button className="editorial-btn"><span>READ MORE</span> <span className="arrow">→</span></button>
             </div>
