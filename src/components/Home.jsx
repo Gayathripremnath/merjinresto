@@ -6,7 +6,7 @@ import {
   FaMugHot,
   FaSwimmingPool,
 } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
 import { GiMountains } from "react-icons/gi";
 import './Home.css'
 import bg1 from '../assets/bg1.jpg'
@@ -115,8 +115,12 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
 
             
 
-              <button className="editorial-btn"><span>READ MORE</span> <span className="arrow">→</span></button>
-            </div>
+<Link to="/about">
+  <button className="editorial-btn">
+    <span>READ MORE</span>
+    <span className="arrow">→</span>
+  </button>
+</Link>            </div>
           </div>
         </div>
       </section>
@@ -251,27 +255,27 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
           <div className="experience-grid">
             <div className="experience-card animate-on-scroll fade-up delay-100">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1617995815236-7f06f6e53180?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2VsbG5lcyUyMGFuZCUyMHNwYXxlbnwwfHwwfHx8MA%3D%3D" alt="Wellness & Spa" />
+                <img src="https://dwellsmithvirtue.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-23-at-12.58.53-PM-1.jpeg" alt="Comfortable Accommodation" />
               </div>
               <span className="exp-number">01</span>
-              <h3>Wellness & Spa</h3>
-              <p>Rejuvenate your body and mind with our holistic treatments and thermal signature baths.</p>
+              <h3>Comfortable Accommodation</h3>
+              <p>Relax in our well-furnished rooms and cottages, thoughtfully designed with modern amenities to ensure a peaceful and comfortable stay amidst the scenic beauty of Vagamon.</p>
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-200">
               <div className="card-img">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/28/73/f0/forest-canopy.jpg?w=1400&h=-1&s=1"alt="Fine Dining" />
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Multi-Cuisine Restaurant" />
               </div>
               <span className="exp-number">02</span>
-              <h3>Fine Dining</h3>
-              <p>Savor exquisite cuisine crafted by world-renowned chefs in our ambient signature restaurants.</p>
+              <h3>Multi-Cuisine Restaurant</h3>
+              <p>Delight your taste buds with a variety of delicious Kerala, Indian, and international dishes, freshly prepared using quality ingredients in a warm and welcoming dining atmosphere.</p>
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1000" alt="Exclusive Forest Excursions" />
+                <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Campfire & Outdoor Activities" />
               </div>
               <span className="exp-number">03</span>
-              <h3>Exclusive Excursions</h3>
-              <p>Explore the secrets of the deep woodland with our private wildlife safaris and curated sunlit meadow picnics.</p>
+              <h3>Campfire & Outdoor Activities</h3>
+              <p>Create unforgettable memories with evening campfires, outdoor games, nature walks, and adventure experiences that make your stay both relaxing and exciting.</p>
             </div>
           </div>
         </div>
@@ -304,18 +308,18 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
           <div className="testimonials-grid">
             <div className="testimonial-card animate-on-scroll fade-right delay-100">
               <div className="stars">★★★★★</div>
-              <p className="quote">"An absolutely breathtaking experience. The attention to detail in the Alpine Suite and the pristine mountain views made our anniversary unforgettable."</p>
-              <h4 className="guest-name">- Eleanor V., New York</h4>
+              <p className="quote">"Our stay at Merjin's Paraiso Resort was absolutely wonderful. The rooms were spotless, the mountain views were breathtaking, and the staff made us feel at home. We can't wait to visit again!"</p>
+              <h4 className="guest-name">- Anjali & Rahul, Kochi</h4>
             </div>
             <div className="testimonial-card animate-on-scroll fade-up delay-200">
               <div className="stars">★★★★★</div>
-              <p className="quote">"From the world-class spa facilities to the exceptional dining, Merjin's Paraiso redefines luxury. We felt completely rejuvenated after our stay."</p>
-              <h4 className="guest-name">- James & Sarah L., London</h4>
+              <p className="quote">"A perfect getaway from the city's hustle and bustle. The peaceful surroundings, delicious food, and excellent hospitality made our vacation truly memorable. Highly recommended!"</p>
+              <h4 className="guest-name">- Arun Thomas, Bengaluru</h4>
             </div>
             <div className="testimonial-card animate-on-scroll fade-left delay-300">
               <div className="stars">★★★★★</div>
-              <p className="quote">"The perfect blend of elegant design and warm hospitality. Every staff member went above and beyond to ensure our comfort. Truly a five-star gem."</p>
-              <h4 className="guest-name">- Marcus T., Berlin</h4>
+              <p className="quote">"The resort is beautifully maintained and surrounded by nature. Every morning we woke up to stunning views and fresh mountain air. It was the relaxing holiday we were looking for."</p>
+              <h4 className="guest-name">- Nisha Menon, Chennai</h4>
             </div>
           </div>
         </div>

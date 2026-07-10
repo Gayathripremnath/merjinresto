@@ -336,28 +336,59 @@ const Rooms = () => {
         </div>
       </section>
 
-      {/* Hotel Services Section */}
-      <section className="services-section-v3">
-        <div className="container">
-          <div className="services-header-v3 animate-on-scroll fade-up">
-            <span className="section-tag">EXCLUSIVE BENEFITS</span>
-            <h2 className="section-title">Resort Services & Amenities</h2>
+      {/* SECTION 3: AMENITIES & SERVICES */}
+      <section className="services-section">
+        {/* Header Row */}
+        <div className="services-header">
+          <div className="services-title-area">
+            <span className="sub-title">LUXURY, COMFORT & TAILOR-MADE SERVICES</span>
+            <h2 className="main-title1">Amenities & Services</h2>
+          </div>
+          <div className="services-desc-area">
+            <p className="services-description">
+              Relax and unwind with our exceptional amenities, including a serene infinity pool, 
+              nature trails, and personalized service to ensure your stay at Merjin's Paraíso is 
+              unforgettable.
+            </p>
+          </div>
+        </div>
+
+        {/* Amenities Cards Grid */}
+        <div className="services-grid">
+          {/* Card 1: Restaurant */}
+          <div className="service-card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="card-img" />
+            <div className="card-overlay">
+              <h3>Restaurant</h3>
+              <p>Delicious Cuisine</p>
+            </div>
           </div>
 
-          <div className="services-grid-v3">
-            {servicesData.map((service, idx) => (
-              <div 
-                key={service.id} 
-                className="service-card-v3 animate-on-scroll scale-fade-up"
-                style={{ animationDelay: `${(idx % 3 + 1) * 150}ms` }}
-              >
-                <div className="service-icon-wrap-v3">
-                  {service.icon}
-                </div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
+          {/* Card 2: Infinity Pool */}
+          <div className="service-card">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="card-img" />
+            <div className="card-overlay">
+              <h3>Infinity Pool</h3>
+              <p>Breathtaking Valley Views</p>
+            </div>
+          </div>
+
+          {/* Card 3: Bonfire */}
+          <div className="service-card">
+            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="card-img" />
+            <div className="card-overlay">
+              <h3>Bonfire</h3>
+              <p>Cozy Evening Gatherings</p>
+            </div>
+          </div>
+
+          {/* Card 4: Barbeque */}
+          <div className="service-card">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="card-img" />
+            <div className="card-overlay">
+              <h3>Barbeque</h3>
+              <p>Grilled Delights Outdoors</p>
+            </div>
           </div>
         </div>
       </section>

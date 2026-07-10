@@ -52,37 +52,7 @@ const About= () => {
             </div>
 
             {/* Features Row */}
-            <div className="features-container">
-              <div className="feature-image-wrapper">
-                <img src={BEDROOM_IMG} alt="Luxury Interior" className="feature-side-img" />
-              </div>
-              
-              <div className="feature-items">
-                {/* Feature 1 */}
-                <div className="feature-item">
-                  <div className="feature-icon">
-                    {/* SVG representing Scenic/Waves */}
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89254" strokeWidth="2">
-                      <path d="M2 10c3 0 3-3 6-3s3 3 6 3 3-3 6-3 3 3 6 3M2 17c3 0 3-3 6-3s3 3 6 3 3-3 6-3 3 3 6 3" />
-                    </svg>
-                  </div>
-                  <h3>Scenic Escapes</h3>
-                  <p>Immerse yourself in the beauty of Vagamon with panoramic views and serene surroundings.</p>
-                </div>
-
-                {/* Feature 2 */}
-                <div className="feature-item">
-                  <div className="feature-icon">
-                    {/* SVG representing Comfort/Bed */}
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89254" strokeWidth="2">
-                      <path d="M2 4v16M2 11h20M22 4v16M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M4 17h16" />
-                    </svg>
-                  </div>
-                  <h3>Comfort Redefined</h3>
-                  <p>Stay in style with our cozy A-frame cabins, designed for ultimate relaxation and luxury.</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Right Column: Main Showcase Image */}
@@ -94,107 +64,51 @@ const About= () => {
       </section>
       {/* PLACE THIS DIRECTLY UNDER THE PREVIOUS </section> */}
 
-{/* SECTION 3: AMENITIES & SERVICES */}
-<section className="services-section">
-  {/* Header Row */}
-  <div className="services-header">
-    <div className="services-title-area">
-      <span className="sub-title">LUXURY, COMFORT & TAILOR-MADE SERVICES</span>
-      <h2 className="main-title1">Amenities & Services</h2>
-    </div>
-    <div className="services-desc-area">
-      <p className="services-description">
-        Relax and unwind with our exceptional amenities, including a serene infinity pool, 
-        nature trails, and personalized service to ensure your stay at Merjin's Paraíso is 
-        unforgettable.
-      </p>
-    </div>
-  </div>
 
-  {/* Amenities Cards Grid */}
-  <div className="services-grid">
-    {/* Card 1: Restaurant */}
-    <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="card-img" />
-      <div className="card-overlay">
-        <h3>Restaurant</h3>
-        <p>Delicious Cuisine</p>
-      </div>
-    </div>
-
-    {/* Card 2: Infinity Pool */}
-    <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="card-img" />
-      <div className="card-overlay">
-        <h3>Infinity Pool</h3>
-        <p>Breathtaking Valley Views</p>
-      </div>
-    </div>
-
-    {/* Card 3: Bonfire */}
-    <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="card-img" />
-      <div className="card-overlay">
-        <h3>Bonfire</h3>
-        <p>Cozy Evening Gatherings</p>
-      </div>
-    </div>
-
-    {/* Card 4: Barbeque */}
-    <div className="service-card">
-      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="card-img" />
-      <div className="card-overlay">
-        <h3>Barbeque</h3>
-        <p>Grilled Delights Outdoors</p>
-      </div>
-    </div>
-  </div>
-</section>
-{/* PLACE THIS DIRECTLY UNDER THE AMENITIES & SERVICES </section> */}
 
 {/* SECTION 4: NEAREST PLACES */}
 <section className="places-section">
   {/* Centered Header */}
   <div className="places-header">
     <span className="sub-title">EXPLORE VAGAMON</span>
-    <h2 className="main-title1">Visit Nearest Places</h2>
+    <h2 className="main-title1">Explore Nearby Attractions</h2>
   </div>
 
   {/* Places Grid */}
   <div className="places-grid">
-    {/* Place 1: Adventure Park */}
+    {/* Place 1: Vagamon Pine Forest */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80" alt="Adventure Park" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80" alt="Vagamon Pine Forest" className="place-img" />
       <div className="place-overlay">
-        <h3>Adventure Park</h3>
-        <p>10KM (28 Min)</p>
+        <h3>Vagamon Pine Forest</h3>
+        <p>One of Vagamon's most iconic destinations, the Pine Forest offers a peaceful escape with towering pine trees, cool mountain air, and picturesque walking trails.</p>
       </div>
     </div>
 
-    {/* Place 2: Paragliding */}
+    {/* Place 2: Marmala Waterfalls */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80" alt="Paragliding" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80" alt="Marmala Waterfalls" className="place-img" />
       <div className="place-overlay">
-        <h3>Paragliding</h3>
-        <p>9.4 KM</p>
+        <h3>Marmala Waterfalls</h3>
+        <p>Hidden amidst lush greenery, Marmala Waterfalls is a breathtaking natural attraction where crystal-clear water cascades down rocky cliffs.</p>
       </div>
     </div>
 
-    {/* Place 3: Meadows */}
+    {/* Place 3: Vagamon Adventure Park & Paragliding */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80" alt="Meadows" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80" alt="Vagamon Adventure Park & Paragliding" className="place-img" />
       <div className="place-overlay">
-        <h3>Meadows</h3>
-        <p>4 KM</p>
+        <h3>Vagamon Adventure Park</h3>
+        <p>Experience the thrill of paragliding over Vagamon's rolling hills or enjoy exciting outdoor activities at the nearby adventure park.</p>
       </div>
     </div>
 
-    {/* Place 4: Boating */}
+    {/* Place 4: Vagamon Meadows */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80" alt="Boating" className="place-img" />
+      <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80" alt="Vagamon Meadows" className="place-img" />
       <div className="place-overlay">
-        <h3>Boating</h3>
-        <p>1.2 KM</p>
+        <h3>Vagamon Meadows</h3>
+        <p>Famous for its expansive green grasslands and stunning hilltop scenery, Vagamon Meadows is the perfect place to relax.</p>
       </div>
     </div>
   </div>

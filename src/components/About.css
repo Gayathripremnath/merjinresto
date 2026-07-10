@@ -90,12 +90,12 @@
 
 .main-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #1a242f;
   line-height: 1.25;
   margin: 0 0 25px 0;
   font-weight: 400;
-  min-height: 80px; 
+  min-height: 60px; 
 }
 .main-title1 {
   font-family: 'Playfair Display', serif;
@@ -439,8 +439,9 @@
   color: #ffffff;
   font-size: 1.75rem;
   font-weight: 400;
-  margin: 0 0 6px 0;
+  margin: 0;
   letter-spacing: 0.3px;
+  transition: transform 0.4s ease;
 }
 
 .place-overlay p {
@@ -450,6 +451,18 @@
   font-weight: 500;
   margin: 0;
   letter-spacing: 0.5px;
+  
+  /* Hide initially for hover effect */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+}
+
+.place-card:hover .place-overlay p {
+  opacity: 1;
+  max-height: 250px;
+  margin-top: 10px;
 }
 
 
@@ -488,7 +501,7 @@
   min-height: 420px;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Creates a clean, premium parallax-like scroll depth */
+  /* background-attachment: fixed; removed to prevent scroll lag */
   display: flex;
   align-items: center;
   justify-content: center;

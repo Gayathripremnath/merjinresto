@@ -84,21 +84,39 @@ const Navbar = () => {
               <span className="brand-subb" style={{color: '#dcc191ff'}}>LUXURY RESORT</span>
             </div>
             
-            <h3 className="menu-subtitle" style={{color: '#ffffffff'}}>Hotel & Spa Merjin's<br/>Paraiso</h3>
+            <h3 className="menu-subtitle" style={{color: '#ffffffff'}}>Hotel  Merjin's<br/>Paraiso</h3>
             
             <div className="menu-info-block">
               <h4 style={{color: '#ffffffff'}}>Location</h4>
-              <p style={{color: '#ffffffff'}}>PO Box 16122 Collins Street West<br/>Victoria 8007 Australia</p>
+              <p style={{color: '#ffffffff'}}>Vagamon, Kerala<br/></p>
             </div>
             
             <div className="menu-info-block">
               <h4 style={{color: '#ffffffff'}}>Phone Support</h4>
-              <p style={{color: '#ffffffff'}}>+ 01 345 647 745<br/>info@merjinsparaiso.com</p>
-            </div>
+<p style={{ color: "#fff" }}>
+  <a
+    href="tel:+918848808474"
+    style={{ color: "#fff", textDecoration: "none" }}
+  >
+    +91 8848808474
+  </a>
+  <br />
+  <a
+    href="mailto:merjinsparaiso@gmail.com"
+    style={{ color: "#fff", textDecoration: "none" }}
+  >
+    merjinsparaiso@gmail.com
+  </a>
+</p>            </div>
             
             <div className="menu-info-block">
               <h4 style={{color: '#ffffffff'}}>Connect With Us</h4>
-              <p style={{color: '#ffffffff'}}>+ 01 345 647 745</p>
+              <p style={{color: '#ffffffff'}}> <a
+    href="tel:+918848808474"
+    style={{ color: "#fff", textDecoration: "none" }}
+  >
+    +91 8848808474
+  </a></p>
             </div>
           </div>
         </div>
