@@ -337,15 +337,15 @@ const Rooms = () => {
       </section>
 
       {/* SECTION 3: AMENITIES & SERVICES */}
-      <section className="services-section">
+      <section className="rooms-services-section">
         {/* Header Row */}
-        <div className="services-header">
-          <div className="services-title-area">
-            <span className="sub-title">LUXURY, COMFORT & TAILOR-MADE SERVICES</span>
-            <h2 className="main-title1">Amenities & Services</h2>
+        <div className="rooms-services-header">
+          <div className="rooms-services-title-area">
+            <span className="rooms-sub-title">LUXURY, COMFORT & TAILOR-MADE SERVICES</span>
+            <h2 className="rooms-main-title1">Amenities & Services</h2>
           </div>
-          <div className="services-desc-area">
-            <p className="services-description">
+          <div className="rooms-services-desc-area">
+            <p className="rooms-services-description">
               Relax and unwind with our exceptional amenities, including a serene infinity pool, 
               nature trails, and personalized service to ensure your stay at Merjin's Paraíso is 
               unforgettable.
@@ -354,38 +354,38 @@ const Rooms = () => {
         </div>
 
         {/* Amenities Cards Grid */}
-        <div className="services-grid">
+        <div className="rooms-services-grid">
           {/* Card 1: Restaurant */}
-          <div className="service-card">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="card-img" />
-            <div className="card-overlay">
+          <div className="rooms-service-card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="rooms-card-img" />
+            <div className="rooms-card-overlay">
               <h3>Restaurant</h3>
               <p>Delicious Cuisine</p>
             </div>
           </div>
 
           {/* Card 2: Infinity Pool */}
-          <div className="service-card">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="card-img" />
-            <div className="card-overlay">
+          <div className="rooms-service-card">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="rooms-card-img" />
+            <div className="rooms-card-overlay">
               <h3>Infinity Pool</h3>
               <p>Breathtaking Valley Views</p>
             </div>
           </div>
 
           {/* Card 3: Bonfire */}
-          <div className="service-card">
-            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="card-img" />
-            <div className="card-overlay">
+          <div className="rooms-service-card">
+            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="rooms-card-img" />
+            <div className="rooms-card-overlay">
               <h3>Bonfire</h3>
               <p>Cozy Evening Gatherings</p>
             </div>
           </div>
 
           {/* Card 4: Barbeque */}
-          <div className="service-card">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="card-img" />
-            <div className="card-overlay">
+          <div className="rooms-service-card">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="rooms-card-img" />
+            <div className="rooms-card-overlay">
               <h3>Barbeque</h3>
               <p>Grilled Delights Outdoors</p>
             </div>
