@@ -342,7 +342,7 @@
 
 .catalog-grid-v2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   max-width: 1300px;
   margin: 0 auto;
@@ -359,7 +359,7 @@
 .card-image-wrap-v2 {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5; /* Elegant portrait aspect ratio matching screenshot */
+  aspect-ratio: 4 / 3; /* Reduced height for 2-column layout */
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);

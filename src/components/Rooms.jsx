@@ -39,156 +39,71 @@ const Rooms = () => {
   const roomsData = [
     {
       id: 1,
-      name: 'Luxury Suite',
-      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80',
+      name: 'Mountain View Suite',
+      image: 'https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26',
       gallery: [
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80',
         'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80'
       ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
+      area: '45M2',
+      guests: '4 GUESTS',
+      beds: '2 BEDS',
+      baths: '2 BATHS',
+      price: '₹5,499',
+      description: 'Our most spacious accommodation, featuring a separate living area, elegant interiors, and breathtaking panoramic mountain views. Perfect for families, honeymooners, and guests seeking a premium stay with comfort and privacy.'
     },
     {
       id: 2,
-      name: 'Double Room',
-      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
+      name: 'Deluxe Room with Mountain View',
+      image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o=',
       gallery: [
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1533633310920-cc9f1e0f793c?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80'
       ],
-      area: '30M2',
-      guests: '2 GUEST',
+      area: '35M2',
+      guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
+      price: '₹4,499',
+      description: 'A well-appointed room offering modern comforts and beautiful mountain views. Designed for couples and leisure travelers, it provides a relaxing atmosphere with all essential amenities for a comfortable stay.'
     },
     {
       id: 3,
-      name: 'Deluxe Suite',
-      image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80',
+      name: 'Standard Room with Mountain View',
+      image: 'https://res.cloudinary.com/voyehomes/image/upload/v1773861135/property/176/image/e07734f2-8558-4762-8e83-44d73e06929f.jpg',
       gallery: [
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
         'https://images.unsplash.com/photo-1522771731478-44bf104f2910?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80',
         'https://images.unsplash.com/photo-1559841644-08984562005a?auto=format&fit=crop&q=80'
       ],
       area: '30M2',
-      guests: '2 GUEST',
+      guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
+      price: '₹3,499',
+      description: 'A cozy and comfortable room with scenic mountain views, ideal for business and leisure travelers. It offers all the necessary amenities for a pleasant and value-for-money stay.'
     },
     {
       id: 4,
-      name: 'Comfort Room',
-      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80'
-      ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
-    },
-    {
-      id: 5,
-      name: 'Beach Villa Room',
-      image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1574643156929-51fa098b0394?auto=format&fit=crop&q=80'
-      ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
-    },
-    {
-      id: 6,
-      name: 'Garden Room',
-      image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1558211583-d26f610c1eb1?auto=format&fit=crop&q=80'
-      ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
-    },
-    {
-      id: 7,
-      name: 'Panorama Room',
-      image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1534595038511-9f219fe0c979?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=80'
-      ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
-    },
-    {
-      id: 8,
-      name: 'Laguna Suite',
-      image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80'
-      ],
-      area: '30M2',
-      guests: '2 GUEST',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
-    },
-    {
-      id: 9,
-      name: 'Comfort Family',
+      name: 'Studio Room',
       image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80',
       gallery: [
         'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1522771731478-44bf104f2910?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=80'
       ],
-      area: '30M2',
-      guests: '2 GUEST',
+      area: '25M2',
+      guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹499',
-      description: 'Ut et rhoncus odio. Quisque pellentesque nisl leo, eget ultricies nibh ullamcorper ut.'
+      price: '₹2,499',
+      description: 'A stylish and compact room thoughtfully designed for solo travelers and couples. Featuring a contemporary layout with modern amenities, it offers a comfortable and relaxing stay.'
     }
   ]
 

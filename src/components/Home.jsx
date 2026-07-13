@@ -139,45 +139,41 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
           <div className="rooms-grid">
             <div className="room-card animate-on-scroll scale-fade-up delay-100">
               <div className="room-img">
-                <img src="https://plus.unsplash.com/premium_photo-1663126637580-ff22a73f9bfc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fEV4ZWN1dGl2ZSUyMEFscGluZSUyMFN1aXRlfGVufDB8fDB8fHww" alt="Executive Suite" />
+                <img src="https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26" alt="Mountain View Suite" />
               </div>
               <div className="room-info">
-                <h3>Executive Alpine Suite</h3>
-                <p>Spacious suite with private terrace and mountain views.</p>
-                {/* <div className="room-price">From $450 / night</div> */}
+                <h3>Mountain View Suite</h3>
+                <p>Our most spacious accommodation, featuring a separate living area, elegant interiors, and breathtaking panoramic mountain views.</p>
               </div>
             </div>
 
             <div className="room-card animate-on-scroll scale-fade-up delay-200">
               <div className="room-img">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/61/f9/68/room.jpg?w=2000&h=-1&s=1" alt="Deluxe Room" />
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o=" alt="Deluxe Room with Mountain View" />
               </div>
               <div className="room-info">
-                <h3>Panoramic Deluxe Room</h3>
-                <p>Modern design with floor-to-ceiling panoramic windows.</p>
-                {/* <div className="room-price">From $320 / night</div> */}
+                <h3>Deluxe Room with Mountain View</h3>
+                <p>A well-appointed room offering modern comforts and beautiful mountain views, designed for couples and leisure travelers.</p>
               </div>
             </div>
 
             <div className="room-card animate-on-scroll scale-fade-up delay-300">
               <div className="room-img">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/87/a1/6c/forest-canopy.jpg?w=1200&h=-1&s=1" alt="Forest Canopy Suite" />
+                <img src="https://res.cloudinary.com/voyehomes/image/upload/v1773861135/property/176/image/e07734f2-8558-4762-8e83-44d73e06929f.jpg" alt="Standard Room with Mountain View" />
               </div>
               <div className="room-info">
-                <h3>Forest Canopy Suite</h3>
-                <p>Stay amidst the treetops in our glass-walled suite, offering unobstructed views of the whispering pine canopy.</p>
-                {/* <div className="room-price">From $380 / night</div> */}
+                <h3>Standard Room with Mountain View</h3>
+                <p>A cozy and comfortable room with scenic mountain views, ideal for business and leisure travelers.</p>
               </div>
             </div>
 
             <div className="room-card animate-on-scroll scale-fade-up delay-400">
               <div className="room-img">
-                <img src="https://images.unsplash.com/photo-1718071215606-ea8d309dcec8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEZhbWlseSUyMFN1aXRlfGVufDB8fDB8fHww" alt="Family Suite" />
+                <img src="https://aboutwallart.com/cdn/shop/articles/small-studio-apartment-decor-10-genius-tips-3328074_16fbc07b-8a48-4d37-9b46-85a92be73020.jpg?v=1783020307" alt="Studio Room" />
               </div>
               <div className="room-info">
-                <h3>Family Suite</h3>
-                <p>Generous space with two bedrooms and family amenities.</p>
-                {/* <div className="room-price">From $520 / night</div> */}
+                <h3>Studio Room</h3>
+                <p>A stylish and compact room thoughtfully designed for solo travelers and couples with modern amenities.</p>
               </div>
             </div>
           </div>
