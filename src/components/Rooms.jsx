@@ -6,13 +6,6 @@ import roomHeroImg from '../assets/room_hero.png'
 const Rooms = () => {
   const navigate = useNavigate()
 
-
-
-
-
-
-
-
   // Scroll animations observer
   useEffect(() => {
     const observerOptions = {
