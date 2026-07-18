@@ -1,7 +1,38 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Invoice.css';
 
-const Invoice = ({ details, onBack }) => {
+const Invoice = ({ details: propDetails, onBack: propOnBack }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const details = propDetails || location.state?.bookingDetails;
+  const onBack = propOnBack || (() => navigate('/booking'));
+
+  if (!details) {
+    return (
+      <div className="invoice-screen-container" style={{ padding: '120px 20px', textAlign: 'center', color: '#072b2b', background: '#fff' }}>
+        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.5rem', marginBottom: '15px' }}>No Active Booking Found</h2>
+        <p style={{ fontSize: '1rem', color: '#666', marginBottom: '30px' }}>Please complete a booking reservation first before checking the invoice receipt.</p>
+        <button 
+          onClick={() => navigate('/booking')} 
+          style={{
+            background: '#4b6043',
+            color: '#fff',
+            border: 'none',
+            padding: '14px 28px',
+            fontSize: '0.9rem',
+            letterSpacing: '1px',
+            cursor: 'pointer',
+            borderRadius: '2px'
+          }}
+        >
+          Go To Booking Form
+        </button>
+      </div>
+    );
+  }
+
   const {
     invoiceNo,
     date,
@@ -13,6 +44,7 @@ const Invoice = ({ details, onBack }) => {
     rooms,
     adults,
     children,
+    roomName,     // Dynamically set room category name
     basePricePerNight,
     roomTotal,
     services,
@@ -101,13 +133,13 @@ const Invoice = ({ details, onBack }) => {
             <tbody>
               <tr>
                 <td>
-                  <strong>Premium Cottage Stay</strong>
+                  <strong>{roomName || 'Premium Cottage Stay'}</strong>
                   <br />
                   <span className="item-sub text-muted">Base accommodation charges</span>
                 </td>
                 <td className="text-center">{nights} Nights ({rooms} Room)</td>
-                <td className="text-right">${basePricePerNight}.00</td>
-                <td className="text-right">${roomTotal}.00</td>
+                <td className="text-right">₹{basePricePerNight}.00</td>
+                <td className="text-right">₹{roomTotal}.00</td>
               </tr>
               
               {services.bookingFee > 0 && (
@@ -118,8 +150,8 @@ const Invoice = ({ details, onBack }) => {
                     <span className="item-sub text-muted">Fixed logistics booking fee</span>
                   </td>
                   <td className="text-center">1</td>
-                  <td className="text-right">${services.bookingFee}.00</td>
-                  <td className="text-right">${services.bookingFee}.00</td>
+                  <td className="text-right">₹{services.bookingFee}.00</td>
+                  <td className="text-right">₹{services.bookingFee}.00</td>
                 </tr>
               )}
 
@@ -131,15 +163,15 @@ const Invoice = ({ details, onBack }) => {
                     <span className="item-sub text-muted">Catering & extra amenities per person</span>
                   </td>
                   <td className="text-center">{adults} Pax ({nights} Nights)</td>
-                  <td className="text-right">$20.00</td>
-                  <td className="text-right">${services.adultFee}.00</td>
+                  <td className="text-right">₹250.00</td>
+                  <td className="text-right">₹{services.adultFee}.00</td>
                 </tr>
               )}
 
               <tr className="grand-total-row">
                 <td colSpan="2"></td>
                 <td className="text-right label-total">Grand Total:</td>
-                <td className="text-right val-total">${total}.00</td>
+                <td className="text-right val-total">₹{total}.00</td>
               </tr>
             </tbody>
           </table>

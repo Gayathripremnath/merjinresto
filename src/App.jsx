@@ -7,6 +7,8 @@ import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 import { Suspense, lazy } from 'react';
 
+import ReachLocation from './components/ReachLocation';
+
 const Home = lazy(() => import('./components/Home'));
 const Rooms = lazy(() => import('./components/Rooms'));
 const RoomDetails = lazy(() => import('./components/RoomDetails'));
@@ -33,7 +35,8 @@ function App() {
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactUs />} />
-        </Routes>
+          <Route path="/reach" element={<ReachLocation />} />
+        </Routes> 
       </Suspense>
       <Footer />
     </BrowserRouter>

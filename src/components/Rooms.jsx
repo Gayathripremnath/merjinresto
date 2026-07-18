@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Room.css'
 import roomHeroImg from '../assets/room_hero.png'
+import room from '../assets/room.jpg';
 
 const Rooms = () => {
   const navigate = useNavigate()
@@ -32,71 +33,54 @@ const Rooms = () => {
   const roomsData = [
     {
       id: 1,
-      name: 'Mountain View Suite',
-      image: 'https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26',
+      name: 'Paraiso Signature Suite',
+      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=75',
       gallery: [
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80'
       ],
-      area: '45M2',
+      area: '55M2',
       guests: '4 GUESTS',
       beds: '2 BEDS',
       baths: '2 BATHS',
-      price: '₹5,499',
-      description: 'Our most spacious accommodation, featuring a separate living area, elegant interiors, and breathtaking panoramic mountain views. Perfect for families, honeymooners, and guests seeking a premium stay with comfort and privacy.'
+      price: '₹6,999',
+      description: 'Your most luxurious escape to nature. Wake up in our flagship suite featuring panoramic misty valley views, premium wooden architecture, a private jacuzzi setup, and standard butler services.'
     },
     {
       id: 2,
-      name: 'Deluxe Room with Mountain View',
-      image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o=',
+      name: 'Nature View Retreat',
+      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=75',
       gallery: [
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'
       ],
-      area: '35M2',
+      area: '40M2',
       guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹4,499',
-      description: 'A well-appointed room offering modern comforts and beautiful mountain views. Designed for couples and leisure travelers, it provides a relaxing atmosphere with all essential amenities for a comfortable stay.'
+      price: '₹4,999',
+      description: 'Wake up to the beauty of Vagamon. An exquisite room with wall-to-wall glass windows showing rolling meadows, a custom sit-out balcony, and comfortable amenities.'
     },
     {
       id: 3,
-      name: 'Standard Room with Mountain View',
-      image: 'https://res.cloudinary.com/voyehomes/image/upload/v1773861135/property/176/image/e07734f2-8558-4762-8e83-44d73e06929f.jpg',
+      name: 'Cozy Escape',
+      image: room,
       gallery: [
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1522771731478-44bf104f2910?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1559841644-08984562005a?auto=format&fit=crop&q=80'
+        'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80'
       ],
       area: '30M2',
       guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
       price: '₹3,499',
-      description: 'A cozy and comfortable room with scenic mountain views, ideal for business and leisure travelers. It offers all the necessary amenities for a pleasant and value-for-money stay.'
-    },
-    {
-      id: 4,
-      name: 'Studio Room',
-      image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80',
-      gallery: [
-        'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=80'
-      ],
-      area: '25M2',
-      guests: '2 GUESTS',
-      beds: '1 BED',
-      baths: '1 BATH',
-      price: '₹2,499',
-      description: 'A stylish and compact room thoughtfully designed for solo travelers and couples. Featuring a contemporary layout with modern amenities, it offers a comfortable and relaxing stay.'
+      description: 'Comfort surrounded by nature. A rustic wooden cottage style lodging designed for peace, privacy, and an intimate connection with the pine forest walking trails.'
     }
   ]
 
@@ -265,7 +249,7 @@ const Rooms = () => {
         <div className="rooms-services-grid">
           {/* Card 1: Restaurant */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Restaurant" className="rooms-card-img" />
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=75" alt="Restaurant" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Restaurant</h3>
               <p>Delicious Cuisine</p>
@@ -274,7 +258,7 @@ const Rooms = () => {
 
           {/* Card 2: Infinity Pool */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80" alt="Infinity Pool" className="rooms-card-img" />
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=75" alt="Infinity Pool" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Infinity Pool</h3>
               <p>Breathtaking Valley Views</p>
@@ -283,7 +267,7 @@ const Rooms = () => {
 
           {/* Card 3: Bonfire */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Bonfire" className="rooms-card-img" />
+            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=600&q=75" alt="Bonfire" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Bonfire</h3>
               <p>Cozy Evening Gatherings</p>
@@ -292,7 +276,7 @@ const Rooms = () => {
 
           {/* Card 4: Barbeque */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80" alt="Barbeque" className="rooms-card-img" />
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=75" alt="Barbeque" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Barbeque</h3>
               <p>Grilled Delights Outdoors</p>
@@ -301,6 +285,31 @@ const Rooms = () => {
         </div>
       </section>
 
+      {/* SECTION 4: BOOKING GUIDE */}
+      <section className="booking-guide-section">
+        <div className="container">
+          <div className="guide-header">
+            <span className="rooms-sub-title">GUEST GUIDANCE</span>
+            <h2 className="rooms-main-title1">How to Book Your Stay</h2>
+          </div>
+          <div className="guide-grid">
+            <div className="guide-card animate-on-scroll fade-up">
+              <div className="guide-number">03</div>
+              <h3>How to Check the Room Availability?</h3>
+              <p>
+                Navigate to the <strong>Book Your Stay</strong> form. Enter your desired check-in and check-out dates, set the room quantity, and specify the number of guests. The calendar helper will instantly show you available slots.
+              </p>
+            </div>
+            <div className="guide-card animate-on-scroll fade-up delay-100">
+              <div className="guide-number">04</div>
+              <h3>How to Proceed Further?</h3>
+              <p>
+                Once you see dynamic pricing and confirm room categories, fill in your guest details and click <strong>"Book Your Stay Now"</strong>. You will proceed to our secure mock payment page to choose cards, UPI, or Net Banking and receive your dynamic paid PDF receipt immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
      
     </div>
   )

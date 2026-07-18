@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './ContactUs.css';
 
 const ContactUs = ({ onBackToBooking }) => {
@@ -59,7 +60,7 @@ const ContactUs = ({ onBackToBooking }) => {
                 </div>
                 <div className="card-text-context">
                   <h4>Our Sanctuary Location</h4>
-                  <p>Unique Vagamon Resort, Pine Valley Road, Vagamon, Kerala, India</p>
+                  <p>Tharayanganam, Vagamon, Kerala 685503</p>
                 </div>
               </div>
 
@@ -70,8 +71,7 @@ const ContactUs = ({ onBackToBooking }) => {
                 <div className="card-text-context">
                   <h4>Reservation Desk Line</h4>
                   <p>
-  <a href="tel:+919845123456">+91 90000 00000</a>
-  <br />
+<a href="tel:+918848808474">+91 88488 08474</a>  <br />
   <span className="text-muted-call">
     Available Mon-Sun, 8 AM - 10 PM IST
   </span>
@@ -91,8 +91,15 @@ const ContactUs = ({ onBackToBooking }) => {
     
   </p>
 </div>
+
               </div>
+
             </div>
+            <div className="contact-action-buttons">
+  <Link to="/reach" className="btn-how-to-reach">
+    How to Reach
+  </Link>
+</div>
           </div>
 
           {/* RIGHT COLUMN: INTERACTIVE FORM CONTAINER */}

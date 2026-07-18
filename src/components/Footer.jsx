@@ -22,6 +22,7 @@ const Footer = () => {
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/rooms">Rooms </Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/reach">How to reach</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
@@ -29,7 +30,7 @@ const Footer = () => {
         <div className="footer-column ">
           <h3>Contact Us</h3>
           <ul>
-            <li><span>📍</span> 123 Alpine Way, Mountain Resort, CH,Vagamon</li>
+            <li><span>📍</span> Tharayanganam, Vagamon, Kerala 685503</li>
             <li><span>📞</span> <a href="tel:+91 8848808474">+91 8848808474</a></li>
             <li><span>✉️</span> <a href="mailto:info@merjinsparaiso.com">info@merjinsparaiso.com</a></li>
           </ul>
@@ -75,7 +76,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom ">
-        <p>&copy; {new Date().getFullYear()} Genova Technologies. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Genova Technologies Pvt Ltd. All Rights Reserved.</p>
       </div>
     </footer>
   )

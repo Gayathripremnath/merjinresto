@@ -1,10 +1,14 @@
 import React from 'react';
 import './About.css';
+import park from '../assets/park.jpg';
 
-// Replace these placeholder URLs with your actual local image paths
-const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFnYW1vbnxlbnwwfHwwfHx8MA%3D%3D';
-const BEDROOM_IMG = 'https://dwellsmithvirtue.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-23-at-12.58.53-PM-1.jpeg';
-const CABIN_OUTSIDE = 'https://pix8.agoda.net/hotelImages/637/6377629/6377629_18121913430070465654.jpg?ca=7&ce=1&s=1024x';
+import ulipooni from '../assets/ulipooni.jpg';
+import kurisumala from '../assets/kurisumala.jpg'
+import paragliding from '../assets/paragliding.jpg'
+import tea from '../assets/tea.jpg'
+import merjin4 from '../assets/merjin4.jpg'
+const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?auto=format&fit=crop&w=1600&q=60';
+const CABIN_OUTSIDE = merjin4;
 
 const About= () => {
   return (
@@ -57,7 +61,7 @@ const About= () => {
 
           {/* Right Column: Main Showcase Image */}
           <div className="right-column">
-            <img src={CABIN_OUTSIDE} alt="A-Frame Cabin Exterior" className="main-showcase-img" />
+            <img src={CABIN_OUTSIDE} alt="A-Frame Cabin Exterior" className="main-showcase-img" loading="lazy" />
           </div>
 
         </div>
@@ -71,63 +75,50 @@ const About= () => {
   {/* Centered Header */}
   <div className="places-header">
     <span className="sub-title">EXPLORE VAGAMON</span>
-    <h2 className="main-title1">Explore Nearby Attractions</h2>
+    <h2 className="main-title1">Explore the Best of Vagamon</h2>
   </div>
 
   {/* Places Grid */}
   <div className="places-grid">
-    {/* Place 1: Vagamon Pine Forest */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80" alt="Vagamon Pine Forest" className="place-img" />
-      <div className="place-overlay">
-        <h3>Vagamon Pine Forest</h3>
-        <p>One of Vagamon's most iconic destinations, the Pine Forest offers a peaceful escape with towering pine trees, cool mountain air, and picturesque walking trails.</p>
-      </div>
-    </div>
-
-    {/* Place 2: Marmala Waterfalls */}
-    <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80" alt="Marmala Waterfalls" className="place-img" />
-      <div className="place-overlay">
-        <h3>Marmala Waterfalls</h3>
-        <p>Hidden amidst lush greenery, Marmala Waterfalls is a breathtaking natural attraction where crystal-clear water cascades down rocky cliffs.</p>
-      </div>
-    </div>
-
-    {/* Place 3: Vagamon Adventure Park & Paragliding */}
-    <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80" alt="Vagamon Adventure Park & Paragliding" className="place-img" />
+      <img src={park} alt="Vagamon Adventure Park" className="place-img" loading="lazy" />
       <div className="place-overlay">
         <h3>Vagamon Adventure Park</h3>
-        <p>Experience the thrill of paragliding over Vagamon's rolling hills or enjoy exciting outdoor activities at the nearby adventure park.</p>
+        <p>Experience thrilling outdoor activities and adventure sports, perfect for adrenaline seekers of all ages.</p>
       </div>
     </div>
-
-    {/* Place 4: Vagamon Meadows */}
     <div className="place-card">
-      <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80" alt="Vagamon Meadows" className="place-img" />
+      <img src={ulipooni} alt="Ulipooni Wildlife Sanctuary Viewpoint" className="place-img" loading="lazy" />
       <div className="place-overlay">
-        <h3>Vagamon Meadows</h3>
-        <p>Famous for its expansive green grasslands and stunning hilltop scenery, Vagamon Meadows is the perfect place to relax.</p>
+        <h3>Ulipooni Wildlife Sanctuary Viewpoint</h3>
+        <p>A serene viewpoint offering panoramic vistas of the wildlife sanctuary and rolling hills of Vagamon.</p>
+      </div>
+    </div>
+    <div className="place-card">
+      <img src={kurisumala} alt="Kurisumala Ashram" className="place-img" loading="lazy" />
+      <div className="place-overlay">
+        <h3>Kurisumala Ashram</h3>
+        <p>A peaceful monastery perched on a hilltop, offering spiritual solace and stunning views.</p>
+      </div>
+    </div>
+    <div className="place-card">
+      <img src={paragliding} alt="Paragliding Point" className="place-img" loading="lazy" />
+      <div className="place-overlay">
+        <h3>Paragliding Point (Seasonal)</h3>
+        <p>Soar above Vagamon's breathtaking landscape — an unforgettable aerial adventure over misty hills.</p>
+      </div>
+    </div>
+    <div className="place-card">
+      <img src={tea} alt="Tea Gardens" className="place-img" loading="lazy" />
+      <div className="place-overlay">
+        <h3>Tea Gardens – Throughout Vagamon</h3>
+        <p>Wander through lush tea plantations blanketing Vagamon's hillsides with scenic walks and fresh mountain air.</p>
       </div>
     </div>
   </div>
 </section>  
 {/* PLACE THIS DIRECTLY UNDER THE NEAREST PLACES </section> */}
 
-{/* SECTION 5: BOOK NOW CTA */}
-<section 
-  className="cta-section" 
-  style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${HERO_BG})` }}
->
-  <div className="cta-content">
-    <span className="cta-sub-title">BOOK NOW!</span>
-    <h2 className="cta-main-title">Welcome To Merjin's Paraíso<br />Book Your Stay Today.</h2>
-    <button className="cta-btn" onClick={() => window.location.href = '/booking'}>
-      BOOK YOUR COTTAGE
-    </button>
-  </div>
-</section>
 
     </div>
   );

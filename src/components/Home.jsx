@@ -13,14 +13,18 @@ import bg1 from '../assets/bg1.jpg'
 import bg2 from '../assets/bg2.jpg'
 import bg3 from '../assets/bg3.jpg'
 import BookingModal from './BookingModal'
+import merjin from '../assets/merjin.jpg'
+import merjin1 from '../assets/merjin1.jpg'
+import merjin2 from '../assets/merjin2.jpg'
+import merjin3 from '../assets/merjin3.jpg'
 
-const slides = [bg1, bg2, bg3];
+const slides = [merjin,merjin1, merjin2];
 
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [typedTitle, setTypedTitle] = useState("")
-  const fullTitle = "Experience Unparalleled Comfort"
+  const fullTitle = "Escape to Nature's Paradise"
 
   useEffect(() => {
     let index = 0;
@@ -78,17 +82,17 @@ const Home = () => {
         <div className="hero-content">
           <span className="sub-tag animate-on-scroll fade-up">STAY WITH US FEEL LIKE HOME</span>
           <h1 className="main-title">
-            {typedTitle.split(" ").map((word, i) => (
-              <React.Fragment key={i}>
-                {word === "Unparalleled" || word === "Comfort" ? (
-                  <span className="gold-text">{word} </span>
-                ) : (
-                  word + " "
-                )}
-                {i === 0 && <br />}
-              </React.Fragment>
-            ))}
-          </h1>
+  {typedTitle.split(" ").map((word, i) => (
+    <React.Fragment key={i}>
+      {word === "Nature's" || word === "Paradise" ? (
+        <span className="gold-text">{word} </span>
+      ) : (
+        word + " "
+      )}
+      {i === 0 && <br />}
+    </React.Fragment>
+  ))}
+</h1>
         </div>
       </section>
 
@@ -98,7 +102,7 @@ const Home = () => {
           <div className="editorial-grid">
             <div className="editorial-images">
               <div className="img-main animate-on-scroll fade-right">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/87/a1/6c/forest-canopy.jpg?w=1200&h=-1&s=1" alt="Forest Luxury Hotel" />
+                <img src={merjin3} alt="Forest Luxury Hotel" />
               </div>
               <div className="img-sub animate-on-scroll fade-up delay-200">
                 <img src="https://plus.unsplash.com/premium_photo-1685133855266-57a70d527acd?w=800&auto=format&fit=crop&q=80" alt="Resort in Nature" />
@@ -126,60 +130,79 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       </section>
 
       {/* Rooms Section */}
-      <section className="rooms-section">
-        <div className="container">
-          <div className="rooms-header animate-on-scroll fade-up">
-            <div>
-              <span className="section-tag">ACCOMMODATION</span>
-              <h2 className="section-title1">Rooms & Suites</h2>
-            </div>
-            <button className="outline-btn">VIEW ALL</button>
-          </div>
+  <section className="rooms-section">
+  <div className="container">
+    <div className="rooms-header animate-on-scroll fade-up">
+      <div>
+        <span className="section-tag">ACCOMMODATION</span>
+        <h2 className="section-title1">Rooms & Suites</h2>
+      </div>
 
-          <div className="rooms-grid">
-            <div className="room-card animate-on-scroll scale-fade-up delay-100">
-              <div className="room-img">
-                <img src="https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26" alt="Mountain View Suite" />
-              </div>
-              <div className="room-info">
-                <h3>Mountain View Suite</h3>
-                <p>Our most spacious accommodation, featuring a separate living area, elegant interiors, and breathtaking panoramic mountain views.</p>
-              </div>
-            </div>
+      <button className="outline-btn">VIEW ALL</button>
+    </div>
 
-            <div className="room-card animate-on-scroll scale-fade-up delay-200">
-              <div className="room-img">
-                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o=" alt="Deluxe Room with Mountain View" />
-              </div>
-              <div className="room-info">
-                <h3>Deluxe Room with Mountain View</h3>
-                <p>A well-appointed room offering modern comforts and beautiful mountain views, designed for couples and leisure travelers.</p>
-              </div>
-            </div>
+    <div className="rooms-grid">
 
-            <div className="room-card animate-on-scroll scale-fade-up delay-300">
-              <div className="room-img">
-                <img src="https://res.cloudinary.com/voyehomes/image/upload/v1773861135/property/176/image/e07734f2-8558-4762-8e83-44d73e06929f.jpg" alt="Standard Room with Mountain View" />
-              </div>
-              <div className="room-info">
-                <h3>Standard Room with Mountain View</h3>
-                <p>A cozy and comfortable room with scenic mountain views, ideal for business and leisure travelers.</p>
-              </div>
-            </div>
-
-            <div className="room-card animate-on-scroll scale-fade-up delay-400">
-              <div className="room-img">
-                <img src="https://aboutwallart.com/cdn/shop/articles/small-studio-apartment-decor-10-genius-tips-3328074_16fbc07b-8a48-4d37-9b46-85a92be73020.jpg?v=1783020307" alt="Studio Room" />
-              </div>
-              <div className="room-info">
-                <h3>Studio Room</h3>
-                <p>A stylish and compact room thoughtfully designed for solo travelers and couples with modern amenities.</p>
-              </div>
-            </div>
-          </div>
+      {/* Cozy Escape */}
+      <div className="room-card animate-on-scroll scale-fade-up delay-100">
+        <div className="room-img">
+          <img
+            src="https://aboutwallart.com/cdn/shop/articles/small-studio-apartment-decor-10-genius-tips-3328074_16fbc07b-8a48-4d37-9b46-85a92be73020.jpg?v=1783020307"
+            alt="Cozy Escape"
+          />
         </div>
-      </section>
 
+        <div className="room-info">
+          <h3>Cozy Escape</h3>
+          <p>
+            Comfort surrounded by nature. Relax in a warm, inviting space
+            thoughtfully designed for peaceful stays, offering modern amenities
+            and a tranquil atmosphere amidst Vagamon's lush greenery.
+          </p>
+        </div>
+      </div>
+
+      {/* Nature View Retreat */}
+      <div className="room-card animate-on-scroll scale-fade-up delay-200">
+        <div className="room-img">
+          <img
+            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o="
+            alt="Nature View Retreat"
+          />
+        </div>
+
+        <div className="room-info">
+          <h3>Nature View Retreat</h3>
+          <p>
+            Wake up to the beauty of Vagamon with breathtaking mountain views,
+            refreshing fresh air, and a peaceful retreat that blends comfort
+            with nature's charm.
+          </p>
+        </div>
+      </div>
+
+      {/* Paraiso Signature Suite */}
+      <div className="room-card animate-on-scroll scale-fade-up delay-300">
+        <div className="room-img">
+          <img
+            src="https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26"
+            alt="Paraiso Signature Suite"
+          />
+        </div>
+
+        <div className="room-info">
+          <h3>Paraiso Signature Suite</h3>
+          <p>
+            Your most luxurious escape to nature. Experience spacious interiors,
+            premium amenities, elegant design, and panoramic views for an
+            unforgettable stay in Vagamon.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Amenities Strip Section */}
       <section className="amenities-strip-section">
   <div className="amenities-strip-container">
@@ -257,9 +280,9 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
               <h3>Comfortable Accommodation</h3>
               <p>Relax in our well-furnished rooms and cottages, thoughtfully designed with modern amenities to ensure a peaceful and comfortable stay amidst the scenic beauty of Vagamon.</p>
             </div>
-            <div className="experience-card animate-on-scroll fade-up delay-200">
+             <div className="experience-card animate-on-scroll fade-up delay-200">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80" alt="Multi-Cuisine Restaurant" />
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=75" alt="Multi-Cuisine Restaurant" loading="lazy" />
               </div>
               <span className="exp-number">02</span>
               <h3>Multi-Cuisine Restaurant</h3>
@@ -267,7 +290,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80" alt="Campfire & Outdoor Activities" />
+                <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=800&q=75" alt="Campfire & Outdoor Activities" loading="lazy" />
               </div>
               <span className="exp-number">03</span>
               <h3>Campfire & Outdoor Activities</h3>

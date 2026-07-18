@@ -851,3 +851,81 @@
     height: 400px;
   }
 }
+
+/* ==========================================
+   BOOKING GUIDE SECTION
+   ========================================== */
+.booking-guide-section {
+  background-color: #051e1e;
+  padding: 80px 4%;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.guide-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.guide-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 40px;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(201, 165, 106, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.guide-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #c9a56a;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.guide-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.guide-card p {
+  color: #a0b0b0;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .guide-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .guide-card {
+    padding: 30px 20px;
+  }
+  .guide-card h3 {
+    font-size: 1.5rem;
+  }
+}
+

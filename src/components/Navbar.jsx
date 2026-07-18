@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="v-line" />
         <div className="contact-link">
           <span className="phone-icon">📞</span>
-          <a href="tel:+41965677854">+91 90000-00004</a>
+          <a href="tel:+918848808474">+91 88488 08474</a>
         </div>
       </div>
 
@@ -73,6 +73,7 @@ const Navbar = () => {
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT US</Link>
             <Link to="/rooms" onClick={() => setIsMenuOpen(false)}>ROOMS</Link>
             <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>GALLERY</Link>
+            <Link to="/reach" onClick={() => setIsMenuOpen(false)}>HOW TO REACH</Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
           </div>
         </div>
@@ -88,7 +89,7 @@ const Navbar = () => {
             
             <div className="menu-info-block">
               <h4 style={{color: '#ffffffff'}}>Location</h4>
-              <p style={{color: '#ffffffff'}}>Vagamon, Kerala<br/></p>
+              <p style={{color: '#ffffffff'}}>Tharayanganam, Vagamon<br/></p>
             </div>
             
             <div className="menu-info-block">
