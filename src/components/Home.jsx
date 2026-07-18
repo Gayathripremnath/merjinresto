@@ -138,7 +138,9 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         <h2 className="section-title1">Rooms & Suites</h2>
       </div>
 
-      <button className="outline-btn">VIEW ALL</button>
+      <Link to="/rooms">
+  <button className="outline-btn">VIEW ALL</button>
+</Link>
     </div>
 
     <div className="rooms-grid">
