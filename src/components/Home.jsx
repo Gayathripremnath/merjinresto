@@ -166,7 +166,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       <div className="room-card animate-on-scroll scale-fade-up delay-200">
         <div className="room-img">
           <img
-            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/874072287.jpg?k=06cd9ad662af5422a83c88756a5fe72d28e17598ef89293a0c51cd71b5b8e519&o="
+            src={merjin}
             alt="Nature View Retreat"
           />
         </div>
