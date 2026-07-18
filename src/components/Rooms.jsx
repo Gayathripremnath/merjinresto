@@ -45,7 +45,6 @@ const Rooms = () => {
       guests: '4 GUESTS',
       beds: '2 BEDS',
       baths: '2 BATHS',
-      price: '₹6,999',
       description: 'Your most luxurious escape to nature. Wake up in our flagship suite featuring panoramic misty valley views, premium wooden architecture, a private jacuzzi setup, and standard butler services.'
     },
     {
@@ -62,7 +61,6 @@ const Rooms = () => {
       guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹4,999',
       description: 'Wake up to the beauty of Vagamon. An exquisite room with wall-to-wall glass windows showing rolling meadows, a custom sit-out balcony, and comfortable amenities.'
     },
     {
@@ -79,7 +77,6 @@ const Rooms = () => {
       guests: '2 GUESTS',
       beds: '1 BED',
       baths: '1 BATH',
-      price: '₹3,499',
       description: 'Comfort surrounded by nature. A rustic wooden cottage style lodging designed for peace, privacy, and an intimate connection with the pine forest walking trails.'
     }
   ]
