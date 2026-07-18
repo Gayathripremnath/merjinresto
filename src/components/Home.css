@@ -570,7 +570,9 @@
 .room-img{
     height:320px;
 }
-
+.editorial-text p {
+  text-align:justify;
+}
 }
 
 /* Mobile */
@@ -582,7 +584,9 @@
     align-items:flex-start;
     gap:20px;
 }
-
+.editorial-text p {
+  text-align:justify;
+}
 .rooms-grid{
     grid-template-columns:1fr;
 }
@@ -806,6 +810,9 @@
   .amenity-info h3 {
     font-size: 18px;
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
 
 @media (max-width: 768px) {
@@ -825,6 +832,9 @@
     width: 60%;
     height: 1px;
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
 
 @media (max-width: 480px) {
@@ -837,6 +847,9 @@
   .amenity-info p {
     font-size: 13px;
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
 
 .testimonials-header {
@@ -967,7 +980,9 @@
   .rooms-grid {
     grid-template-columns: 1fr;
   }
-
+.editorial-text p {
+  text-align:justify;
+}
   .events-split-section {
     grid-template-columns: 1fr;
     height: auto;
@@ -1011,7 +1026,9 @@
     top: -50px;
     left: -10px;
   }
-
+.editorial-text p {
+  text-align:justify;
+}
   .editorial-images {
     height: 400px;
   }
@@ -1116,7 +1133,9 @@
   .stat-num {
     font-size: 24px;
   }
-
+.editorial-text p {
+  text-align:justify;
+}
   .room-img {
     height: 240px;
   }
@@ -1277,6 +1296,9 @@
   .experience-card .card-img {
     height: 140px;
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
 
 @media (max-width: 768px) {
@@ -1316,6 +1338,9 @@
   .event-content {
     padding: 80px 24px;
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
 
 @media (max-width: 420px) {
@@ -1326,4 +1351,7 @@
   .section-title {
     font-size: clamp(22px, 6vw, 36px);
   }
+  .editorial-text p {
+  text-align:justify;
+}
 }
