@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import './Gallery.css';
+import merjin from '../assets/merjin.jpg'
+import merjin1 from '../assets/merjin1.jpg'
+import merjin2 from '../assets/merjin2.jpg'
+import merjin3 from '../assets/merjin3.jpg'
+import room from '../assets/room.jpg';
+import room1 from '../assets/room1.jpg';
 
 const Gallery = ({ onBackToBooking }) => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const galleryItems = [
-    { id: 1, category: 'rooms', title: 'Premium Wooden Cottage Interior', img: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80' },
-    { id: 2, category: 'views', title: 'Misty Vagamon Meadows Morning', img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
-    { id: 3, category: 'amenities', title: 'Infinity Pool Facing the Valleys', img: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80' },
-    { id: 4, category: 'rooms', title: 'A-Frame Glass Cabin Night View', img: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80' },
-    { id: 5, category: 'views', title: 'Pine Forest Trekking Trail', img: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80' },
-    { id: 6, category: 'amenities', title: 'Outdoor Campfire & Grill Zone', img: 'https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzb3J0fGVufDB8fDB8fHww' },
+    { id: 1, category: 'views', title: 'Misty Vagamon Meadows Morning', img: merjin },
+    { id: 2, category: 'rooms', title: 'Premium Wooden Cottage Interior', img: room1 },
+    { id: 3, category: 'amenities', title: 'Infinity Pool Facing the Valleys', img: merjin1 },
+    { id: 4, category: 'rooms', title: 'A-Frame Glass Cabin Night View', img: room },
+    { id: 5, category: 'views', title: 'Pine Forest Trekking Trail', img: merjin3},
+    { id: 6, category: 'amenities', title: 'Outdoor Campfire & Grill Zone', img: merjin2 },
   ];
 
   const filteredItems = activeFilter === 'all' 
