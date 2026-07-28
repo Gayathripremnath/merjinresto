@@ -55,10 +55,15 @@ const Navbar = () => {
 </div>
 
       <div className="nav-section right">
-       
-        <button className="navbar-book-btn" onClick={() => setIsBookingOpen(true)}>BOOK YOUR STAY</button>
-      </div>
-
+  <button
+    className="navbar-book-btn"
+    onClick={() =>
+      window.open("https://be.aiosell.com/book/9aa4eb5c2e", "_blank")
+    }
+  >
+    BOOK YOUR STAY
+  </button>
+</div>
       <div className={`mobile-nav-overlay ${isMenuOpen ? 'active' : ''}`}>
         <div className="menu-left-pane">
           <button 
@@ -94,17 +99,17 @@ const Navbar = () => {
             
             <div className="menu-info-block">
               <h4 style={{color: '#ffffffff'}}>Phone Support</h4>
-<p style={{ color: "#fff" }}>
-  <a
-    href="tel:+918848808474"
-    style={{ color: "#fff", textDecoration: "none" }}
-  >
-    +91 8848808474
-  </a>
+              <p style={{ color: "#fff" ,marginLeft:"80px"}}>
+                <a
+                  href="tel:+918848808474"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  +91 8848808474
+                </a>
   <br />
   <a
     href="mailto:merjinsparaiso@gmail.com"
-    style={{ color: "#fff", textDecoration: "none" }}
+    style={{ color: "#fff", textDecoration: "none",marginLeft:"-20px" }}
   >
     info@merjinsparaiso.com
   </a>
@@ -114,7 +119,7 @@ const Navbar = () => {
               <h4 style={{color: '#ffffffff'}}>Connect With Us</h4>
               <p style={{color: '#ffffffff'}}> <a
     href="tel:+918848808474"
-    style={{ color: "#fff", textDecoration: "none" }}
+    style={{ color: "#fff", textDecoration: "none",marginLeft:"40px" }}
   >
     +91 8848808474
   </a></p>

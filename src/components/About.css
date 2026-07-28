@@ -505,6 +505,25 @@
   .editorial-title { font-size: 2.2rem; }
 }
 
+@media (max-width: 480px) {
+  .rooms-editorial { padding: 60px 5%; }
+  .room-row { gap: 24px; margin-bottom: 60px; }
+  .room-row-img img { height: 240px; }
+  .room-number { font-size: 2.8rem; }
+  .room-row-content h3 { font-size: 1.6rem; }
+  .attractions-editorial { padding: 60px 5%; }
+  .attraction-row { gap: 18px; padding: 20px 0; }
+  .attraction-text h4 { font-size: 1.1rem; }
+  .guide-editorial { padding: 60px 5%; }
+  .guide-block { padding: 28px 18px; }
+  .guide-num { font-size: 2.5rem; }
+  .guide-block h3 { font-size: 1.2rem; }
+  .editorial-title { font-size: 1.9rem; }
+  .main-title1 { font-size: 2rem; }
+  .places-grid { grid-template-columns: 1fr; }
+  .place-card { height: 320px; }
+}
+
 /* SECTION 5: BOOK NOW CTA */
 .cta-section {
   height: 55vh;

@@ -183,13 +183,36 @@
   .modal-content {
     flex-direction: column;
   }
-
   .modal-left {
     padding: 40px 30px;
     min-height: 200px;
   }
-
   .modal-right {
     padding: 40px 30px;
+  }
+  .modal-title {
+    font-size: 28px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-modal-container {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .modal-right {
+    padding: 30px 20px;
+  }
+  .modal-left {
+    padding: 30px 20px;
+    min-height: 160px;
+  }
+  .modal-title {
+    font-size: 24px;
   }
 }

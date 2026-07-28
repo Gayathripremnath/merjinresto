@@ -296,3 +296,26 @@
     padding: 30px 20px;
   }
 }
+
+@media (max-width: 600px) {
+  .contact-hero-banner {
+    padding: 100px 16px 60px;
+  }
+  .contact-main-title {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+  }
+  .contact-page-container {
+    padding: 50px 16px;
+  }
+  .contact-form-card {
+    padding: 24px 16px;
+  }
+  .contact-cards-stack {
+    gap: 16px;
+  }
+  .info-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

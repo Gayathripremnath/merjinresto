@@ -226,22 +226,43 @@
     grid-template-columns: 1fr;
     gap: 50px;
   }
-  
   .rd-main-image {
     aspect-ratio: 16 / 9;
   }
-  
   .room-info-section {
     padding: 80px 20px;
   }
-  .rd-book-btn{
-    text-align:center;
+  .rd-book-btn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-info-section {
+    padding: 60px 16px;
+  }
+  .rd-title {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+  .rd-description {
+    font-size: 14px;
+  }
+  .rd-specs-grid {
+    padding: 20px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 576px) {
   .rd-specs-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+  .rd-thumbnail {
+    width: 70px;
+    height: 55px;
+  }
+  .rd-price {
+    font-size: 28px;
   }
 }

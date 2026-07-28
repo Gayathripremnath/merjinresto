@@ -563,6 +563,13 @@
     grid-template-columns: 1fr;
     gap: 50px;
   }
+  .luxury-image-side img {
+    height: 420px;
+  }
+  .amenities-header-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -572,9 +579,41 @@
   .booking-sidebar {
     position: static;
   }
-  .amenities-header-row {
+}
+
+@media (max-width: 768px) {
+  .booking-hero-banner {
+    height: 50vh;
+    min-height: 320px;
+  }
+  .hero-main-title {
+    font-size: 2.2rem;
+  }
+  .booking-page-container {
+    margin: 50px auto;
+    padding: 0 5%;
+  }
+  .accommodation-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .inclusions-list {
     grid-template-columns: 1fr;
-    gap: 20px;
+  }
+  .booking-widget-card {
+    padding: 30px 20px;
+  }
+  .luxury-experience-section {
+    padding: 60px 0;
+  }
+  .amenities-showcase-section {
+    padding: 60px 4%;
+    margin-bottom: 60px;
+  }
+  .nearest-places-section {
+    margin-bottom: 60px;
   }
 }
 
@@ -583,7 +622,17 @@
     grid-template-columns: 1fr;
   }
   .hero-main-title {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+  }
+  .place-card {
+    height: 280px;
+  }
+  .img-crop-wrapper {
+    height: 320px;
+  }
+  .date-picker-row {
+    flex-direction: column;
+    gap: 0;
   }
 }
 .contact-field {

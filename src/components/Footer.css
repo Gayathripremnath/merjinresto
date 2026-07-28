@@ -161,7 +161,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .brand-col .brand-box, 
+  .brand-col .brand-box,
   .brand-col .footer-desc {
     text-align: left;
   }
@@ -169,5 +169,28 @@
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
+  }
+  .footer-bottom-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 50px 20px 24px;
+  }
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .footer-column a,
+  .footer-column p {
+    font-size: 13px;
+  }
+  .social-links a {
+    width: 38px;
+    height: 38px;
+    font-size: 10px;
   }
 }
