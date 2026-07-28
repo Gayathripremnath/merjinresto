@@ -149,7 +149,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       <div className="room-card animate-on-scroll scale-fade-up delay-100">
         <div className="room-img">
           <img
-            src="https://aboutwallart.com/cdn/shop/articles/small-studio-apartment-decor-10-genius-tips-3328074_16fbc07b-8a48-4d37-9b46-85a92be73020.jpg?v=1783020307"
+            src="https://images.unsplash.com/photo-1781372861728-fa63c68f7497?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNvenklMjBlc2NhcGV8ZW58MHx8MHx8fDA%3D"
             alt="Cozy Escape"
           />
         </div>
