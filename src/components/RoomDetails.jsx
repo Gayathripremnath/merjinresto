@@ -7,6 +7,28 @@ const RoomDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { room } = location.state || {};
+  const defaultAmenities = [
+  'Free Wi-Fi',
+  'Chauffeur Service',
+  'Parking Space',
+  'King Size & Double Size Bed',
+  'Toiletries',
+  'Hill View Balcony',
+  'Wardrobe',
+  'Bottled Water',
+  'Welcome Drink',
+  'Cold & Hot Water',
+  'Shoe Rack',
+  'Coffee Maker and Electric Kettle',
+  'Air Conditioned',
+  'Bathroom Amenities',
+  'Complimentary Breakfast',
+  'Table with Double Seating',
+  'LED TV',
+  'Daily Housekeeping',
+  'Attached Bathroom',
+  'Sitting Area'
+];
 
   const [activeImage, setActiveImage] = useState(room?.image);
 
@@ -72,14 +94,25 @@ const RoomDetails = () => {
                   <span className="rd-spec-value">{room.guests}</span>
                 </div>
                 <div className="rd-spec-item">
-                  <span className="rd-spec-label">Beds</span>
+                  <span className="rd-spec-label">Bed Type</span>
                   <span className="rd-spec-value">{room.beds}</span>
                 </div>
-                <div className="rd-spec-item">
-                  <span className="rd-spec-label">Complimentary</span>
-                  <span className="rd-spec-value">{room.complimentary}</span>
-                </div>
               </div>
+
+              {room.amenities && room.amenities.length > 0 && (
+                <div className="rd-amenities-wrap">
+                  <h4 className="rd-amenities-title">Room Amenities</h4>
+   
+                  <ul className="rd-amenities-list">
+                    {room.amenities.map((a, i) => (
+                      <li key={i}>
+                        <span className="rd-amenity-dot" />
+                        {a}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
                       <button
             className="rd-book-btn"

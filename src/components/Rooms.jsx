@@ -33,7 +33,7 @@ const Rooms = () => {
   const roomsData = [
     {
       id: 1,
-      name: 'Deluxe Room with Mountain View',
+      name: 'Deluxe Room',
       image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=75',
       gallery: [
         'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
@@ -41,15 +41,15 @@ const Rooms = () => {
         'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80'
       ],
-      area: '35 square feet',
+      area: '35 sq.ft',
       guests: 'Up to 3 guests',
-      beds: 'King',
-      complimentary: 'Wifi, Tv, Air Conditioner,Free breakfast',
-      description: 'Your most luxurious escape to nature. Wake up in our flagship suite featuring panoramic misty valley views, premium wooden architecture, a private jacuzzi setup, and standard butler services.'
+      beds: 'King Bed',
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
+      description: 'Our Deluxe Rooms offer the perfect blend of comfort and convenience, ideal for short and relaxing stays.'
     },
     {
       id: 2,
-      name: 'Standard Room with Mountain View',
+      name: 'Classic Room',
       image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=75',
       gallery: [
         'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
@@ -57,15 +57,15 @@ const Rooms = () => {
         'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'
       ],
-      area: '35 square feet',
+      area: '35 sq.ft',
       guests: 'Up to 2 guests',
-      beds: 'king',
-      complimentary: 'Wifi, Tv, Air Conditioner,Free breakfast',
-      description: 'Wake up to the beauty of Vagamon. An exquisite room with wall-to-wall glass windows showing rolling meadows, a custom sit-out balcony, and comfortable amenities.'
+      beds: 'King Bed',
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
+      description: 'Cozy and peaceful, our Classic Rooms blend charming interiors with hill-facing views for a restful stay.'
     },
     {
       id: 3,
-      name: 'Mountain View Suite',
+      name: 'Junior Suite Room',
       image: room,
       gallery: [
         'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
@@ -73,28 +73,11 @@ const Rooms = () => {
         'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80',
         'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80'
       ],
-      area: '35 square feet',
+      area: '35 sq.ft',
       guests: 'Up to 4 guests',
-      beds: 'king',
-      complimentary: 'Wifi, Tv, Air Conditioner,Free breakfast',
-      description: 'Comfort surrounded by nature. A rustic wooden cottage style lodging designed for peace, privacy, and an intimate connection with the pine forest walking trails.'
+      beds: 'King Bed',
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],      description: 'Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.'
     },
-    // {
-    //   id: 3,
-    //   name: 'Studio',
-    //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtOjjrHM4RHhdqB09BgDcblQw-Z_QcnwFQHsag7EQVTg&s=10",
-    //   gallery: [
-    //     'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
-    //     'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80',
-    //     'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80',
-    //     'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80'
-    //   ],
-    //   area: '35 square feet',
-    //   guests: 'Up to 4 guests',
-    //   beds: 'king',
-    //   complimentary: 'Wifi, Tv, Air Conditioner,Free breakfast',
-    //   description: 'Comfort surrounded by nature. A rustic wooden cottage style lodging designed for peace, privacy, and an intimate connection with the pine forest walking trails.'
-    // }
   ]
 
   const servicesData = [
@@ -203,7 +186,7 @@ const Rooms = () => {
                 <div className="card-body-v2">
                   <h3 className="room-title-v2">{room.name}</h3>
                   
-                  {/* Inline Specs with Clean SVG Icons */}
+                  {/* Inline Specs */}
                   <div className="room-specs-v2">
                     <span className="spec-item-v2">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -225,15 +208,16 @@ const Rooms = () => {
                       </svg>
                       {room.beds}
                     </span>
-                    <span className="spec-item-v2">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M4 12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3zM2 11h20M7 5v6M17 5v6" strokeLinecap="round"/>
-                      </svg>
-                      {room.complimentary}
-                    </span>
                   </div>
 
                   <p className="room-desc-v2">{room.description}</p>
+
+                  {/* Amenities */}
+                  {/* <ul className="room-amenities-v2">
+                    {room.amenities.map((a, i) => (
+                      <li key={i}>{a}</li>
+                    ))}
+                  </ul> */}
                 </div>
               </div>
             ))}

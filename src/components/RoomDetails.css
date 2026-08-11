@@ -149,11 +149,11 @@
 /* Specs Grid */
 .rd-specs-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-bottom: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
+  padding: 28px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -178,6 +178,67 @@
   font-size: 16px;
   color: #ffffff;
   font-weight: 500;
+}
+
+/* Amenities */
+.rd-amenities-wrap {
+  margin-bottom: 40px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 28px;
+  background: rgba(255,255,255,0.03);
+}
+
+.rd-amenities-title {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.rd-amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+  max-height: none;
+  height: auto;
+  overflow: visible;
+}
+
+.rd-amenities-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-weight: 500;
+}
+.rd-amenities-wrap {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.rd-details-column {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+.rd-amenity-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9a56a;
+  flex-shrink: 0;
 }
 
 /* Book Button */
@@ -257,6 +318,9 @@
   .rd-specs-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .rd-amenities-list {
+    grid-template-columns: 1fr;
   }
   .rd-thumbnail {
     width: 70px;
