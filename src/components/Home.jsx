@@ -155,7 +155,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Cozy Escape</h3>
+          <h3>Deluxe Room with Mountain View</h3>
           <p>
             Comfort surrounded by nature. Relax in a warm, inviting space
             thoughtfully designed for peaceful stays, offering modern amenities
@@ -174,7 +174,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Nature View Retreat</h3>
+          <h3>Standard Room with Mountain View</h3>
           <p>
             Wake up to the beauty of Vagamon with breathtaking mountain views,
             refreshing fresh air, and a peaceful retreat that blends comfort
@@ -193,7 +193,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Paraiso Signature Suite</h3>
+          <h3>Mountain View Suite</h3>
           <p>
             Your most luxurious escape to nature. Experience spacious interiors,
             premium amenities, elegant design, and panoramic views for an
