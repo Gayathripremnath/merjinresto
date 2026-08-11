@@ -76,8 +76,8 @@ const RoomDetails = () => {
                   <span className="rd-spec-value">{room.beds}</span>
                 </div>
                 <div className="rd-spec-item">
-                  <span className="rd-spec-label">Baths</span>
-                  <span className="rd-spec-value">{room.baths}</span>
+                  <span className="rd-spec-label">Complimentary</span>
+                  <span className="rd-spec-value">{room.complimentary}</span>
                 </div>
               </div>
 
