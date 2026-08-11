@@ -276,7 +276,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
           <div className="experience-grid">
             <div className="experience-card animate-on-scroll fade-up delay-100">
               <div className="card-img">
-                <img src="https://dwellsmithvirtue.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-23-at-12.58.53-PM-1.jpeg" alt="Comfortable Accommodation" />
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnzzs5oxOsIsUOQstH4TBiyP7CdL2G3cdxUEr6Fjh1ONUl0oSBWAv639Q5TRum7RerxBy5aEPj8-zL-us9utkQUbbkDWWhMb6ApLwtjEtkOPJ_8TLDd6vnOdHNjlU9o1PWxC1Ro_YAR_SLt=s1360-w1360-h1020-rw" alt="Comfortable Accommodation" />
               </div>
               <span className="exp-number">01</span>
               <h3>Comfortable Accommodation</h3>

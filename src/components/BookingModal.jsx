@@ -40,14 +40,19 @@ const BookingModal = ({ isOpen, onClose }) => {
                 <div className="form-group">
                   <label>ROOM TYPE</label>
                   <select className="luxury-input">
-                    <option>Executive Suite</option>
-                    <option>Deluxe Room</option>
-                    <option>Alpine Suite</option>
+                    <option>Deluxe Room with Mountain View</option>
+                    <option>Standard Room with Mountain View</option>
+                    <option>Mountain View Suite</option>
                   </select>
                 </div>
               </div>
               
-              <button className="confirm-book-btn">CHECK AVAILABILITY</button>
+             <button
+  className="confirm-book-btn"
+  onClick={() => window.location.href = "https://be.aiosell.com/book/9aa4eb5c2e"}
+>
+  CHECK AVAILABILITY
+</button>
             </form>
           </div>
         </div>
