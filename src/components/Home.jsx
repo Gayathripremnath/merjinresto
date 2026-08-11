@@ -155,11 +155,11 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Deluxe Room with Mountain View</h3>
+          <h3>Deluxe Room </h3>
           <p>
-            Comfort surrounded by nature. Relax in a warm, inviting space
-            thoughtfully designed for peaceful stays, offering modern amenities
-            and a tranquil atmosphere amidst Vagamon's lush greenery.
+            Our Deluxe Rooms offer the perfect blend of comfort and convenience, ideal for short and relaxing stays.
+
+
           </p>
         </div>
       </div>
@@ -174,11 +174,11 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Standard Room with Mountain View</h3>
+          <h3>Classic Rooms</h3>
           <p>
-            Wake up to the beauty of Vagamon with breathtaking mountain views,
-            refreshing fresh air, and a peaceful retreat that blends comfort
-            with nature's charm.
+           Cozy and peaceful, our Classic Rooms blend charming interiors with hill-facing views for a restful stay.
+
+
           </p>
         </div>
       </div>
@@ -193,11 +193,11 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
         </div>
 
         <div className="room-info">
-          <h3>Mountain View Suite</h3>
+          <h3>Junior Suite Rooms</h3>
           <p>
-            Your most luxurious escape to nature. Experience spacious interiors,
-            premium amenities, elegant design, and panoramic views for an
-            unforgettable stay in Vagamon.
+Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.
+
+
           </p>
         </div>
       </div>
