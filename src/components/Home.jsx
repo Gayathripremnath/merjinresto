@@ -9,16 +9,21 @@ import {
 import { Link } from 'react-router-dom';
 import { GiMountains } from "react-icons/gi";
 import './Home.css'
-import bg1 from '../assets/bg1.jpg'
-import bg2 from '../assets/bg2.jpg'
-import bg3 from '../assets/bg3.jpg'
 import BookingModal from './BookingModal'
-import merjin from '../assets/merjin.jpg'
-import merjin1 from '../assets/merjin1.jpg'
 import merjin2 from '../assets/merjin2.jpg'
-import merjin3 from '../assets/merjin3.jpg'
+import resortPhoto1 from '../assets/optimized/DJI_20260909185056_0181_D.webp'
+import resortPhoto2 from '../assets/optimized/DSC02718-Edit.webp'
+import resortPhoto3 from '../assets/optimized/DSC02694-Edit.webp'
+import roomPhoto from '../assets/optimized/DSC02560-Edit.webp'
+import roomPhoto1 from '../assets/optimized/DSC02632-Edit.webp'
+import roomPhoto2 from '../assets/optimized/DSC02605-Edit.webp'
+import accommodationPhoto from '../assets/optimized/DSC02569-Edit.webp'
+import eventSpacePhoto from '../assets/optimized/DSC02528-Edit.webp'
+import eventDiningPhoto from '../assets/optimized/DSC02676-Edit.webp'
+import multi from '../assets/optimized/DSC02676-Edit.webp'
+import camp from '../assets/optimized/DSC02504-Edit.webp'
 
-const slides = [merjin,merjin1, merjin2];
+const slides = [resortPhoto1, resortPhoto2, resortPhoto3];
 
 const Home = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -102,10 +107,10 @@ const Home = () => {
           <div className="editorial-grid">
             <div className="editorial-images">
               <div className="img-main animate-on-scroll fade-right">
-                <img src={merjin3} alt="Forest Luxury Hotel" />
+                <img src={resortPhoto2} alt="Merjin's Paraiso Resort surrounded by Vagamon's hills" />
               </div>
               <div className="img-sub animate-on-scroll fade-up delay-200">
-                <img src="https://plus.unsplash.com/premium_photo-1685133855266-57a70d527acd?w=800&auto=format&fit=crop&q=80" alt="Resort in Nature" />
+                <img src={resortPhoto3} alt="A view of the resort grounds" />
               </div>
             </div>
 
@@ -149,7 +154,7 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       <div className="room-card animate-on-scroll scale-fade-up delay-100">
         <div className="room-img">
           <img
-            src="https://images.unsplash.com/photo-1781372861728-fa63c68f7497?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNvenklMjBlc2NhcGV8ZW58MHx8MHx8fDA%3D"
+            src={roomPhoto1}
             alt="Cozy Escape"
           />
         </div>
@@ -168,18 +173,14 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       <div className="room-card animate-on-scroll scale-fade-up delay-200">
         <div className="room-img">
           <img
-            src={merjin}
+            src={roomPhoto2}
             alt="Nature View Retreat"
           />
         </div>
 
         <div className="room-info">
           <h3>Classic Rooms</h3>
-          <p>
-           Cozy and peaceful, our Classic Rooms blend charming interiors with hill-facing views for a restful stay.
-
-
-          </p>
+          <p>Cozy and peaceful, our Classic Rooms blend charming interiors with hill-facing views for a restful stay.</p>
         </div>
       </div>
 
@@ -187,18 +188,14 @@ Whether you're planning a romantic getaway, a family vacation, a group trip, or 
       <div className="room-card animate-on-scroll scale-fade-up delay-300">
         <div className="room-img">
           <img
-            src="https://b-cdn.springnest.com/media/img/3w/picture1150d0e06.jpg?crop=1480%2C914%2C0%2C26"
+            src={roomPhoto}
             alt="Paraiso Signature Suite"
           />
         </div>
 
         <div className="room-info">
           <h3>Junior Suite Rooms</h3>
-          <p>
-Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.
-
-
-          </p>
+          <p> Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.</p>
         </div>
       </div>
 
@@ -276,7 +273,7 @@ Combining comfort and style, the Junior Suite offers a calm, private retreat wit
           <div className="experience-grid">
             <div className="experience-card animate-on-scroll fade-up delay-100">
               <div className="card-img">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnzzs5oxOsIsUOQstH4TBiyP7CdL2G3cdxUEr6Fjh1ONUl0oSBWAv639Q5TRum7RerxBy5aEPj8-zL-us9utkQUbbkDWWhMb6ApLwtjEtkOPJ_8TLDd6vnOdHNjlU9o1PWxC1Ro_YAR_SLt=s1360-w1360-h1020-rw" alt="Comfortable Accommodation" />
+                <img src={accommodationPhoto} alt="Comfortable bedroom at Merjin's Paraiso Resort" loading="lazy" />
               </div>
               <span className="exp-number">01</span>
               <h3>Comfortable Accommodation</h3>
@@ -284,7 +281,7 @@ Combining comfort and style, the Junior Suite offers a calm, private retreat wit
             </div>
              <div className="experience-card animate-on-scroll fade-up delay-200">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=75" alt="Multi-Cuisine Restaurant" loading="lazy" />
+                <img src={multi} alt="Multi-Cuisine Restaurant" loading="lazy" />
               </div>
               <span className="exp-number">02</span>
               <h3>Multi-Cuisine Restaurant</h3>
@@ -292,7 +289,7 @@ Combining comfort and style, the Junior Suite offers a calm, private retreat wit
             </div>
             <div className="experience-card animate-on-scroll fade-up delay-300">
               <div className="card-img">
-                <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=800&q=75" alt="Campfire & Outdoor Activities" loading="lazy" />
+                <img src={camp} alt="Campfire & Outdoor Activities" loading="lazy" />
               </div>
               <span className="exp-number">03</span>
               <h3>Campfire & Outdoor Activities</h3>
@@ -305,7 +302,7 @@ Combining comfort and style, the Junior Suite offers a calm, private retreat wit
       {/* Events Section */}
       <section className="events-split-section">
         <div className="event-img-left animate-on-scroll fade-right">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=80" alt="Event setup" />
+          <img src={eventSpacePhoto} alt="Spacious event and gathering area at Merjin's Paraiso Resort" loading="lazy" />
         </div>
         <div className="event-content animate-on-scroll fade-up delay-100">
           <span className="event-tag">MEETING & EVENTS</span>
@@ -314,7 +311,7 @@ Combining comfort and style, the Junior Suite offers a calm, private retreat wit
           <button className="event-btn"><span className="line-dash">—</span> FIND OUT MORE</button>
         </div>
         <div className="event-img-right animate-on-scroll fade-left delay-200">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80" alt="Interior hall" />
+          <img src={eventDiningPhoto} alt="Resort dining space for meetings and gatherings" loading="lazy" />
         </div>
       </section>
 

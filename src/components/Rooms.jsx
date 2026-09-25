@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Room.css'
-import roomHeroImg from '../assets/room_hero.png'
-import room from '../assets/room.jpg';
+import roomHeroImg from '../assets/optimized/DSC02694-Edit.webp'
+import room2 from '../assets/optimized/DSC02560-Edit.webp';
+import room3 from '../assets/optimized/DSC02632-Edit.webp';
+import room4 from '../assets/optimized/DSC02605-Edit.webp';
+import room5 from '../assets/optimized/DSC02589-Edit.webp';
+import room6 from '../assets/optimized/DSC02623-Edit.webp';
+import restaurantPhoto from '../assets/optimized/DSC02718-Edit.webp';
+import poolPhoto from '../assets/optimized/DSC02663-Edit.webp';
+import bonfirePhoto from '../assets/optimized/DSC02504-Edit.webp';
+import diningPhoto from '../assets/optimized/DSC02678-Edit.webp';
 
 const Rooms = () => {
   const navigate = useNavigate()
@@ -34,12 +42,9 @@ const Rooms = () => {
     {
       id: 1,
       name: 'Deluxe Room',
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=75',
+      image: room2,
       gallery: [
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80'
+        room2, room3, room5, room6
       ],
       area: '35 sq.ft',
       guests: 'Up to 3 guests',
@@ -50,12 +55,9 @@ const Rooms = () => {
     {
       id: 2,
       name: 'Classic Room',
-      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=75',
+      image: room3,
       gallery: [
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'
+        room3, room4, room6, room5
       ],
       area: '35 sq.ft',
       guests: 'Up to 2 guests',
@@ -66,12 +68,9 @@ const Rooms = () => {
     {
       id: 3,
       name: 'Junior Suite Room',
-      image: room,
+      image: room4,
       gallery: [
-        'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80'
+        room4, room2, room5, room6
       ],
       area: '35 sq.ft',
       guests: 'Up to 4 guests',
@@ -246,7 +245,7 @@ const Rooms = () => {
         <div className="rooms-services-grid">
           {/* Card 1: Restaurant */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=75" alt="Restaurant" className="rooms-card-img" loading="lazy" />
+            <img src={restaurantPhoto} alt="Merjin resort dining area" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Restaurant</h3>
               <p>Delicious Cuisine</p>
@@ -255,7 +254,7 @@ const Rooms = () => {
 
           {/* Card 2: Infinity Pool */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=75" alt="Infinity Pool" className="rooms-card-img" loading="lazy" />
+            <img src={poolPhoto} alt="Resort infinity pool overlooking the hills" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Infinity Pool</h3>
               <p>Breathtaking Valley Views</p>
@@ -264,7 +263,7 @@ const Rooms = () => {
 
           {/* Card 3: Bonfire */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=600&q=75" alt="Bonfire" className="rooms-card-img" loading="lazy" />
+            <img src={bonfirePhoto} alt="Evening bonfire at the resort" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Bonfire</h3>
               <p>Cozy Evening Gatherings</p>
@@ -273,7 +272,7 @@ const Rooms = () => {
 
           {/* Card 4: Barbeque */}
           <div className="rooms-service-card">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=75" alt="Barbeque" className="rooms-card-img" loading="lazy" />
+            <img src={diningPhoto} alt="Resort dining and barbecue area" className="rooms-card-img" loading="lazy" />
             <div className="rooms-card-overlay">
               <h3>Barbeque</h3>
               <p>Grilled Delights Outdoors</p>

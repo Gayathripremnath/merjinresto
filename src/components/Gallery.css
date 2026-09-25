@@ -117,7 +117,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Hover Reveals Styling Frame */
@@ -134,7 +134,7 @@
   padding: 24px;
   box-sizing: border-box;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.25s ease;
 }
 
 .gallery-card-category {
