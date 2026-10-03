@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './About.css';
 import park from '../assets/park.jpg';
 
@@ -6,11 +6,42 @@ import ulipooni from '../assets/ulipooni.jpg';
 import kurisumala from '../assets/kurisumala.jpg'
 import paragliding from '../assets/paragliding.jpg'
 import tea from '../assets/tea.jpg'
-import merjin4 from '../assets/merjin4.jpg'
-const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?auto=format&fit=crop&w=1600&q=60';
-const CABIN_OUTSIDE = merjin4;
 
-const About= () => {
+import video1 from '../assets/V O wth Talk.mov';
+import video2 from '../assets/Without Voiceover.mov';
+
+const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?auto=format&fit=crop&w=1600&q=60';
+
+const About = () => {
+  const [modalVideo, setModalVideo] = useState(null);
+  const [modalTitle, setModalTitle] = useState('');
+  const modalVideoRef = useRef(null);
+
+  const openModal = (videoSrc, title) => {
+    setModalVideo(videoSrc);
+    setModalTitle(title);
+  };
+
+  const closeModal = () => {
+    setModalVideo(null);
+    setModalTitle('');
+  };
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    if (modalVideo) {
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [modalVideo]);
+
   return (
     <div className="about-container">
       
@@ -59,9 +90,49 @@ const About= () => {
             
           </div>
 
-          {/* Right Column: Main Showcase Image */}
+          {/* Right Column: Two Video Cards */}
           <div className="right-column">
-            <img src={CABIN_OUTSIDE} alt="A-Frame Cabin Exterior" className="main-showcase-img" loading="lazy" />
+            <div className="video-stack">
+              {/* Video Card 1 */}
+              <div className="video-card" onClick={() => openModal(video1, 'Resort Tour')}>
+                <video
+                  className="video-thumbnail"
+                  src={video1}
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+                <div className="video-overlay">
+                  <button className="play-btn" aria-label="Play Resort Tour video">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="32" cy="32" r="30" stroke="white" strokeWidth="2.5" fill="rgba(0,0,0,0.35)" />
+                      <polygon points="26,20 26,44 46,32" fill="white" />
+                    </svg>
+                  </button>
+                  <span className="video-label">Resort Tour</span>
+                </div>
+              </div>
+
+              {/* Video Card 2 */}
+              <div className="video-card" onClick={() => openModal(video2, 'Scenic Views')}>
+                <video
+                  className="video-thumbnail"
+                  src={video2}
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+                <div className="video-overlay">
+                  <button className="play-btn" aria-label="Play Scenic Views video">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="32" cy="32" r="30" stroke="white" strokeWidth="2.5" fill="rgba(0,0,0,0.35)" />
+                      <polygon points="26,20 26,44 46,32" fill="white" />
+                    </svg>
+                  </button>
+                  <span className="video-label">Scenic Views</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -119,6 +190,24 @@ const About= () => {
 </section>  
 {/* PLACE THIS DIRECTLY UNDER THE NEAREST PLACES </section> */}
 
+      {/* VIDEO FULLSCREEN MODAL */}
+      {modalVideo && (
+        <div className="video-modal-backdrop" onClick={closeModal}>
+          <div className="video-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close-btn" onClick={closeModal} aria-label="Close video">
+              ✕
+            </button>
+            <video
+              ref={modalVideoRef}
+              className="modal-video"
+              src={modalVideo}
+              controls
+              autoPlay
+              playsInline
+            />
+          </div>
+        </div>
+      )}
 
     </div>
   );

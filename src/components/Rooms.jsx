@@ -2,11 +2,26 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Room.css'
 import roomHeroImg from '../assets/optimized/DSC02694-Edit.webp'
-import room2 from '../assets/optimized/DSC02560-Edit.webp';
-import room3 from '../assets/optimized/DSC02632-Edit.webp';
-import room4 from '../assets/optimized/DSC02605-Edit.webp';
-import room5 from '../assets/optimized/DSC02589-Edit.webp';
-import room6 from '../assets/optimized/DSC02623-Edit.webp';
+
+// Deluxe Room images
+import deluxeBed from '../assets/optimized/DSC02560-Edit.webp';
+import deluxeBalcony from '../assets/optimized/DSC02578-Edit.webp';
+import deluxeBath from '../assets/optimized/DSC02589-Edit.webp';
+import deluxeView from '../assets/optimized/DSC02595-Edit.webp';
+
+// Classic Room images
+import classicBed from '../assets/optimized/DSC02651-Edit.webp';
+import classicAngle from '../assets/optimized/DSC02632-Edit.webp';
+import classicSitting from '../assets/optimized/DSC02645-Edit.webp';
+import classicBath from '../assets/optimized/DSC02623-Edit.webp';
+
+// Junior Suite images
+import suiteBed from '../assets/optimized/DSC02569-Edit.webp';
+import suiteLiving from '../assets/optimized/DSC02528-Edit.webp';
+import suiteLounge from '../assets/optimized/DSC02536-Edit.webp';
+import suiteKitchen from '../assets/optimized/DSC02540-Edit.webp';
+
+// Amenities section images
 import restaurantPhoto from '../assets/optimized/DSC02718-Edit.webp';
 import poolPhoto from '../assets/optimized/DSC02663-Edit.webp';
 import bonfirePhoto from '../assets/optimized/DSC02504-Edit.webp';
@@ -42,9 +57,9 @@ const Rooms = () => {
     {
       id: 1,
       name: 'Deluxe Room',
-      image: room2,
+      image: deluxeBed,
       gallery: [
-        room2, room3, room5, room6
+        deluxeBed, deluxeBalcony, deluxeBath, deluxeView
       ],
       area: '35 sq.ft',
       guests: 'Up to 3 guests',
@@ -55,9 +70,9 @@ const Rooms = () => {
     {
       id: 2,
       name: 'Classic Room',
-      image: room3,
+      image: classicBed,
       gallery: [
-        room3, room4, room6, room5
+        classicBed, classicAngle, classicSitting, classicBath
       ],
       area: '35 sq.ft',
       guests: 'Up to 2 guests',
@@ -68,14 +83,15 @@ const Rooms = () => {
     {
       id: 3,
       name: 'Junior Suite Room',
-      image: room4,
+      image: suiteBed,
       gallery: [
-        room4, room2, room5, room6
+        suiteBed, suiteLiving, suiteLounge, suiteKitchen
       ],
       area: '35 sq.ft',
       guests: 'Up to 4 guests',
       beds: 'King Bed',
-      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],      description: 'Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.'
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
+      description: 'Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.'
     },
   ]
 
