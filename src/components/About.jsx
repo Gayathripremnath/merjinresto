@@ -7,7 +7,7 @@ import kurisumala from '../assets/kurisumala.jpg'
 import paragliding from '../assets/paragliding.jpg'
 import tea from '../assets/tea.jpg'
 
-import video1 from '../assets/V O wth Talk.mp4';
+import video1 from '../assets/With voiceover.mp4';
 import video2 from '../assets/Without Voiceover.mp4';
 
 const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?auto=format&fit=crop&w=1600&q=60';
