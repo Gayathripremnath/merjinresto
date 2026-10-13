@@ -4,10 +4,23 @@ import merjin from '../assets/merjin.jpg'
 import merjin1 from '../assets/merjin1.jpg'
 import merjin2 from '../assets/merjin2.jpg'
 import merjin3 from '../assets/merjin3.jpg'
+import merjin4 from '../assets/merjin4.jpg'
 import room from '../assets/room.jpg';
 import room1 from '../assets/room1.jpg';
 
 const photoDetails = {
+  'DSC02185': ['Relax on the Guest Room Balcony', 'rooms'],
+  'DSC02194': ['Balcony with Valley Views', 'rooms'],
+  'DSC02215': ['In-Room Dining with a View', 'rooms'],
+  'DSC02262': ['A Bright, Comfortable Guest Room', 'rooms'],
+  'DSC02306': ['Step Out to a Hill-View Balcony', 'rooms'],
+  'DSC02308': ['A Quiet Balcony Overlooking the Hills', 'rooms'],
+  'DSC02332-Edit': ['Poolside Moments', 'amenities'],
+  'DSC02341-Edit': ['An Evening by the Infinity Pool', 'amenities'],
+  'DSC02358-Edit': ['Infinity Pool at Sunset', 'amenities'],
+  'DSC02391-Edit': ['Outdoor Dining with Valley Views', 'amenities'],
+  'DSC02429-Edit': ['Relax on the Resort Terrace', 'views'],
+  'DSC02550-Edit': ['Valley-View In-Room Dining', 'rooms'],
   'DSC02149': ['Bedroom with a Valley View', 'rooms'],
   'DSC02171': ['Guest Room with Balcony', 'rooms'],
   'DSC02285': ['Bright Guest Room', 'rooms'],
@@ -42,9 +55,14 @@ const photoDetails = {
   'DSC02703-Edit': ['Resort Exterior', 'views'],
   'DSC02718-Edit': ['A Warm Dining Space', 'amenities'],
   'DJI_20260909060619_0006_D': ['Resort Among the Hills', 'views'],
+  'DJI_20260909061014_0007_D': ['Merjin Resort at Dusk', 'views'],
   'DJI_20260909061243_0009_D': ['Aerial Resort View', 'views'],
   'DJI_20260909063238_0023_D': ['Aerial View of the Pool', 'amenities'],
+  'DJI_20260909070155_0042_D': ['Resort Nestled in the Hills', 'views'],
+  'DJI_20260909070632_0044_D': ['Aerial View of Merjin Resort', 'views'],
   'DJI_20260909072932_0052_D': ['The Resort and Surrounding Hills', 'views'],
+  'DJI_20260909104723_0060_D': ['Aerial View of the Infinity Pool', 'amenities'],
+  'DJI_20260909134258_0072_D': ['Balcony Views Across the Resort', 'rooms'],
   'DJI_20260909104945_0061_D': ['Resort from Above', 'views'],
   'DJI_20260909160814_0095_D': ['Aerial View of the Resort', 'views'],
   'DJI_20260909161903_0167_D': ['Resort in the Green Hills', 'views'],
@@ -53,9 +71,9 @@ const photoDetails = {
 
 const newResortPhotos = Object.entries(
   import.meta.glob('../assets/optimized/*.webp', { eager: true, query: '?url', import: 'default' })
-).map(([path, img]) => {
+).filter(([path]) => /\/(?:DSC|DJI)/.test(path)).map(([path, img]) => {
   const fileName = path.split('/').pop().replace(/\.webp$/i, '');
-  const [title, category] = photoDetails[fileName] || ['A Stay at Merjin’s Paraiso Resort', 'views'];
+  const [title, category] = photoDetails[fileName] || [`Resort photo ${fileName}`, 'views'];
   return { img, title, category };
 });
 
@@ -69,8 +87,9 @@ const Gallery = ({ onBackToBooking }) => {
     { id: 4, category: 'rooms', title: 'A-Frame Glass Cabin Night View', img: room },
     { id: 5, category: 'views', title: 'Pine Forest Trekking Trail', img: merjin3},
     { id: 6, category: 'amenities', title: 'Outdoor Campfire & Grill Zone', img: merjin2 },
+    { id: 7, category: 'views', title: 'Merjin Resort', img: merjin4 },
   ...newResortPhotos.map((photo, index) => ({
-      id: index + 7,
+      id: index + 8,
       category: photo.category,
       title: photo.title,
       img: photo.img,
@@ -113,7 +132,7 @@ const Gallery = ({ onBackToBooking }) => {
           {filteredItems.map((item) => (
             <div key={item.id} className="gallery-card">
               <div className="gallery-img-wrapper">
-                <img src={item.img} alt={item.title} loading="lazy" />
+                <img src={item.img} alt={item.title} loading="lazy" decoding="async" />
                 <div className="gallery-card-overlay">
                   <span className="gallery-card-category">{item.category}</span>
                   <h3 className="gallery-card-title">{item.title}</h3>

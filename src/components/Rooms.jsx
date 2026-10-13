@@ -8,6 +8,7 @@ import deluxeBed from '../assets/optimized/DSC02560-Edit.webp';
 import deluxeBalcony from '../assets/optimized/DSC02578-Edit.webp';
 import deluxeBath from '../assets/optimized/DSC02589-Edit.webp';
 import deluxeView from '../assets/optimized/DSC02595-Edit.webp';
+import extraRoomPhoto from '../assets/optimized/DSC02605-Edit.webp';
 
 // Classic Room images
 import classicBed from '../assets/optimized/DSC02651-Edit.webp';
@@ -18,14 +19,29 @@ import classicBath from '../assets/optimized/DSC02623-Edit.webp';
 // Junior Suite images
 import suiteBed from '../assets/optimized/DSC02569-Edit.webp';
 import suiteLiving from '../assets/optimized/DSC02528-Edit.webp';
-import suiteLounge from '../assets/optimized/DSC02536-Edit.webp';
 import suiteKitchen from '../assets/optimized/DSC02540-Edit.webp';
+import suiteSofaBed from '../assets/optimized/DSC02536-Edit.webp';
 
 // Amenities section images
 import restaurantPhoto from '../assets/optimized/DSC02718-Edit.webp';
 import poolPhoto from '../assets/optimized/DSC02663-Edit.webp';
 import bonfirePhoto from '../assets/optimized/DSC02504-Edit.webp';
 import diningPhoto from '../assets/optimized/DSC02678-Edit.webp';
+import restaurantPhoto2 from '../assets/optimized/DSC02656-Edit.webp';
+import restaurantPhoto3 from '../assets/optimized/DSC02676-Edit.webp';
+import poolPhoto2 from '../assets/optimized/DSC02325-2-Edit.webp';
+import poolPhoto3 from '../assets/optimized/DSC02384-Edit.webp';
+import poolPhoto4 from '../assets/optimized/DSC02367-Edit.webp';
+import poolPhoto5 from '../assets/optimized/DSC02403.webp';
+import poolPhoto6 from '../assets/optimized/DSC02421-Edit.webp';
+import poolPhoto7 from '../assets/optimized/DSC02432.webp';
+import poolPhoto8 from '../assets/optimized/DSC02441-Edit.webp';
+import restaurantPhoto4 from '../assets/optimized/DSC02688-Edit.webp';
+import resortViewPhoto from '../assets/optimized/DJI_20260909061243_0009_D.webp';
+import resortViewPhoto2 from '../assets/optimized/DJI_20260909161903_0167_D.webp';
+import resortViewPhoto3 from '../assets/optimized/DJI_20260909060619_0006_D.webp';
+import resortViewPhoto4 from '../assets/optimized/DJI_20260909072932_0052_D.webp';
+import resortViewPhoto5 from '../assets/optimized/DSC02701-Edit.webp';
 
 const Rooms = () => {
   const navigate = useNavigate()
@@ -59,9 +75,9 @@ const Rooms = () => {
       name: 'Deluxe Room',
       image: deluxeBed,
       gallery: [
-        deluxeBed, deluxeBalcony, deluxeBath, deluxeView
+        deluxeBed, deluxeBalcony, deluxeBath, deluxeView, extraRoomPhoto
       ],
-      area: '35 sq.ft',
+      area: '350 sq. ft.',
       guests: 'Up to 3 guests',
       beds: 'King Bed',
       amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
@@ -69,12 +85,12 @@ const Rooms = () => {
     },
     {
       id: 2,
-      name: 'Classic Room',
+      name: 'Standard Room',
       image: classicBed,
       gallery: [
         classicBed, classicAngle, classicSitting, classicBath
       ],
-      area: '35 sq.ft',
+      area: '220 sq. ft.',
       guests: 'Up to 2 guests',
       beds: 'King Bed',
       amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
@@ -85,13 +101,13 @@ const Rooms = () => {
       name: 'Junior Suite Room',
       image: suiteBed,
       gallery: [
-        suiteBed, suiteLiving, suiteLounge, suiteKitchen
+        suiteBed, suiteLiving, suiteKitchen, suiteSofaBed
       ],
-      area: '35 sq.ft',
+      area: '700 sq. ft.',
       guests: 'Up to 4 guests',
       beds: 'King Bed',
-      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
-      description: 'Combining comfort and style, the Junior Suite offers a calm, private retreat with stunning hill views.'
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size Bed', 'Convertible sofa cum bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Separate Sitting Area'],
+      description: 'Combining comfort and style, the spacious 700 sq. ft. suite offers a calm retreat with a king bed, a sofa cum bed that converts into a bed when needed, a separate sitting area, and hill views.'
     },
   ]
 
@@ -227,12 +243,6 @@ const Rooms = () => {
 
                   <p className="room-desc-v2">{room.description}</p>
 
-                  {/* Amenities */}
-                  {/* <ul className="room-amenities-v2">
-                    {room.amenities.map((a, i) => (
-                      <li key={i}>{a}</li>
-                    ))}
-                  </ul> */}
                 </div>
               </div>
             ))}
@@ -257,7 +267,7 @@ const Rooms = () => {
           </div>
         </div>
 
-        {/* Amenities Cards Grid */}
+        {/* Amenities and photo gallery */}
         <div className="rooms-services-grid">
           {/* Card 1: Restaurant */}
           <div className="rooms-service-card">
@@ -294,6 +304,24 @@ const Rooms = () => {
               <p>Grilled Delights Outdoors</p>
             </div>
           </div>
+          {[restaurantPhoto2, restaurantPhoto3, restaurantPhoto4].map((photo, index) => (
+            <div className="rooms-service-card" key={`restaurant-${index}`}>
+              <img src={photo} alt={`Resort restaurant and dining area ${index + 2}`} className="rooms-card-img" loading="lazy" />
+              <div className="rooms-card-overlay"><h3>Restaurant</h3><p>Dining at Merjin</p></div>
+            </div>
+          ))}
+          {[poolPhoto2, poolPhoto3, poolPhoto4, poolPhoto5, poolPhoto6, poolPhoto7, poolPhoto8].map((photo, index) => (
+            <div className="rooms-service-card" key={`pool-${index}`}>
+              <img src={photo} alt={`Resort pool and valley view ${index + 2}`} className="rooms-card-img" loading="lazy" />
+              <div className="rooms-card-overlay"><h3>Pool & Views</h3><p>Relax by the pool</p></div>
+            </div>
+          ))}
+          {[resortViewPhoto, resortViewPhoto2, resortViewPhoto3, resortViewPhoto4, resortViewPhoto5].map((photo, index) => (
+            <div className="rooms-service-card" key={`view-${index}`}>
+              <img src={photo} alt={`Aerial resort and hill view ${index + 1}`} className="rooms-card-img" loading="lazy" />
+              <div className="rooms-card-overlay"><h3>Resort Views</h3><p>Vagamon hills</p></div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -101,6 +101,8 @@
   overflow: hidden;
   background-color: #f0f2f3;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  content-visibility: auto;
+  contain-intrinsic-size: 360px 252px;
 }
 
 .gallery-img-wrapper {
