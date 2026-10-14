@@ -86,7 +86,7 @@ const ContactUs = ({ onBackToBooking }) => {
                 <div className="card-text-context">
   <h4>Electronic Mailbox</h4>
   <p>
-    <a href="mailto:info@merjinsparaiso.com">info@merjinsparaiso.com</a>
+    <a href="mailto:merjinsparaiso@gmail.com">merjinsparaiso@gmail.com</a>
     <br />
     
   </p>

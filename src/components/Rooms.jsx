@@ -78,9 +78,9 @@ const Rooms = () => {
         deluxeBed, deluxeBalcony, deluxeBath, deluxeView, extraRoomPhoto
       ],
       area: '350 sq. ft.',
-      guests: 'Up to 3 guests',
+      guests: 'Up to 2 guests',
       beds: 'King Bed',
-      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
       description: 'Our Deluxe Rooms offer the perfect blend of comfort and convenience, ideal for short and relaxing stays.'
     },
     {
@@ -93,7 +93,7 @@ const Rooms = () => {
       area: '220 sq. ft.',
       guests: 'Up to 2 guests',
       beds: 'King Bed',
-      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size & Double Size Bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Bathroom Amenities', 'Complimentary Breakfast', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Sitting Area'],
       description: 'Cozy and peaceful, our Classic Rooms blend charming interiors with hill-facing views for a restful stay.'
     },
     {
@@ -106,7 +106,7 @@ const Rooms = () => {
       area: '700 sq. ft.',
       guests: 'Up to 4 guests',
       beds: 'King Bed',
-      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size Bed', 'Convertible sofa cum bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Air Conditioned', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Separate Sitting Area'],
+      amenities: ['Free Wi-Fi', 'Chauffeur Service', 'Parking Space', 'King Size Bed', 'Convertible sofa cum bed', 'Toiletries', 'Hill View Balcony', 'Wardrobe', 'Bottled Water', 'Welcome Drink', 'Cold & Hot Water', 'Shoe Rack', 'Coffee Maker and Electric Kettle', 'Bathroom Amenities', 'Complimentary Breakfast', 'Table with Double Seating', 'LED TV', 'Daily Housekeeping', 'Attached Bathroom', 'Separate Sitting Area'],
       description: 'Combining comfort and style, the spacious 700 sq. ft. suite offers a calm retreat with a king bed, a sofa cum bed that converts into a bed when needed, a separate sitting area, and hill views.'
     },
   ]
@@ -304,16 +304,32 @@ const Rooms = () => {
               <p>Grilled Delights Outdoors</p>
             </div>
           </div>
-          {[restaurantPhoto2, restaurantPhoto3, restaurantPhoto4].map((photo, index) => (
-            <div className="rooms-service-card" key={`restaurant-${index}`}>
-              <img src={photo} alt={`Resort restaurant and dining area ${index + 2}`} className="rooms-card-img" loading="lazy" />
-              <div className="rooms-card-overlay"><h3>Restaurant</h3><p>Dining at Merjin</p></div>
+          {[
+            { photo: restaurantPhoto2, title: 'Valley-View Terrace', description: 'Relax in covered seating overlooking the hills' },
+            { photo: restaurantPhoto3, title: 'Restaurant Dining', description: 'Enjoy a meal with a scenic view' },
+            { photo: restaurantPhoto4, title: 'Restaurant', description: 'A warm and welcoming dining space' }
+          ].map(({ photo, title, description }) => (
+            <div className="rooms-service-card" key={`restaurant-${title}`}>
+              <img src={photo} alt={title} className="rooms-card-img" loading="lazy" />
+              <div className="rooms-card-overlay"><h3>{title}</h3><p>{description}</p></div>
             </div>
           ))}
-          {[poolPhoto2, poolPhoto3, poolPhoto4, poolPhoto5, poolPhoto6, poolPhoto7, poolPhoto8].map((photo, index) => (
+          {[poolPhoto2, poolPhoto3].map((photo, index) => (
             <div className="rooms-service-card" key={`pool-${index}`}>
               <img src={photo} alt={`Resort pool and valley view ${index + 2}`} className="rooms-card-img" loading="lazy" />
               <div className="rooms-card-overlay"><h3>Pool & Views</h3><p>Relax by the pool</p></div>
+            </div>
+          ))}
+          {[
+            { photo: poolPhoto4, title: 'Garden Swing', description: 'Unwind in the garden swing' },
+            { photo: poolPhoto5, title: 'Balcony Tea & Treats', description: 'Enjoy tea and treats with a view' },
+            { photo: poolPhoto6, title: 'Scenic Seating', description: 'Relax and take in the beautiful surroundings' },
+            { photo: poolPhoto7, title: 'Hill-View Terrace', description: 'Take in the hills from the resort terrace' },
+            { photo: poolPhoto8, title: 'Resort Exterior', description: 'A view of the resort among the hills' }
+          ].map(({ photo, title, description }) => (
+            <div className="rooms-service-card" key={`resort-feature-${title}`}>
+              <img src={photo} alt={title} className="rooms-card-img" loading="lazy" />
+              <div className="rooms-card-overlay"><h3>{title}</h3><p>{description}</p></div>
             </div>
           ))}
           {[resortViewPhoto, resortViewPhoto2, resortViewPhoto3, resortViewPhoto4, resortViewPhoto5].map((photo, index) => (

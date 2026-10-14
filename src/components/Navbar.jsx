@@ -111,7 +111,7 @@ const Navbar = () => {
     href="mailto:merjinsparaiso@gmail.com"
     style={{ color: "#fff", textDecoration: "none",marginLeft:"-20px" }}
   >
-    info@merjinsparaiso.com
+    merjinsparaiso@gmail.com
   </a>
 </p>            </div>
             
