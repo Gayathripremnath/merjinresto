@@ -100,7 +100,7 @@ const About = () => {
                   src={video1}
                   muted
                   playsInline
-                  preload="metadata"
+                  preload="none"
                 />
                 <div className="video-overlay">
                   <button className="play-btn" aria-label="Play Resort Tour video">
@@ -120,7 +120,7 @@ const About = () => {
                   src={video2}
                   muted
                   playsInline
-                  preload="metadata"
+                  preload="none"
                 />
                 <div className="video-overlay">
                   <button className="play-btn" aria-label="Play Scenic Views video">
