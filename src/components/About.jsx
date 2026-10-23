@@ -98,6 +98,7 @@ const About = () => {
                 <video
                   className="video-thumbnail"
                   src={video1}
+                  poster={park}
                   muted
                   playsInline
                   preload="none"
@@ -118,6 +119,7 @@ const About = () => {
                 <video
                   className="video-thumbnail"
                   src={video2}
+                  poster={ulipooni}
                   muted
                   playsInline
                   preload="none"
