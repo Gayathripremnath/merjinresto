@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './About.css';
 import park from '../assets/park.jpg';
 
@@ -14,12 +14,37 @@ const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?au
 
 const About = () => {
   const [modalVideo, setModalVideo] = useState(null);
+  const [isModalVideoPlaying, setIsModalVideoPlaying] = useState(false);
+  const [playbackError, setPlaybackError] = useState('');
+  const modalVideoRef = useRef(null);
+
   const openModal = (videoSrc) => {
     setModalVideo(videoSrc);
+    setIsModalVideoPlaying(false);
+    setPlaybackError('');
   };
 
   const closeModal = () => {
     setModalVideo(null);
+    setIsModalVideoPlaying(false);
+    setPlaybackError('');
+  };
+
+  const playModalVideo = async () => {
+    const video = modalVideoRef.current;
+    if (!video) return;
+
+    setPlaybackError('');
+    video.muted = false;
+    video.defaultMuted = false;
+    video.volume = 1;
+
+    try {
+      await video.play();
+    } catch (error) {
+      console.error('About video playback failed:', error);
+      setPlaybackError('Video could not start. Use the video controls to try again.');
+    }
   };
 
   // Close modal on Escape key
@@ -195,13 +220,37 @@ const About = () => {
               ✕
             </button>
             <video
+              ref={modalVideoRef}
               className="modal-video"
               src={modalVideo}
               controls
               muted={false}
               defaultMuted={false}
               playsInline
+              onPlay={() => {
+                setIsModalVideoPlaying(true);
+                setPlaybackError('');
+              }}
+              onPause={() => setIsModalVideoPlaying(false)}
+              onError={() => {
+                console.error('About video failed to load:', modalVideo);
+                setPlaybackError('Video failed to load. Please try again later.');
+              }}
             />
+            {!isModalVideoPlaying && (
+              <button
+                className="modal-play-btn"
+                type="button"
+                onClick={playModalVideo}
+              >
+                Play with sound
+              </button>
+            )}
+            {playbackError && (
+              <p className="modal-playback-error" role="alert">
+                {playbackError}
+              </p>
+            )}
           </div>
         </div>
       )}

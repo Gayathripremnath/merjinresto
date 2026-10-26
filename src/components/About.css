@@ -230,6 +230,35 @@
   background: #000;
 }
 
+.modal-play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.modal-playback-error {
+  position: absolute;
+  left: 50%;
+  bottom: 48px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 90%;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  text-align: center;
+}
+
 .modal-close-btn {
   position: absolute;
   top: -48px;
