@@ -14,23 +14,23 @@ const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?au
 
 const About = () => {
   const [modalVideo, setModalVideo] = useState(null);
-  const [isModalVideoPlaying, setIsModalVideoPlaying] = useState(false);
+  const [isModalVideoMuted, setIsModalVideoMuted] = useState(true);
   const [playbackError, setPlaybackError] = useState('');
   const modalVideoRef = useRef(null);
 
   const openModal = (videoSrc) => {
     setModalVideo(videoSrc);
-    setIsModalVideoPlaying(false);
+    setIsModalVideoMuted(true);
     setPlaybackError('');
   };
 
   const closeModal = () => {
     setModalVideo(null);
-    setIsModalVideoPlaying(false);
+    setIsModalVideoMuted(true);
     setPlaybackError('');
   };
 
-  const playModalVideo = async () => {
+  const toggleModalVideoSound = async () => {
     const video = modalVideoRef.current;
     if (!video) {
       console.error('About video player is unavailable.');
@@ -41,12 +41,17 @@ const About = () => {
     setPlaybackError('');
 
     try {
-      video.muted = false;
-      video.defaultMuted = false;
-      video.volume = 1;
-      await video.play();
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.defaultMuted = false;
+        video.volume = 1;
+      }
+      if (video.paused) await video.play();
+      setIsModalVideoMuted(video.muted);
     } catch (error) {
       console.error('About video playback failed:', error);
+      video.muted = true;
+      setIsModalVideoMuted(true);
       setPlaybackError('Video could not start. Use the video controls to try again.');
     }
   };
@@ -228,28 +233,23 @@ const About = () => {
               className="modal-video"
               src={modalVideo}
               controls
-              muted={false}
-              defaultMuted={false}
+              muted={isModalVideoMuted}
               playsInline
-              onPlay={() => {
-                setIsModalVideoPlaying(true);
-                setPlaybackError('');
-              }}
-              onPause={() => setIsModalVideoPlaying(false)}
+              onPlay={() => setPlaybackError('')}
+              onVolumeChange={(event) => setIsModalVideoMuted(event.currentTarget.muted)}
               onError={() => {
                 console.error('About video failed to load:', modalVideo);
                 setPlaybackError('Video failed to load. Please try again later.');
               }}
             />
-            {!isModalVideoPlaying && (
-              <button
-                className="modal-play-btn"
-                type="button"
-                onClick={playModalVideo}
-              >
-                Play with sound
-              </button>
-            )}
+            <button
+              className="modal-sound-btn"
+              type="button"
+              onClick={toggleModalVideoSound}
+              aria-label={isModalVideoMuted ? 'Enable sound' : 'Mute sound'}
+            >
+              {isModalVideoMuted ? 'Enable sound' : 'Mute sound'}
+            </button>
             {playbackError && (
               <p className="modal-playback-error" role="alert">
                 {playbackError}
