@@ -32,14 +32,18 @@ const About = () => {
 
   const playModalVideo = async () => {
     const video = modalVideoRef.current;
-    if (!video) return;
+    if (!video) {
+      console.error('About video player is unavailable.');
+      setPlaybackError('Video player is unavailable. Close and reopen the video.');
+      return;
+    }
 
     setPlaybackError('');
-    video.muted = false;
-    video.defaultMuted = false;
-    video.volume = 1;
 
     try {
+      video.muted = false;
+      video.defaultMuted = false;
+      video.volume = 1;
       await video.play();
     } catch (error) {
       console.error('About video playback failed:', error);
