@@ -198,6 +198,8 @@ const About = () => {
               className="modal-video"
               src={modalVideo}
               controls
+              muted={false}
+              defaultMuted={false}
               playsInline
             />
           </div>
