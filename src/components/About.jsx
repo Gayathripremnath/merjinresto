@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 import park from '../assets/park.jpg';
 
@@ -14,17 +14,12 @@ const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?au
 
 const About = () => {
   const [modalVideo, setModalVideo] = useState(null);
-  const [modalTitle, setModalTitle] = useState('');
-  const modalVideoRef = useRef(null);
-
-  const openModal = (videoSrc, title) => {
+  const openModal = (videoSrc) => {
     setModalVideo(videoSrc);
-    setModalTitle(title);
   };
 
   const closeModal = () => {
     setModalVideo(null);
-    setModalTitle('');
   };
 
   // Close modal on Escape key
@@ -94,7 +89,7 @@ const About = () => {
           <div className="right-column">
             <div className="video-stack">
               {/* Video Card 1 */}
-              <div className="video-card" onClick={() => openModal(video1, 'Resort Tour')}>
+              <div className="video-card" onClick={() => openModal(video1)}>
                 <video
                   className="video-thumbnail"
                   src={video1}
@@ -115,7 +110,7 @@ const About = () => {
               </div>
 
               {/* Video Card 2 */}
-              <div className="video-card" onClick={() => openModal(video2, 'Scenic Views')}>
+              <div className="video-card" onClick={() => openModal(video2)}>
                 <video
                   className="video-thumbnail"
                   src={video2}
@@ -200,11 +195,9 @@ const About = () => {
               ✕
             </button>
             <video
-              ref={modalVideoRef}
               className="modal-video"
               src={modalVideo}
               controls
-              autoPlay
               playsInline
             />
           </div>
