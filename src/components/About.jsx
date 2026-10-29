@@ -63,7 +63,7 @@ const About = () => {
               <div className="video-card">
                 <iframe
                   className="video-embed"
-                  src="https://www.youtube-nocookie.com/embed/ZQjGihncVpQ"
+                  src="https://www.youtube-nocookie.com/embed/SF_d14nA3KA"
                   title="Merjin's Paraiso Resort video 1"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -73,7 +73,7 @@ const About = () => {
               <div className="video-card">
                 <iframe
                   className="video-embed"
-                  src="https://www.youtube-nocookie.com/embed/SF_d14nA3KA"
+                  src="https://www.youtube-nocookie.com/embed/J7BE8p8A8Ok"
                   title="Merjin's Paraiso Resort video 2"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
