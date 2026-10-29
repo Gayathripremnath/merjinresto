@@ -1,4 +1,3 @@
-import React, { useRef, useState, useEffect } from 'react';
 import './About.css';
 import park from '../assets/park.jpg';
 
@@ -7,70 +6,9 @@ import kurisumala from '../assets/kurisumala.jpg'
 import paragliding from '../assets/paragliding.jpg'
 import tea from '../assets/tea.jpg'
 
-import video1 from '../assets/With Voiceover .mp4';
-import video2 from '../assets/Without Voiceover.mp4';
-
 const HERO_BG = 'https://images.unsplash.com/photo-1659410553816-fa68a5d1bd94?auto=format&fit=crop&w=1600&q=60';
 
 const About = () => {
-  const [modalVideo, setModalVideo] = useState(null);
-  const [isModalVideoMuted, setIsModalVideoMuted] = useState(true);
-  const [playbackError, setPlaybackError] = useState('');
-  const modalVideoRef = useRef(null);
-
-  const openModal = (videoSrc) => {
-    setModalVideo(videoSrc);
-    setIsModalVideoMuted(true);
-    setPlaybackError('');
-  };
-
-  const closeModal = () => {
-    setModalVideo(null);
-    setIsModalVideoMuted(true);
-    setPlaybackError('');
-  };
-
-  const toggleModalVideoSound = async () => {
-    const video = modalVideoRef.current;
-    if (!video) {
-      console.error('About video player is unavailable.');
-      setPlaybackError('Video player is unavailable. Close and reopen the video.');
-      return;
-    }
-
-    setPlaybackError('');
-
-    try {
-      video.muted = !video.muted;
-      if (!video.muted) {
-        video.defaultMuted = false;
-        video.volume = 1;
-      }
-      if (video.paused) await video.play();
-      setIsModalVideoMuted(video.muted);
-    } catch (error) {
-      console.error('About video playback failed:', error);
-      video.muted = true;
-      setIsModalVideoMuted(true);
-      setPlaybackError('Video could not start. Use the video controls to try again.');
-    }
-  };
-
-  // Close modal on Escape key
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') closeModal();
-    };
-    if (modalVideo) {
-      document.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
-    }
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [modalVideo]);
-
   return (
     <div className="about-container">
       
@@ -122,46 +60,25 @@ const About = () => {
           {/* Right Column: Two Video Cards */}
           <div className="right-column">
             <div className="video-stack">
-              {/* Video Card 1 */}
-              <div className="video-card" onClick={() => openModal(video1)}>
-                <video
-                  className="video-thumbnail"
-                  src={video1}
-                  poster={park}
-                  muted
-                  playsInline
-                  preload="none"
+              <div className="video-card">
+                <iframe
+                  className="video-embed"
+                  src="https://www.youtube-nocookie.com/embed/ZQjGihncVpQ"
+                  title="Merjin's Paraiso Resort video 1"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
-                <div className="video-overlay">
-                  <button className="play-btn" aria-label="Play Resort Tour video">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="32" cy="32" r="30" stroke="white" strokeWidth="2.5" fill="rgba(0,0,0,0.35)" />
-                      <polygon points="26,20 26,44 46,32" fill="white" />
-                    </svg>
-                  </button>
-                  <span className="video-label">Resort Tour</span>
-                </div>
               </div>
-
-              {/* Video Card 2 */}
-              <div className="video-card" onClick={() => openModal(video2)}>
-                <video
-                  className="video-thumbnail"
-                  src={video2}
-                  poster={ulipooni}
-                  muted
-                  playsInline
-                  preload="none"
+              <div className="video-card">
+                <iframe
+                  className="video-embed"
+                  src="https://www.youtube-nocookie.com/embed/SF_d14nA3KA"
+                  title="Merjin's Paraiso Resort video 2"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
-                <div className="video-overlay">
-                  <button className="play-btn" aria-label="Play Scenic Views video">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="32" cy="32" r="30" stroke="white" strokeWidth="2.5" fill="rgba(0,0,0,0.35)" />
-                      <polygon points="26,20 26,44 46,32" fill="white" />
-                    </svg>
-                  </button>
-                  <span className="video-label">Scenic Views</span>
-                </div>
               </div>
             </div>
           </div>
@@ -219,46 +136,6 @@ const About = () => {
     </div>
   </div>
 </section>  
-{/* PLACE THIS DIRECTLY UNDER THE NEAREST PLACES </section> */}
-
-      {/* VIDEO FULLSCREEN MODAL */}
-      {modalVideo && (
-        <div className="video-modal-backdrop" onClick={closeModal}>
-          <div className="video-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={closeModal} aria-label="Close video">
-              ✕
-            </button>
-            <video
-              ref={modalVideoRef}
-              className="modal-video"
-              src={modalVideo}
-              controls
-              muted={isModalVideoMuted}
-              playsInline
-              onPlay={() => setPlaybackError('')}
-              onVolumeChange={(event) => setIsModalVideoMuted(event.currentTarget.muted)}
-              onError={() => {
-                console.error('About video failed to load:', modalVideo);
-                setPlaybackError('Video failed to load. Please try again later.');
-              }}
-            />
-            <button
-              className="modal-sound-btn"
-              type="button"
-              onClick={toggleModalVideoSound}
-              aria-label={isModalVideoMuted ? 'Enable sound' : 'Mute sound'}
-            >
-              {isModalVideoMuted ? 'Enable sound' : 'Mute sound'}
-            </button>
-            {playbackError && (
-              <p className="modal-playback-error" role="alert">
-                {playbackError}
-              </p>
-            )}
-          </div>
-        </div>
-      )}
-
     </div>
   );
 };
