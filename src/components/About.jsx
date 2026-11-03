@@ -63,22 +63,38 @@ const About = () => {
               <div className="video-card">
                 <iframe
                   className="video-embed"
-                  src="https://www.youtube-nocookie.com/embed/SF_d14nA3KA"
+                  src="https://www.youtube-nocookie.com/embed/u5QCRspfRn4"
                   title="Merjin's Paraiso Resort video 1"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
+                <a
+                  className="video-link"
+                  href="https://www.youtube.com/watch?v=u5QCRspfRn4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on YouTube
+                </a>
               </div>
               <div className="video-card">
                 <iframe
                   className="video-embed"
-                  src="https://www.youtube-nocookie.com/embed/J7BE8p8A8Ok"
+                  src="https://www.youtube-nocookie.com/embed/CZaPvr_785c"
                   title="Merjin's Paraiso Resort video 2"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
+                <a
+                  className="video-link"
+                  href="https://www.youtube.com/watch?v=CZaPvr_785c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on YouTube
+                </a>
               </div>
             </div>
           </div>
